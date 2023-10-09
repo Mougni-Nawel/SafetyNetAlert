@@ -7,6 +7,7 @@ import SafetyNetAlert.DTO.PersonInfo;
 import SafetyNetAlert.DTO.PersonsEmail;
 import SafetyNetAlert.DTO.PersonsMobile;
 import SafetyNetAlert.Model.Persons;
+import SafetyNetAlert.SafetyApplication;
 import SafetyNetAlert.Service.IPersonService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
@@ -39,9 +40,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @author Mougni
  *
  */
-@SpringBootTest(classes = PersonsController.class)
 @AutoConfigureMockMvc
 @EnableWebMvc
+@SpringBootTest(classes = SafetyApplication.class)
 public class PersonsControllerTest {
 
     @Autowired

@@ -92,7 +92,6 @@ public class PersonsController {
 	 */
 	@PutMapping(value = "/person/{firstName}/{lastName}", consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Persons> updatePersons(@PathVariable("firstName") final String firstName, @PathVariable("lastName") final String lastName, @RequestBody Persons person) throws PersonsNotFoundException, PersonLastnameNotFoundException, PersonFirstnameNotFoundException {
-			//System.out.println("Try");
 		Persons personUpdated = personsService.updatePerson(person,firstName, lastName);
 		return new ResponseEntity<>(personUpdated, HttpStatus.ACCEPTED);
 	}

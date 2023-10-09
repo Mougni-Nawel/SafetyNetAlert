@@ -5165,3 +5165,14 @@ java.lang.IndexOutOfBoundsException: Index 16 out of bounds for length 16
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
 	at java.lang.Thread.run(Thread.java:834) ~[?:?]
+2023-09-04 19:00:28,859 ERROR S.C.E.ControllerExceptionsHandler [main] null
+2023-09-04 19:01:14,553 ERROR S.C.E.ControllerExceptionsHandler [main] null
+2023-09-04 19:03:59,741 ERROR S.C.E.ControllerExceptionsHandler [main] null
+2023-09-04 19:09:09,083 ERROR S.C.E.ControllerExceptionsHandler [main] null
+2023-09-04 19:10:22,925 ERROR S.C.E.ControllerExceptionsHandler [main] null
+2023-09-04 19:16:14,779 ERROR S.C.E.ControllerExceptionsHandler [main] null
+2023-09-04 19:17:23,328 ERROR S.C.E.ControllerExceptionsHandler [main] null
+2023-09-04 19:19:16,808 ERROR S.C.E.ControllerExceptionsHandler [main] null
+2023-09-04 19:20:35,526 ERROR S.C.E.ControllerExceptionsHandler [main] null
+2023-09-04 19:21:49,328 ERROR S.C.E.ControllerExceptionsHandler [main] null
+2023-10-09 12:16:53,998 ERROR S.C.E.ControllerExceptionsHandler [main] null

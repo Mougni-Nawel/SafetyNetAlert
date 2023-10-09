@@ -13,7 +13,7 @@ import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.databind.DatabindException;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-@SpringBootApplication()
+@SpringBootApplication
 @EnableSwagger2
 @Generated
 public class SafetyApplication {
