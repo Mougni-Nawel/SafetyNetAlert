@@ -17,12 +17,12 @@ public interface IFirestationService {
 
     public List<Firestations> getAllFirestations();
     public Firestations saveFirestations(Firestations firestations);
-    public Firestations getFirestations(final String address) throws FirestationNotFoundByAddressException;
-    public Firestations updateFirestations(String address, Firestations firestation) throws FirestationNotFoundByAddressException;
-    public void deleteFirestation(String address) throws FirestationNotFoundByAddressException;
+    public Firestations getFirestations(final String address) throws FirestationNotFoundException;
+    public Firestations updateFirestations(String address, Firestations firestation) throws FirestationNotFoundException;
+    public void deleteFirestation(String address) throws FirestationNotFoundException;
     public FireAddress getPersonsFromAddress(String address) throws AddressInParameterIsNullException;
-    public FirestationByStation getPersonsFromStation(int station) throws FirestationStationNotFoundException, MedicalRecordLastnameNotFoundException, MedicalRecordFirstnameNotFoundException;
-    public List<Flood> getHearthByStations(List<Integer> stationsList) throws FirestationListStationNotFoundException;
+    public FirestationByStation getPersonsFromStation(int station) throws FirestationStationNotFoundException, MedicalRecordsNotFoundException;
+    public List<Flood> getHearthByStations(List<Integer> stationsList) throws FirestationNotFoundException;
 
 
 }

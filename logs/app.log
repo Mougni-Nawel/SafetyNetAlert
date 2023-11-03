@@ -5176,3 +5176,14 @@ java.lang.IndexOutOfBoundsException: Index 16 out of bounds for length 16
 2023-09-04 19:20:35,526 ERROR S.C.E.ControllerExceptionsHandler [main] null
 2023-09-04 19:21:49,328 ERROR S.C.E.ControllerExceptionsHandler [main] null
 2023-10-09 12:16:53,998 ERROR S.C.E.ControllerExceptionsHandler [main] null
+2023-10-10 19:16:30,214 ERROR S.C.E.ControllerExceptionsHandler [main] null
+2023-10-17 18:44:20,808 ERROR S.C.E.ControllerExceptionsHandler [main] null
+2023-10-17 18:56:26,823 ERROR S.C.E.ControllerExceptionsHandler [main] null
+2023-10-26 19:36:43,424 ERROR S.C.E.ControllerExceptionsHandler [main] null
+2023-11-02 23:45:17,001 ERROR S.C.E.ControllerExceptionsHandler [main] null
+2023-11-02 23:47:36,989 ERROR S.C.E.ControllerExceptionsHandler [main] null
+2023-11-03 14:16:18,929 ERROR S.C.E.ControllerExceptionsHandler [main] null
+2023-11-03 14:22:52,825 ERROR S.C.E.ControllerExceptionsHandler [main] null
+2023-11-03 15:19:49,262 ERROR S.C.E.ControllerExceptionsHandler [main] null
+2023-11-03 19:37:36,867 ERROR S.C.E.ControllerExceptionsHandler [main] null
+2023-11-03 19:40:54,506 ERROR S.C.E.ControllerExceptionsHandler [main] null

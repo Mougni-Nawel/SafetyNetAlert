@@ -1,7 +1,6 @@
 package SafetyNetAlert.Model;
 
 import Config.Generated;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 

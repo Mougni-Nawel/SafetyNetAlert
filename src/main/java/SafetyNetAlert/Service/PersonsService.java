@@ -6,7 +6,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-
 import SafetyNetAlert.Controller.Exception.*;
 import SafetyNetAlert.DTO.ChildAlerts;
 import SafetyNetAlert.DTO.PersonInfo;
@@ -19,6 +18,7 @@ import SafetyNetAlert.Model.SafetyAlerts;
 import SafetyNetAlert.Repository.MedicalRecordsRepository;
 import SafetyNetAlert.Repository.PersonsRepository;
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,8 +31,8 @@ import org.springframework.stereotype.Service;
  *
  */
 @Service
-//@Configurable
 @Data
+@Slf4j
 public class PersonsService implements IPersonService{
 
 	@Autowired
@@ -52,6 +52,7 @@ public class PersonsService implements IPersonService{
 	 * @return all the persons registered.
 	 */
 	public List<Persons> getAllPersons() throws PersonsNotFoundException {
+		log.info("Function : getAllPersons");
 		return personsRepository.findAll();
 	}
 
@@ -61,6 +62,7 @@ public class PersonsService implements IPersonService{
 	 * @return the person saved.
 	 */
 	public Persons savePerson(Persons person) {
+		log.info("Function : savePerson");
         return personsRepository.save(person);
 
 	}
@@ -70,21 +72,20 @@ public class PersonsService implements IPersonService{
 	 * @param firstName represents the firstName of the person that has to be found.
 	 * @param lastName represents the lastName of the person that has to be found.
 	 * @return person that reprensents the person found.
-	 * @throws PersonFirstnameNotFoundException if there is no person found with this firstName.
-	 * @throws PersonLastnameNotFoundException if there is no person found with this lastName.
+	 * @throws PersonsNotFoundException if there is no person found with this firstName or name.
 	 * TODO return
 	 */
-	public <Persons> Persons getPersons(final String firstName, final String lastName) throws PersonsNotFoundException, PersonFirstnameNotFoundException, PersonLastnameNotFoundException {
-        Persons person = (Persons) personsRepository.findByIds(firstName, lastName);
+	public Persons getPersons(final String firstName, final String lastName) throws PersonsNotFoundException {
+		log.info("Function : getPersons");
+        Persons person = personsRepository.findByIds(firstName, lastName);
 		if(person != null){
-
 			return person;
 		}else{
 			SafetyAlerts safetyAlerts = personsRepository.getSafety();
 			if(!safetyAlerts.getPersons().contains(firstName)){
-				throw new PersonFirstnameNotFoundException("L'utilisateur n'est pas trouvé avec ce firstname");
+				throw new PersonsNotFoundException("L'utilisateur n'est pas trouvé avec ce firstname");
 			}else if(!safetyAlerts.getPersons().contains(lastName)){
-				throw new PersonLastnameNotFoundException("L'utilisateur n'est pas trouvé avec ce lastname");
+				throw new PersonsNotFoundException("L'utilisateur n'est pas trouvé avec ce lastname");
 			}
 
 		}
@@ -95,22 +96,20 @@ public class PersonsService implements IPersonService{
 	 * this method remove a person from the firstName and the lastName put in parameter.
 	 * @param firstName represents the firstName of the person that has to be removed.
 	 * @param lastName represents the lastName of the person that has to be removed.
-	 * @throws PersonFirstnameNotFoundException if there is no person found with this firstName.
-	 * @throws PersonLastnameNotFoundException if there is no person found with this lastName.
 	 * @throws PersonsNotFoundException if there is no person found with this name.
 	 */
-	public void deleteAccount(String firstName, String lastName) throws PersonsNotFoundException, PersonFirstnameNotFoundException, PersonLastnameNotFoundException {
+	public void deleteAccount(String firstName, String lastName) throws PersonsNotFoundException {
 		// TODO Auto-generated method stub
+		log.info("Function : deleteAccount");
 		Persons person = (Persons) personsRepository.findByIds(firstName, lastName);
-		//System.out.println("Persons: "+person.getLastName());
 		if(person != null){
 			personsRepository.deleteByIds(firstName, lastName);
 		}else{
 			SafetyAlerts safetyAlerts = personsRepository.getSafety();
 			if(!safetyAlerts.getPersons().contains(firstName)){
-				throw new PersonFirstnameNotFoundException("L'utilisateur à supprimé n'est pas trouvé avec ce firstname");
+				throw new PersonsNotFoundException("L'utilisateur à supprimé n'est pas trouvé avec ce firstname");
 			}else if(!safetyAlerts.getPersons().contains(lastName)){
-				throw new PersonLastnameNotFoundException("L'utilisateur à supprimé n'est pas trouvé avec ce lastname");
+				throw new PersonsNotFoundException("L'utilisateur à supprimé n'est pas trouvé avec ce lastname");
 			}
 			throw new PersonsNotFoundException("L'utilisateur à supprimé n'est pas trouvé");
 		}
@@ -125,11 +124,10 @@ public class PersonsService implements IPersonService{
 	 * @param person represents the new version of person that has to replace the old person.
 	 * @return currentPerson that reprensents the person updated.
 	 * @throws PersonsNotFoundException if there is no person found with this name.
-	 * @throws PersonFirstnameNotFoundException if there is no person found with this firstName.
-	 * @throws PersonLastnameNotFoundException if there is no person found with this lastName.
 	 */
-	public Persons updatePerson(Persons person, String firstName, String lastName) throws PersonsNotFoundException, PersonFirstnameNotFoundException, PersonLastnameNotFoundException {
-		Persons e =  (Persons) personsRepository.findByIds(firstName, lastName);
+	public Persons updatePerson(Persons person, String firstName, String lastName) throws PersonsNotFoundException {
+		log.info("Function : updatePerson");
+		Persons e = personsRepository.findByIds(firstName, lastName);
 		Persons currentPerson = null;
 		if (e != null) {
 			currentPerson = e;
@@ -159,9 +157,9 @@ public class PersonsService implements IPersonService{
 		}else{
 			SafetyAlerts safetyAlerts = personsRepository.getSafety();
 			if(!safetyAlerts.getPersons().contains(firstName)){
-				throw new PersonFirstnameNotFoundException("L'utilisateur n'est pas trouvé avec ce firstname");
+				throw new PersonsNotFoundException("L'utilisateur n'est pas trouvé avec ce firstname");
 			}else if(!safetyAlerts.getPersons().contains(lastName)){
-				throw new PersonLastnameNotFoundException("L'utilisateur n'est pas trouvé avec ce lastname");
+				throw new PersonsNotFoundException("L'utilisateur n'est pas trouvé avec ce lastname");
 			}
 			throw new PersonsNotFoundException("L'utilisateur n'est pas trouvé");
 		}
@@ -179,6 +177,7 @@ public class PersonsService implements IPersonService{
 	 * @throws PersonInParameterIsNullException if the person in parameter is null.
 	 */
 	public PersonInfo addPersonInfo(Persons person, MedicalRecords medicalRecords) throws PersonInParameterIsNullException {
+		log.info("Function : addPersonInfo");
 		if(person != null) {
 			PersonInfo personInfo = new PersonInfo();
 			personInfo.setAddress(person.getAddress());
@@ -205,10 +204,10 @@ public class PersonsService implements IPersonService{
 	 * @return persons that represent all the info of a persons that has the same lastName.
 	 * @throws MedicalRecordsNotFoundException if the medicalRecord in parameter is null.
 	 */
-	public List<PersonInfo> getPersonsInfo(String firstName, String lastName) throws PersonsNotFoundException, MedicalRecordLastnameNotFoundException, MedicalRecordFirstnameNotFoundException, PersonInParameterIsNullException, MedicalRecordsNotFoundException {
+	public List<PersonInfo> getPersonsInfo(String firstName, String lastName) throws PersonsNotFoundException, MedicalRecordsNotFoundException, PersonInParameterIsNullException {
+		log.info("Function : getPersonsInfo");
 		SafetyAlerts safetyAlerts = personsRepository.getSafety();
 		Persons p = personsRepository.findByIds(firstName, lastName);
-			//MedicalRecords m = medicalRecordsService.getMedicalRecords(firstName,lastName);
 			List<PersonInfo> persons = new ArrayList<>();
 			for(Persons person : safetyAlerts.getPersons()) {
 				if(person.getLastName().contains(p.getLastName())) {
@@ -234,9 +233,10 @@ public class PersonsService implements IPersonService{
 	 * @throws PersonsNotFoundException if the list of person is empty.
 	 */
 	public PersonsEmail getPersonsEmail(String city) throws PersonsNotFoundException {
+		log.info("Function : getPersonsEmail");
 		SafetyAlerts safetyAlerts = personsRepository.getSafety();
 		PersonsEmail p = new PersonsEmail();
-			List listEmail = new ArrayList();
+			List<String> listEmail = new ArrayList<>();
 			for(Persons person : safetyAlerts.getPersons()){
 				if(safetyAlerts.getPersons().isEmpty()){
 					throw new PersonsNotFoundException("The list of persons is empty");
@@ -259,10 +259,11 @@ public class PersonsService implements IPersonService{
 	 * @throws PersonsNotFoundException if the list of persons is empty.
 	 */
 	public PersonsMobile getPersonsMobile(int station) throws FirestationNotFoundException, PersonsNotFoundException {
+		log.info("Function : getPersonsMobile");
 		SafetyAlerts safetyAlerts = personsRepository.getSafety();
 		PersonsMobile p = new PersonsMobile();
-        List<String> mobileList = new ArrayList();
-        List<String> addressList = new ArrayList();
+        List<String> mobileList = new ArrayList<>();
+        List<String> addressList = new ArrayList<>();
         for(Firestations firestation : safetyAlerts.getFirestations()){
 			if(safetyAlerts.getFirestations().isEmpty()){
 				throw new FirestationNotFoundException("The list of firestations is empty");
@@ -291,9 +292,10 @@ public class PersonsService implements IPersonService{
 	 * this method get all the info of a person from the medicalRecord and person put in parameter.
 	 * @param medicalRecord represents the medicalRecord of a person.
 	 * @return period.getYears() represent the age of a person from the birthdate on the medicalRecord.
-	 * @throws MedicalRecordInParameterIsNullException if medicalRecord given in parameter is null.
+	 * @throws MedicalRecordsNotFoundException if medicalRecord given in parameter is null.
 	 */
-	public int addAge(MedicalRecords medicalRecord) throws MedicalRecordInParameterIsNullException {
+	public int addAge(MedicalRecords medicalRecord) throws MedicalRecordsNotFoundException {
+		log.info("Function : addAge");
 		if(medicalRecord != null) {
 			LocalDate curDate = LocalDate.now();
 			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("LL/dd/yyyy", Locale.FRANCE);
@@ -301,7 +303,7 @@ public class PersonsService implements IPersonService{
 			Period period = Period.between(birthdate, curDate);
 			return period.getYears();
 		}else{
-			throw new MedicalRecordInParameterIsNullException("The given Medical Record is not found");
+			throw new MedicalRecordsNotFoundException("The given Medical Record is not found");
 		}
 	}
 
@@ -313,14 +315,11 @@ public class PersonsService implements IPersonService{
 	 * @return membersList is a list that represent the person's family member.
 	 */
 	public List<Persons> addMembre(SafetyAlerts safetyAlerts, String nameChild, String firstName){
-
+		log.info("Function : addMembre");
 		List<Persons> membresList = new ArrayList<>();
 		for (Persons membre : safetyAlerts.getPersons()) {
-			// add exception for getPersons() is empty
 			if (membre.getLastName().contains(nameChild) && membre.getFirstName() != firstName) {
 				membresList.add(membre);
-				//System.out.println(AbstractRepository.safety.getPersons().get(i).getFirstName());
-
 			}
 		}
 		return membresList;
@@ -335,14 +334,14 @@ public class PersonsService implements IPersonService{
 	 * @throws ListIsNullException if the lists given in parameter are null.
 	 */
 	public List<ChildAlerts> addChild(List<Persons> personsList, List<Integer> ageList, List<Persons> membresList) throws ListIsNullException {
+		log.info("Function : addChild");
 		List<ChildAlerts> enfantsList = new ArrayList<>();
 		int count = 0;
 		if(personsList == null || ageList == null || membresList == null){
 			throw new ListIsNullException("The given list is null");
 		}
 		for (Persons persons : personsList) {
-
-			enfantsList.add(new ChildAlerts(persons.getLastName(), persons.getFirstName(), (Integer) ageList.get(count), membresList));
+			enfantsList.add(new ChildAlerts(persons.getLastName(), persons.getFirstName(), ageList.get(count), membresList));
 			count++;
 		}
 		return enfantsList;
@@ -356,14 +355,13 @@ public class PersonsService implements IPersonService{
 	 * @throws PersonsNotFoundException if the list of persons is empty.
 	 * @throws MedicalRecordsNotFoundException if the list of medical record is empty.
 	 */
-	public List<ChildAlerts> getChildByAddress(String address) throws MedicalRecordsNotFoundException, PersonsNotFoundException, MedicalRecordInParameterIsNullException, ListIsNullException, AddressInParameterIsNullException {
+	public List<ChildAlerts> getChildByAddress(String address) throws MedicalRecordsNotFoundException, PersonsNotFoundException, ListIsNullException, AddressInParameterIsNullException {
+		log.info("Function : getChildByAddress");
 		SafetyAlerts safetyAlerts = personsRepository.getSafety();
-		List<ChildAlerts> enfantsList = new ArrayList();
-		List<Integer> ageList = new ArrayList();
-		List<Persons> membresList = new ArrayList();
+		List<Integer> ageList = new ArrayList<>();
+		List<Persons> membresList = new ArrayList<>();
 
-// //getHabitant by address
-		List<Persons> personsList = new ArrayList();
+		List<Persons> personsList = new ArrayList<>();
 		String nameChild = null;
 		String firstName = null;
 		int majorite = 18;
@@ -373,7 +371,6 @@ public class PersonsService implements IPersonService{
 				throw new PersonsNotFoundException("The list of persons is empty");
 			}
 			for (Persons person : safetyAlerts.getPersons()) {
-
 
 				if (person.getAddress().contains(address)) {
 					if(safetyAlerts.getMedicalrecords().isEmpty()){

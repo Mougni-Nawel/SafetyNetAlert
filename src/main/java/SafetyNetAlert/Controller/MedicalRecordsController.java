@@ -2,14 +2,18 @@ package SafetyNetAlert.Controller;
 
 import java.util.List;
 
+import SafetyNetAlert.Controller.Exception.MedicalRecordsNotFoundException;
 import SafetyNetAlert.Service.IMedicalRecordService;
 import io.swagger.annotations.Api;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import SafetyNetAlert.Model.MedicalRecords;
+
+import javax.naming.NameNotFoundException;
 
 
 /**
@@ -18,14 +22,12 @@ import SafetyNetAlert.Model.MedicalRecords;
  *
  */
 
-//@JsonFormat
 @RestController
 @RequestMapping("/medicalRecord")
 @Api
+@Slf4j
 public class MedicalRecordsController {
 
-//	@Autowired
-//	MedicalRecordsRepository medicalRecordsRepository;
 	
 	@Autowired
 	IMedicalRecordService medicalRecordsService;
@@ -36,6 +38,7 @@ public class MedicalRecordsController {
 	 */
 	@GetMapping()
 	public List<MedicalRecords> getAllMedicalsRecords(){
+		log.info("Function : getAllMedicalsRecords");
 		return medicalRecordsService.getAllMedicalRecords();
 	}
 
@@ -46,15 +49,11 @@ public class MedicalRecordsController {
 	 * @param lastName represents the lastName of the medical record that has to be found.
 	 * @return ResponseEntity ok which represents a http response with code 200.
 	 */
-	@GetMapping("/{firstName}&{lastName}")
-	public ResponseEntity<Object> getMedicalRecords(@PathVariable("firstName") final String firstName, @PathVariable("lastName") final String lastName){
-		//return medicalRecordsService.getMedicalRecords(firstName,lastName);
-		try{
-			MedicalRecords medicalRecords = medicalRecordsService.getMedicalRecords(firstName, lastName);
-			return ResponseEntity.ok(medicalRecords);
-		} catch (Exception e){
-			return ResponseEntity.notFound().build();
-		}
+	@GetMapping("/{firstName}/{lastName}")
+	public ResponseEntity<MedicalRecords> getMedicalRecords(@PathVariable("firstName") final String firstName, @PathVariable("lastName") final String lastName) throws MedicalRecordsNotFoundException {
+		log.info("Function : getMedicalRecords");
+		MedicalRecords medicalRecords = medicalRecordsService.getMedicalRecords(firstName, lastName);
+		return ResponseEntity.ok(medicalRecords);
 	}
 
 	/**
@@ -64,6 +63,7 @@ public class MedicalRecordsController {
 	 */
 	@PostMapping()
 	public ResponseEntity<MedicalRecords> addMedicalRecords(@RequestBody MedicalRecords medicalRecords) {
+		log.info("Function : addMedicalRecords");
 		MedicalRecords medicalRecordsAdded = medicalRecordsService.saveMedicalRecords(medicalRecords);
 		return new ResponseEntity<>(medicalRecordsAdded, HttpStatus.CREATED);
 	}
@@ -75,14 +75,11 @@ public class MedicalRecordsController {
 	 * @param medicalRecords represents the new medical record that has to replace the old one.
 	 * @return ResponseEntity accepted which represents a http response with code 202.
 	 */
-	@PutMapping("/{firstName}&{lastName}")
-	public ResponseEntity<HttpStatus> updateMedicalRecords(@PathVariable("firstName") final String firstName, @PathVariable("lastName") final String lastName, @RequestBody MedicalRecords medicalRecords){
-		try {
-			medicalRecordsService.updateMedicalRecords(medicalRecords,firstName, lastName);
-			return new ResponseEntity<HttpStatus>(HttpStatus.ACCEPTED);
-		}catch (Exception e){
-			return new ResponseEntity<HttpStatus>(HttpStatus.NOT_FOUND);
-		}
+	@PutMapping("/{firstName}/{lastName}")
+	public ResponseEntity<HttpStatus> updateMedicalRecords(@PathVariable("firstName") final String firstName, @PathVariable("lastName") final String lastName, @RequestBody MedicalRecords medicalRecords) throws NameNotFoundException, MedicalRecordsNotFoundException {
+		log.info("Function : updateMedicalRecords");
+		medicalRecordsService.updateMedicalRecords(medicalRecords,firstName, lastName);
+		return new ResponseEntity<>(HttpStatus.ACCEPTED);
 	}
 
 	/**
@@ -91,13 +88,10 @@ public class MedicalRecordsController {
 	 * @param lastName represents the lastName of the medical record that has to be removed.
 	 * @return ResponseEntity accepted which represents a http response with code 202.
 	 */
-	@DeleteMapping("/{firstName}&{lastName}")
-	public ResponseEntity<HttpStatus> deletePerson(@PathVariable("firstName") final String firstName, @PathVariable("lastName") final String lastName) {
-		try {
-			medicalRecordsService.deleteAccount(firstName, lastName);
-			return new ResponseEntity<HttpStatus>(HttpStatus.ACCEPTED);
-		}catch (Exception e){
-			return new ResponseEntity<HttpStatus>(HttpStatus.NOT_FOUND);
-		}
+	@DeleteMapping("/{firstName}/{lastName}")
+	public ResponseEntity<HttpStatus> deletePerson(@PathVariable("firstName") final String firstName, @PathVariable("lastName") final String lastName) throws NameNotFoundException, MedicalRecordsNotFoundException {
+		log.info("Function : deletePerson");
+		medicalRecordsService.deleteAccount(firstName, lastName);
+		return new ResponseEntity<HttpStatus>(HttpStatus.ACCEPTED);
 	}
 }

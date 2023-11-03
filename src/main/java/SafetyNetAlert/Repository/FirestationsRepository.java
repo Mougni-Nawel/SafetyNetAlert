@@ -45,15 +45,14 @@ public class FirestationsRepository implements IRepository {
 	 * @param firestation represents the firestation passed on from the service that has to be saved.
 	 * @return firestationAdded represents the firestation saved.
 	 */
-	@Override
+
 	public <Firestations> Firestations save(Firestations firestation) {
 		// TODO Auto-generated method stub
 		//return null;
 		if(firestation!= null){
 			AbstractRepository.safety.getFirestations().add((SafetyNetAlert.Model.Firestations) firestation);
 			int index = AbstractRepository.safety.getFirestations().size();
-			Firestations firestationAdded = (Firestations) AbstractRepository.safety.getFirestations().get(index--);
-			return firestationAdded;
+            return (Firestations) AbstractRepository.safety.getFirestations().get(index--);
 		}else{
 			return null;
 		}
@@ -66,8 +65,7 @@ public class FirestationsRepository implements IRepository {
 	 * @param address represents the address of the firestation that has to be found.
 	 * @return p that represents the firestation found.
 	 */
-	//@Override
-	public <Firestations> Firestations findByIds(String address) {
+	public Firestations findByIds(String address) {
 		// TODO Auto-generated method stub
 		Firestations p = null;
 		for(int i = 0; i < AbstractRepository.safety.getFirestations().size(); i++){
@@ -82,8 +80,7 @@ public class FirestationsRepository implements IRepository {
 	 * this method remove a firestation from address that is put in parameter
 	 * @param address represents the address of the firestation that has to be removed.
 	 */
-	//@Override
-	public <T> void deleteByIds(String address) {
+	public void deleteByIds(String address) {
 		// TODO Auto-generated method stub
 		Firestations firestations = findByIds(address);
 		if(firestations != null){

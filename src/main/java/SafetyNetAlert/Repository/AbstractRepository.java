@@ -1,10 +1,7 @@
 package SafetyNetAlert.Repository;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-
 import Config.Generated;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -62,17 +59,6 @@ public class AbstractRepository {
 		}
 		safety = localData;
 	}
-	
-//	@Override
-//	public <Persons> Persons[] write(String file, Object object) {
-//		
-//		// charger l'objet des données a cette dans le service pour ensuite apperler cette fonction et 
-//		// mettre cette classe en parametre
-//		mapper.writeValue(file, object);
-//		return (Persons[]) read(file, object);
-//	}
-//	
-	
-	
+
 	
 }

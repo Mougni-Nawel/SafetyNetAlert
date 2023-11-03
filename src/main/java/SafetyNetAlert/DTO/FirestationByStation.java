@@ -1,6 +1,7 @@
 package SafetyNetAlert.DTO;
 
 import Config.Generated;
+import SafetyNetAlert.Model.Persons;
 
 import java.util.List;
 
@@ -12,15 +13,15 @@ import java.util.List;
 @Generated
 public class FirestationByStation {
 
-    private List habitants;
+    private List<Persons> habitants;
     private int Adulte;
     private int Enfant;
 
-    public List getHabitants() {
+    public List<Persons> getHabitants() {
         return habitants;
     }
 
-    public void setHabitants(List habitants) {
+    public void setHabitants(List<Persons> habitants) {
         this.habitants = habitants;
     }
 

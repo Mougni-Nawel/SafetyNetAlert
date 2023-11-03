@@ -73,9 +73,6 @@ public class MedicalRecordsControllerTest {
     //  add nothing when add a MedicalRecord because no data in body
     @Test
     public void givenMedicalRecord_whenMedicalRecordAddedWithoutData_then_404IsReceived() throws Exception {
-        //setUpPerTest();
-
-
 
         mockMvc.perform( MockMvcRequestBuilders
                         .post("/medicalRecord")
@@ -109,12 +106,11 @@ public class MedicalRecordsControllerTest {
         when(medicalRecordService.getMedicalRecords("Jon", "Boyd")).thenThrow(MedicalRecordsNotFoundException.class);
 
         mockMvc.perform(MockMvcRequestBuilders
-                        .get("/medicalRecord/Jon&Boyd")
+                        .get("/medicalRecord/Jon/Boyd")
                         .accept(MediaType.APPLICATION_JSON)
                         .contentType("application/json;charset=UTF-8"))
                 .andDo(print())
                 .andExpect(status().isNotFound())
-                //.andExpect(MockMvcResultMatchers.jsonPath("$.person.firstName").value("John"))
                 .andReturn().getResponse().getContentAsString();
     }
 
@@ -132,12 +128,11 @@ public class MedicalRecordsControllerTest {
         when(medicalRecordService.getMedicalRecords("John", "Boyd")).thenReturn(medicalRecords);
 
         mockMvc.perform(MockMvcRequestBuilders
-                        .get("/medicalRecord/John&Boyd")
+                        .get("/medicalRecord/John/Boyd")
                         .accept(MediaType.APPLICATION_JSON)
                         .contentType("application/json;charset=UTF-8"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                //.andExpect(MockMvcResultMatchers.jsonPath("$.person.firstName").value("John"))
                 .andReturn().getResponse().getContentAsString();
     }
 
@@ -150,10 +145,9 @@ public class MedicalRecordsControllerTest {
         setUpPerTest();
         // when
 
-        //Mockito.doThrow(NameNotFoundException.class).when(personsService).deleteAccount("John", "Boyd");
         Mockito.doNothing().when(medicalRecordService).deleteAccount("John", "Boyd");
 
-        mockMvc.perform(MockMvcRequestBuilders.delete("/medicalRecord/John&Boyd")
+        mockMvc.perform(MockMvcRequestBuilders.delete("/medicalRecord/John/Boyd")
                         .accept(MediaType.APPLICATION_JSON)
                         .contentType("application/json;charset=UTF-8"))
                 .andExpect(status().isAccepted())
@@ -167,10 +161,9 @@ public class MedicalRecordsControllerTest {
         setUpPerTest();
         // when
 
-        //Mockito.doThrow(NameNotFoundException.class).when(personsService).deleteAccount("John", "Boyd");
         doThrow(MedicalRecordsNotFoundException.class).when(medicalRecordService).deleteAccount("Jon", "Boyd");
 
-        mockMvc.perform(MockMvcRequestBuilders.delete("/medicalRecord/Jon&Boyd")
+        mockMvc.perform(MockMvcRequestBuilders.delete("/medicalRecord/Jon/Boyd")
                         .accept(MediaType.APPLICATION_JSON)
                         .contentType("application/json;charset=UTF-8"))
                 .andExpect(status().isNotFound())
@@ -191,13 +184,12 @@ public class MedicalRecordsControllerTest {
         when(medicalRecordService.updateMedicalRecords(medicalRecords, "John", "Boyd")).thenReturn(medicalRecords);
 
         mockMvc.perform(MockMvcRequestBuilders
-                        .put("/medicalRecord/John&Boyd")
+                        .put("/medicalRecord/John/Boyd")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(asJsonString(medicalRecords))
                         .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
                 .andExpect(status().isAccepted())
-                //.andExpect(MockMvcResultMatchers.jsonPath("$.person.firstName").value("John"))
                 .andReturn().getResponse().getContentAsString();
     }
 
@@ -215,14 +207,12 @@ public class MedicalRecordsControllerTest {
 
 
         // when
-        //doThrow(NameNotFoundException.class).when(personsService).getPersons("Jon", "Paul");
-        //Mockito.when(personsService.updatePerson(person, "Jon", "Paul")).thenThrow(NameNotFoundException.class);
         doThrow(MedicalRecordsNotFoundException.class).when(medicalRecordService).updateMedicalRecords(any(MedicalRecords.class), anyString(), anyString());
 
         String requestBody = asJsonString(medicalRecords);
 
         mockMvc.perform(MockMvcRequestBuilders
-                        .put("/medicalRecord/Jon&Boyd")
+                        .put("/medicalRecord/Jon/Boyd")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(requestBody))
                 .andExpect(status().isNotFound())

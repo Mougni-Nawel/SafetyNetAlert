@@ -1,7 +1,6 @@
 package Controller;
 
 import SafetyNetAlert.Controller.Exception.*;
-import SafetyNetAlert.Controller.PersonsController;
 import SafetyNetAlert.DTO.ChildAlerts;
 import SafetyNetAlert.DTO.PersonInfo;
 import SafetyNetAlert.DTO.PersonsEmail;
@@ -23,13 +22,10 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
-import static org.springframework.http.RequestEntity.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -88,9 +84,6 @@ public class PersonsControllerTest {
     //  add nothing when add a persons because no data in body
     @Test
     public void givenPerson_whenPersonAddedWithoutData_then_404IsReceived() throws Exception {
-        //setUpPerTest();
-
-
 
         mockMvc.perform( MockMvcRequestBuilders
                         .post("/person")
@@ -127,7 +120,6 @@ public class PersonsControllerTest {
                         .contentType("application/json;charset=UTF-8"))
                 .andDo(print())
                 .andExpect(status().isNotFound())
-                //.andExpect(MockMvcResultMatchers.jsonPath("$.person.firstName").value("John"))
                 .andReturn().getResponse().getContentAsString();
     }
 
@@ -153,7 +145,6 @@ public class PersonsControllerTest {
                         .contentType("application/json;charset=UTF-8"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                //.andExpect(MockMvcResultMatchers.jsonPath("$.person.firstName").value("John"))
                 .andReturn().getResponse().getContentAsString();
     }
 
@@ -165,7 +156,6 @@ public class PersonsControllerTest {
         setUpPerTest();
         // when
 
-        //Mockito.doThrow(NameNotFoundException.class).when(personsService).deleteAccount("John", "Boyd");
         Mockito.doNothing().when(personsService).deleteAccount("John", "Boyd");
 
         mockMvc.perform(MockMvcRequestBuilders.delete("/person/John/Boyd")
@@ -182,7 +172,6 @@ public class PersonsControllerTest {
         setUpPerTest();
         // when
 
-        //Mockito.doThrow(NameNotFoundException.class).when(personsService).deleteAccount("John", "Boyd");
         doThrow(PersonsNotFoundException.class).when(personsService).deleteAccount("Jon", "Boyd");
 
         mockMvc.perform(MockMvcRequestBuilders.delete("/person/Jon&Boyd")
@@ -215,7 +204,6 @@ public class PersonsControllerTest {
                         .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
                 .andExpect(status().isAccepted())
-                //.andExpect(MockMvcResultMatchers.jsonPath("$.person.firstName").value("John"))
                 .andReturn().getResponse().getContentAsString();
     }
 
@@ -235,9 +223,7 @@ public class PersonsControllerTest {
         person.setPhone("841-874-0000");
 
         // when
-        doThrow(PersonFirstnameNotFoundException.class).when(personsService).updatePerson(any(Persons.class),anyString(), anyString());
-        //Mockito.when(personsService.updatePerson(person, "Jon", "Paul")).thenThrow(NameNotFoundException.class);
-        //doThrow(PersonsNotFoundException.class).when(personsService).updatePerson(any(Persons.class),anyString(), anyString());
+        doThrow(PersonsNotFoundException.class).when(personsService).updatePerson(any(Persons.class),anyString(), anyString());
 
         String requestBody = asJsonString(person);
 
@@ -273,7 +259,6 @@ public class PersonsControllerTest {
                         .contentType("application/json;charset=UTF-8"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                //.andExpect(MockMvcResultMatchers.jsonPath("$.person.firstName").value("John"))
                 .andReturn().getResponse().getContentAsString();
     }
 
@@ -289,8 +274,6 @@ public class PersonsControllerTest {
         person.setFirstName("John");
         person.setPhone("841-874-6512");
 
-        //List<PersonInfo> list = new ArrayList<PersonInfo>();
-
         // when
         when(personsService.getPersonsEmail(anyString())).thenReturn(any(PersonsEmail.class));
 
@@ -300,15 +283,11 @@ public class PersonsControllerTest {
                         .contentType("application/json;charset=UTF-8"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                //.andExpect(MockMvcResultMatchers.jsonPath("$.person.firstName").value("John"))
                 .andReturn().getResponse().getContentAsString();
     }
 
     @Test
     public void givenStation_whenGetAPersonMobile_then200IsReceived() throws Exception {
-
-
-        //List<PersonInfo> list = new ArrayList<PersonInfo>();
 
         // when
         when(personsService.getPersonsMobile(anyInt())).thenReturn(any(PersonsMobile.class));
@@ -319,13 +298,11 @@ public class PersonsControllerTest {
                         .contentType("application/json;charset=UTF-8"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                //.andExpect(MockMvcResultMatchers.jsonPath("$.person.firstName").value("John"))
                 .andReturn().getResponse().getContentAsString();
     }
 
     @Test
     public void givenAddress_whenGetChildAlert_then200IsReceived() throws Exception {
-
 
         List<ChildAlerts> list = new ArrayList<ChildAlerts>();
 
@@ -338,7 +315,6 @@ public class PersonsControllerTest {
                         .contentType("application/json;charset=UTF-8"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                //.andExpect(MockMvcResultMatchers.jsonPath("$.person.firstName").value("John"))
                 .andReturn().getResponse().getContentAsString();
     }
 

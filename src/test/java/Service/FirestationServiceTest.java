@@ -54,8 +54,6 @@ import static org.mockito.Mockito.verify;
 @Log4j2
 public class FirestationServiceTest {
 
-    @Autowired
-    private MockMvc mockmvc;
     private Firestations firestations;
     private SafetyAlerts safety;
     @InjectMocks
@@ -91,7 +89,6 @@ public class FirestationServiceTest {
 
         Persons person = new Persons();
 
-        //Persons person = new Persons();
         person.setPhone("000-000-000");
         person.setLastName("Boyd");
         person.setFirstName("John");
@@ -140,9 +137,6 @@ public class FirestationServiceTest {
 
         FirestationsRepository e = Mockito.mock(FirestationsRepository.class);
         Mockito.when(firestationsRepository.save(firestations)).thenReturn(firestations);
-        // when(personsRepository.save((Persons) any(Persons.class))).thenReturn(person);
-
-        //personService = new PersonsService();
         Firestations firestationAdded = firestationsService.saveFirestations(firestations);
         verify(firestationsRepository, Mockito.times(1)).save(firestations);
         Assert.assertEquals(firestationAdded, firestations);
@@ -156,12 +150,9 @@ public class FirestationServiceTest {
 
         firestations.setStation(5);
         FirestationsRepository e = Mockito.mock(FirestationsRepository.class);
-        //Mockito.when(e.save(firestations)).thenReturn(null);
         Mockito.when(firestationsRepository.save(any(Firestations.class))).thenReturn(null);
 
 
-        //when(personsRepository.save(null)).thenReturn(null);
-        //personService = new PersonsService();
         Firestations firestationAdded = firestationsService.saveFirestations(firestations);
         verify(firestationsRepository, Mockito.times(1)).save(firestations);
         Assert.assertEquals(null, firestationAdded);
@@ -178,11 +169,6 @@ public class FirestationServiceTest {
 
         FirestationsRepository e = Mockito.mock(FirestationsRepository.class);
         Mockito.when(firestationsRepository.findByIds(firestations.getAddress())).thenReturn(firestations);
-        //when(personsRepository.save((Persons) any(Persons.class))).thenReturn(0);
-
-
-        //when(personsRepository.save(null)).thenReturn(null);
-        //personService = new PersonsService();
         Firestations firestationFound = firestationsService.getFirestations(firestations.getAddress());
         verify(firestationsRepository, Mockito.times(1)).findByIds(firestations.getAddress());
         Assert.assertEquals(firestations, firestationFound);
@@ -201,17 +187,10 @@ public class FirestationServiceTest {
 
         FirestationsRepository e = Mockito.mock(FirestationsRepository.class);
         Mockito.when(firestationsRepository.findByIds(firestations.getAddress())).thenReturn(null);
-        //when(personsRepository.save((Persons) any(Persons.class))).thenReturn(0);
-
-
-        //when(personsRepository.save(null)).thenReturn(null);
-        //personService = new PersonsService();
-        Exception thrown = Assert.assertThrows(FirestationNotFoundByAddressException.class, () -> {
-            //Code under test
+        Exception thrown = Assert.assertThrows(FirestationNotFoundException.class, () -> {
             firestationsService.getFirestations(firestations.getAddress());
         });
         verify(firestationsRepository, Mockito.times(1)).findByIds(firestations.getAddress());
-        // Assert.assertEquals(null, personFound);
 
         Assert.assertEquals("Firestation not found with this address", thrown.getMessage());
 
@@ -236,11 +215,7 @@ public class FirestationServiceTest {
         list.add(firestations);
         list.add(firestations1);
         Mockito.when(firestationsRepository.findAll()).thenReturn(list);
-        //when(personsRepository.save((Persons) any(Persons.class))).thenReturn(0);
 
-
-        //when(personsRepository.save(null)).thenReturn(null);
-        //personService = new PersonsService();
         List<Firestations> listFound = firestationsService.getAllFirestations();
         verify(firestationsRepository, Mockito.times(1)).findAll();
         Assert.assertEquals(list, listFound);
@@ -284,11 +259,9 @@ public class FirestationServiceTest {
         FirestationsRepository e = Mockito.mock(FirestationsRepository.class);
         Mockito.doNothing().when(firestationsRepository).deleteByIds(firestations.getAddress());
         Mockito.when(firestationsRepository.findByIds(firestations.getAddress())).thenReturn(null);
-        Exception thrown = Assert.assertThrows(FirestationNotFoundByAddressException.class, () -> {
-            //Code under test
+        Exception thrown = Assert.assertThrows(FirestationNotFoundException.class, () -> {
             firestationsService.deleteFirestation(firestations.getAddress());
         });
-        //personService.deleteAccount(person.getFirstName(), person.getLastName());
         verify(firestationsRepository, Mockito.times(1)).findByIds(firestations.getAddress());
 
         Assert.assertEquals("Firestation not found with this address", thrown.getMessage());
@@ -306,14 +279,11 @@ public class FirestationServiceTest {
         firestations.setStation(5);
 
         FirestationsRepository e = Mockito.mock(FirestationsRepository.class);
-        //Mockito.doNothing().when(personsRepository).update(person, person.getFirstName(), person.getLastName());
         Mockito.when(firestationsRepository.findByIds(firestations.getAddress())).thenReturn(firestations);
 
         Firestations firestationsUpdated = firestationsService.updateFirestations(firestations.getAddress(), firestations);
 
         verify(firestationsRepository, Mockito.times(1)).update(firestations, firestations.getAddress());
-        //Mockito.when(personsRepository.findByIds(person.getFirstName(), person.getLastName())).thenReturn(null);
-        //Persons personDeleted = personsRepository.findByIds(person.getFirstName(), person.getLastName());
         Assert.assertEquals(firestations, firestationsUpdated);
 
 
@@ -328,17 +298,12 @@ public class FirestationServiceTest {
 
         firestations.setStation(5);
         FirestationsRepository e = Mockito.mock(FirestationsRepository.class);
-        //Mockito.doNothing().when(personsRepository).update(person, person.getFirstName(), person.getLastName());
         Mockito.when(firestationsRepository.findByIds(firestations.getAddress())).thenReturn(null);
-        //Persons personUpdated = personService.updatePerson(person, person.getFirstName(), person.getLastName());
-        Exception thrown = Assert.assertThrows(FirestationNotFoundByAddressException.class, () -> {
-            //Code under test
+        Exception thrown = Assert.assertThrows(FirestationNotFoundException.class, () -> {
             firestationsService.updateFirestations(firestations.getAddress(), firestations);
         });
 
         verify(firestationsRepository, Mockito.times(1)).findByIds(firestations.getAddress());
-        //Mockito.when(personsRepository.findByIds(person.getFirstName(), person.getLastName())).thenReturn(null);
-        //Persons personDeleted = personsRepository.findByIds(person.getFirstName(), person.getLastName());
         Assert.assertEquals("Firestation not found with this address", thrown.getMessage());
 
     }
@@ -358,7 +323,6 @@ public class FirestationServiceTest {
         station.add(safety.getFirestations().get(1).getStation());
         List<PersonInfoFireAddress> listPersonsInfoFire = new ArrayList<>();
 
-        //get age
         LocalDate curDate = LocalDate.now();
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("LL/dd/yyyy", Locale.FRANCE);
 
@@ -389,7 +353,6 @@ public class FirestationServiceTest {
         assertEquals(fireAddress.getHabitants().get(0).getAge(), fireAddressActual.getHabitants().get(0).getAge());
         assertEquals(fireAddress.getHabitants().get(1).getAge(), fireAddressActual.getHabitants().get(1).getAge());
         assertEquals(fireAddress.getHabitants().get(1).getLastName(), fireAddressActual.getHabitants().get(1).getLastName());
-        //assertEquals(fireAddress.getHabitants().get(1).getAge(), fireAddressActual.getHabitants().get(1).getAge());
 
         verify(firestationsRepository, Mockito.times(1)).getSafety();
 
@@ -398,9 +361,6 @@ public class FirestationServiceTest {
     // get person by station (successfull)
     @Test
     public void givenStation_whenGetFirestationByStation_then200IsReceived() throws Exception {
-        //medicalRecordRepository = Mockito.mock(MedicalRecordsRepository.class);
-        //firestationsService.setFirestationsRepository(firestationsRepository);
-        //firestationsService.setMedicalRecordsRepository(medicalRecordRepository);
         FireAddress fireAddress = new FireAddress();
 
         firestations.setAddress("19 street Cluver");
@@ -421,7 +381,6 @@ public class FirestationServiceTest {
 
         Persons person = new Persons();
 
-        //Persons person = new Persons();
         person.setPhone("000-000-000");
         person.setLastName("Paes");
         person.setFirstName("John");
@@ -448,7 +407,6 @@ public class FirestationServiceTest {
         LocalDate birthdate;
         List<PersonInfoFireAddress> listPersonsInfoFire = new ArrayList<>();
 
-        //get age
         LocalDate curDate = LocalDate.now();
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("LL/dd/yyyy", Locale.FRANCE);
 
@@ -500,7 +458,6 @@ public class FirestationServiceTest {
 
         Mockito.when(firestationsRepository.getSafety()).thenReturn(safety);
 
-        // initialisation
         List<Flood> expected = new ArrayList<>();
         List<String> address= new ArrayList<String>();
         List<String> medications = new ArrayList<>();
@@ -508,9 +465,7 @@ public class FirestationServiceTest {
         List<Integer> liststation = new ArrayList<>();
         liststation.add(5);
         liststation.add(0);
-        //liststation.add(5);
 
-        //preparer expected
 
         for(int i = 0; i < safety.getFirestations().size(); i++) {
             address.add(safety.getFirestations().get(i).getAddress());
@@ -532,7 +487,6 @@ public class FirestationServiceTest {
 
             expected.add(new Flood(address1, lastName, phone, age, m));
         }
-        //
 
         List<Flood> actual = firestationsService.getHearthByStations(liststation);
 

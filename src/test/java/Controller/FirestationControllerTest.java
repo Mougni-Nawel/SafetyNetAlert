@@ -81,8 +81,6 @@ public class FirestationControllerTest {
     //  add nothing when add a firestation because no data in body
     @Test
     public void givenFirestation_whenFirestationAddedWithoutData_then_404IsReceived() throws Exception {
-        //setUpPerTest();
-
 
 
         mockMvc.perform( MockMvcRequestBuilders
@@ -120,7 +118,6 @@ public class FirestationControllerTest {
                         .contentType("application/json;charset=UTF-8"))
                 .andDo(print())
                 .andExpect(status().isNotFound())
-                //.andExpect(MockMvcResultMatchers.jsonPath("$.person.firstName").value("John"))
                 .andReturn().getResponse().getContentAsString();
     }
 
@@ -143,7 +140,6 @@ public class FirestationControllerTest {
                         .contentType("application/json;charset=UTF-8"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                //.andExpect(MockMvcResultMatchers.jsonPath("$.person.firstName").value("John"))
                 .andReturn().getResponse().getContentAsString();
     }
 
@@ -155,7 +151,6 @@ public class FirestationControllerTest {
         setUpPerTest();
         // when
 
-        //Mockito.doThrow(NameNotFoundException.class).when(personsService).deleteAccount("John", "Boyd");
         Mockito.doNothing().when(firestationService).deleteFirestation("1509 Culver St");
 
         mockMvc.perform(MockMvcRequestBuilders.delete("/firestation/1509 Culver St")
@@ -172,8 +167,7 @@ public class FirestationControllerTest {
         setUpPerTest();
         // when
 
-        //Mockito.doThrow(NameNotFoundException.class).when(personsService).deleteAccount("John", "Boyd");
-        doThrow(FirestationNotFoundByAddressException.class).when(firestationService).deleteFirestation("150 Culver St");
+        doThrow(FirestationNotFoundException.class).when(firestationService).deleteFirestation("150 Culver St");
 
         mockMvc.perform(MockMvcRequestBuilders.delete("/firestation/150 Culver St")
                         .accept(MediaType.APPLICATION_JSON)
@@ -201,7 +195,6 @@ public class FirestationControllerTest {
                         .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
                 .andExpect(status().isAccepted())
-                //.andExpect(MockMvcResultMatchers.jsonPath("$.person.firstName").value("John"))
                 .andReturn().getResponse().getContentAsString();
     }
 
@@ -219,9 +212,7 @@ public class FirestationControllerTest {
 
 
         // when
-        //doThrow(NameNotFoundException.class).when(personsService).getPersons("Jon", "Paul");
-        //Mockito.when(personsService.updatePerson(person, "Jon", "Paul")).thenThrow(NameNotFoundException.class);
-        doThrow(FirestationNotFoundByAddressException.class).when(firestationService).updateFirestations(anyString(),any(Firestations.class));
+        doThrow(FirestationNotFoundException.class).when(firestationService).updateFirestations(anyString(),any(Firestations.class));
 
         String requestBody = asJsonString(firestations);
 
@@ -250,7 +241,6 @@ public class FirestationControllerTest {
                         .contentType("application/json;charset=UTF-8"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                //.andExpect(MockMvcResultMatchers.jsonPath("$.person.firstName").value("John"))
                 .andReturn().getResponse().getContentAsString();
     }
 
@@ -270,7 +260,6 @@ public class FirestationControllerTest {
                         .contentType("application/json;charset=UTF-8"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                //.andExpect(MockMvcResultMatchers.jsonPath("$.person.firstName").value("John"))
                 .andReturn().getResponse().getContentAsString();
     }
 
@@ -291,7 +280,6 @@ public class FirestationControllerTest {
                         .contentType("application/json;charset=UTF-8"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                //.andExpect(MockMvcResultMatchers.jsonPath("$.person.firstName").value("John"))
                 .andReturn().getResponse().getContentAsString();
     }
 

@@ -7,6 +7,7 @@ import SafetyNetAlert.DTO.Flood;
 import SafetyNetAlert.Model.Firestations;
 import SafetyNetAlert.Service.IFirestationService;
 import io.swagger.annotations.Api;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +26,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/firestation")
 @Api
+@Slf4j
 public class FirestationsController {
 
 	@Autowired
@@ -36,6 +38,7 @@ public class FirestationsController {
 	 */
 	@GetMapping
 	public List<Firestations> getAllFirestations(){
+		log.info("Function : getAllFirestations");
 		return firestationsService.getAllFirestations();
 	}
 
@@ -45,13 +48,10 @@ public class FirestationsController {
 	 * @return ResponseEntity ok which represents a http response with code 200.
 	 */
 	@GetMapping("/{address}")
-	public ResponseEntity<Object> getFirestations(@PathVariable("address") final String address){
-		try{
-			Firestations firestation = firestationsService.getFirestations(address);
-			return ResponseEntity.ok(firestation);
-		} catch (Exception e){
-			return ResponseEntity.notFound().build();
-		}
+	public ResponseEntity<Object> getFirestations(@PathVariable("address") final String address) throws FirestationNotFoundException {
+		log.info("Function : getFirestations");
+		Firestations firestation = firestationsService.getFirestations(address);
+		return ResponseEntity.ok(firestation);
 	}
 
 	/**
@@ -61,6 +61,7 @@ public class FirestationsController {
 	 */
 	@PostMapping()
 	public ResponseEntity<Firestations> addPerson(@RequestBody Firestations firestations) {
+		log.info("Function : addPerson");
 		Firestations firestationAdded = firestationsService.saveFirestations(firestations);
 		return new ResponseEntity<>(firestationAdded, HttpStatus.CREATED);
 }
@@ -72,13 +73,10 @@ public class FirestationsController {
 	 * @return ResponseEntity accepted which represents a http response with code 202.
 	 */
 	@PutMapping("/{address}")
-	public ResponseEntity<HttpStatus> updateFirestations(@PathVariable("address") final String address, @RequestBody Firestations firestation) {
-		try {
-			firestationsService.updateFirestations(address, firestation);
-			return new ResponseEntity<HttpStatus>(HttpStatus.ACCEPTED);
-		}catch (Exception e){
-			return new ResponseEntity<HttpStatus>(HttpStatus.NOT_FOUND);
-		}
+	public ResponseEntity<HttpStatus> updateFirestations(@PathVariable("address") final String address, @RequestBody Firestations firestation) throws FirestationNotFoundException {
+		log.info("Function : updateFirestations");
+		firestationsService.updateFirestations(address, firestation);
+		return new ResponseEntity<HttpStatus>(HttpStatus.ACCEPTED);
 	}
 
 	/**
@@ -87,13 +85,10 @@ public class FirestationsController {
 	 * @return ResponseEntity accepted which represents a http response with code 202.
 	 */
 	@DeleteMapping("/{address}")
-	public ResponseEntity<HttpStatus> deleteFirestation(@PathVariable("address") final String address) {
-		try {
-			firestationsService.deleteFirestation(address);
-			return new ResponseEntity<HttpStatus>(HttpStatus.ACCEPTED);
-		}catch (Exception e){
-			return new ResponseEntity<HttpStatus>(HttpStatus.NOT_FOUND);
-		}
+	public ResponseEntity<HttpStatus> deleteFirestation(@PathVariable("address") final String address) throws FirestationNotFoundException {
+		log.info("Function : deleteFirestation");
+		firestationsService.deleteFirestation(address);
+		return new ResponseEntity<HttpStatus>(HttpStatus.ACCEPTED);
 	}
 
 	// routes supplementaires
@@ -106,6 +101,7 @@ public class FirestationsController {
 	 */
 	@GetMapping("/fire/{address}")
 	public ResponseEntity<FireAddress> getPersonInfo(@PathVariable("address") final String address) throws AddressInParameterIsNullException {
+		log.info("Function : getPersonInfo");
 		FireAddress fireAddress = firestationsService.getPersonsFromAddress(address);
 		return ResponseEntity.ok(fireAddress);
 	}
@@ -117,7 +113,8 @@ public class FirestationsController {
 	 * @throws NameNotFoundException if the station given is not recorded with persons living near this station.
 	 */
 	@GetMapping("/stationNumber/{station}")
-	public ResponseEntity<FirestationByStation> getPersonsByStation(@PathVariable("station") final int station) throws FirestationStationNotFoundException, MedicalRecordLastnameNotFoundException, MedicalRecordFirstnameNotFoundException {
+	public ResponseEntity<FirestationByStation> getPersonsByStation(@PathVariable("station") final int station) throws FirestationStationNotFoundException, MedicalRecordsNotFoundException {
+		log.info("Function : getPersonsByStation");
 		FirestationByStation firestationByStation = firestationsService.getPersonsFromStation(station);
 		return ResponseEntity.ok(firestationByStation);
 	}
@@ -129,7 +126,8 @@ public class FirestationsController {
 	 * @throws NameNotFoundException if the list of stations given is not recorded with persons living in this near these stations.
 	 */
 	@GetMapping("/flood/{list_of_stations}")
-	public ResponseEntity<List<Flood>> getHearthByStations(@PathVariable("list_of_stations") final List<Integer> stationsList) throws FirestationListStationNotFoundException {
+	public ResponseEntity<List<Flood>> getHearthByStations(@PathVariable("list_of_stations") final List<Integer> stationsList) throws FirestationNotFoundException {
+		log.info("Function : getHearthByStations");
 		List<Flood> flood = firestationsService.getHearthByStations(stationsList);
 		return ResponseEntity.ok(flood);
 	}

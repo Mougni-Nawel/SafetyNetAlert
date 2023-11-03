@@ -10,6 +10,7 @@ import SafetyNetAlert.DTO.PersonsMobile;
 import SafetyNetAlert.Model.Persons;
 import SafetyNetAlert.Service.IPersonService;
 import io.swagger.annotations.Api;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -36,6 +37,7 @@ import javax.naming.NameNotFoundException;
 @RestController
 @RequestMapping
 @Api(value = "hello", description = "Sample hello world application")
+@Slf4j
 public class PersonsController {
 
 	@Autowired
@@ -45,10 +47,9 @@ public class PersonsController {
 	 * this method get all accounts from persons service.
 	 * @return list of persons.
 	 */
-	// penser à ajouter les logs (info, error, debug (si besoin))
 	@GetMapping("/person")
 	public List<Persons> getAllAccount() throws PersonsNotFoundException {
-		//log4j
+		log.info("Function : getAllAccount");
 		return personsService.getAllPersons();
 	}
 
@@ -60,14 +61,10 @@ public class PersonsController {
 	 * @throws PersonsNotFoundException if the firstname and lastname given is not recorded with persons having this name.
 	 */
 	@GetMapping("/person/{firstName}/{lastName}")
-	public ResponseEntity<Object> getPerson(@PathVariable("firstName") final String firstName, @PathVariable("lastName") final String lastName) throws PersonsNotFoundException, PersonLastnameNotFoundException, PersonFirstnameNotFoundException {
-		//try{
-			Persons person = personsService.getPersons(firstName,lastName);
-			return ResponseEntity.ok(person);
-		//}catch (Exception e){
-		//	System.out.println(e.getMessage());
-		//	return new ResponseEntity<>( e.getMessage(), HttpStatus.NOT_FOUND);
-		//}
+	public ResponseEntity<Persons> getPerson(@PathVariable("firstName") final String firstName, @PathVariable("lastName") final String lastName) throws PersonsNotFoundException {
+		log.info("Function : getPerson");
+		Persons person = personsService.getPersons(firstName,lastName);
+		return ResponseEntity.ok(person);
 	}
 
 	/**
@@ -77,7 +74,7 @@ public class PersonsController {
 	 */
 	@PostMapping(value = "/person", consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Persons> addPerson(@RequestBody Persons person) {
-
+		log.info("Function : addPerson");
 		Persons personAdded = personsService.savePerson(person);
 		return new ResponseEntity<>(personAdded, HttpStatus.CREATED);
 	}
@@ -91,7 +88,8 @@ public class PersonsController {
 	 * @throws PersonsNotFoundException if the firstname and lastname given is not recorded with persons having this name.
 	 */
 	@PutMapping(value = "/person/{firstName}/{lastName}", consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Persons> updatePersons(@PathVariable("firstName") final String firstName, @PathVariable("lastName") final String lastName, @RequestBody Persons person) throws PersonsNotFoundException, PersonLastnameNotFoundException, PersonFirstnameNotFoundException {
+	public ResponseEntity<Persons> updatePersons(@PathVariable("firstName") final String firstName, @PathVariable("lastName") final String lastName, @RequestBody Persons person) throws PersonsNotFoundException {
+		log.info("Function : updatePersons");
 		Persons personUpdated = personsService.updatePerson(person,firstName, lastName);
 		return new ResponseEntity<>(personUpdated, HttpStatus.ACCEPTED);
 	}
@@ -104,13 +102,14 @@ public class PersonsController {
 	 * @throws PersonsNotFoundException if the firstname and lastname given is not recorded with persons having this name.
 	 */
 	@DeleteMapping("/person/{firstName}/{lastName}")
-	public ResponseEntity<HttpStatus> deletePerson(@PathVariable("firstName") final String firstName, @PathVariable("lastName") final String lastName) throws PersonsNotFoundException, PersonLastnameNotFoundException, PersonFirstnameNotFoundException {
-			personsService.deleteAccount(firstName, lastName);
-			return new ResponseEntity<HttpStatus>(HttpStatus.ACCEPTED);
+	public ResponseEntity<HttpStatus> deletePerson(@PathVariable("firstName") final String firstName, @PathVariable("lastName") final String lastName) throws PersonsNotFoundException {
+		log.info("Function : deletePerson");
+		personsService.deleteAccount(firstName, lastName);
+		return new ResponseEntity<>(HttpStatus.ACCEPTED);
 
 	}
 
-	// ajouter les routes supplementaires qui concerne la classe Persons
+	// routes supplementaires
 
 	/**
 	 * this method get a person from firstname and lastname from the path /personInfo/{firstName}/{lastName}
@@ -120,7 +119,8 @@ public class PersonsController {
 	 * @throws PersonsNotFoundException if the firstname and lastname given is not recorded with person having this name.
 	 */
 	@GetMapping("/personInfo/{firstName}/{lastName}")
-	public ResponseEntity<List<PersonInfo>> getPersonInfo(@PathVariable("firstName") final String firstName, @PathVariable("lastName") final String lastName) throws PersonsNotFoundException, MedicalRecordLastnameNotFoundException, PersonInParameterIsNullException, MedicalRecordFirstnameNotFoundException, MedicalRecordsNotFoundException {
+	public ResponseEntity<List<PersonInfo>> getPersonInfo(@PathVariable("firstName") final String firstName, @PathVariable("lastName") final String lastName) throws PersonsNotFoundException, PersonInParameterIsNullException, MedicalRecordsNotFoundException {
+		log.info("Function : getPersonInfo");
 		List<PersonInfo> persons = personsService.getPersonsInfo(firstName,lastName);
 		return ResponseEntity.ok(persons);
 	}
@@ -133,6 +133,7 @@ public class PersonsController {
 	 */
 	@GetMapping("/communityEmail/{city}")
 	public ResponseEntity<PersonsEmail> getPersonEmails(@PathVariable("city") final String city) throws PersonsNotFoundException {
+		log.info("Function : getPersonEmails");
 		PersonsEmail persons = personsService.getPersonsEmail(city);
 		return ResponseEntity.ok(persons);
 	}
@@ -145,6 +146,7 @@ public class PersonsController {
 	 */
 	@GetMapping("/phoneAlert/{station}")
 	public ResponseEntity<PersonsMobile> getPersonsMobile(@PathVariable("station") final int station) throws NameNotFoundException, PersonsNotFoundException, FirestationNotFoundException {
+		log.info("Function : getPersonsMobile");
 		PersonsMobile persons = personsService.getPersonsMobile(station);
 		return ResponseEntity.ok(persons);
 	}
@@ -157,7 +159,8 @@ public class PersonsController {
 	 * @throws MedicalRecordsNotFoundException if the medical record is not found.
 	 */
 	@GetMapping("/childAlert/{address}")
-	public ResponseEntity<List<ChildAlerts>> getChild(@PathVariable("address") final String address) throws PersonsNotFoundException, MedicalRecordsNotFoundException, AddressInParameterIsNullException, MedicalRecordInParameterIsNullException, ListIsNullException {
+	public ResponseEntity<List<ChildAlerts>> getChild(@PathVariable("address") final String address) throws PersonsNotFoundException, MedicalRecordsNotFoundException, AddressInParameterIsNullException, ListIsNullException {
+		log.info("Function : getChild");
 		List<ChildAlerts> childAlerts = personsService.getChildByAddress(address);
 		return ResponseEntity.ok(childAlerts);
 	}

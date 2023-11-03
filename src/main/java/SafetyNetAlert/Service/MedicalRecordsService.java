@@ -1,14 +1,12 @@
 package SafetyNetAlert.Service;
 
 import java.util.List;
-
-
 import SafetyNetAlert.Model.MedicalRecords;
 import SafetyNetAlert.Repository.MedicalRecordsRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import SafetyNetAlert.Controller.Exception.*;
-
 import javax.naming.NameNotFoundException;
 
 /**
@@ -17,6 +15,7 @@ import javax.naming.NameNotFoundException;
  *
  */
 @Service
+@Slf4j
 public class MedicalRecordsService implements IMedicalRecordService{
 
 	@Autowired(required = false)
@@ -27,6 +26,7 @@ public class MedicalRecordsService implements IMedicalRecordService{
 	 * @return all the medical records registered.
 	 */
 	public List<MedicalRecords> getAllMedicalRecords(){
+		log.info("Function : getAllMedicalRecords");
 		return medicalRecordsRepository.findAll();
 	}
 
@@ -36,8 +36,8 @@ public class MedicalRecordsService implements IMedicalRecordService{
 	 * @return medicalRecordAdded that reprensents the medical record saved.
 	 */
 	public MedicalRecords saveMedicalRecords(MedicalRecords medicalRecords) {
+		log.info("Function : saveMedicalRecords");
 		MedicalRecords medicalRecordAdded = medicalRecordsRepository.save(medicalRecords);
-		//return medicalData;
 		return medicalRecordAdded;
 	}
 
@@ -48,7 +48,8 @@ public class MedicalRecordsService implements IMedicalRecordService{
 	 * @return medicalRecord that reprensents the medical record found.
 	 * @throws MedicalRecordsNotFoundException if there is no medical record found with this name.
 	 */
-	public MedicalRecords getMedicalRecords(final String firstName, final String lastName) throws MedicalRecordLastnameNotFoundException, MedicalRecordFirstnameNotFoundException, MedicalRecordsNotFoundException {
+	public MedicalRecords getMedicalRecords(final String firstName, final String lastName) throws MedicalRecordsNotFoundException {
+		log.info("Function : getMedicalRecords");
 		MedicalRecords medicalRecord = medicalRecordsRepository.findByIds(firstName, lastName);
 		if(medicalRecord != null){
 			return medicalRecord;
@@ -65,17 +66,18 @@ public class MedicalRecordsService implements IMedicalRecordService{
 	 * @return currentMedicalRecords that reprensents the medical record updated.
 	 * @throws MedicalRecordsNotFoundException if there is no medical record found with this name.
 	 */
-	public MedicalRecords updateMedicalRecords(MedicalRecords medicalRecords, String firstName, String lastName) throws NameNotFoundException, MedicalRecordLastnameNotFoundException, MedicalRecordFirstnameNotFoundException, MedicalRecordsNotFoundException {
+	public MedicalRecords updateMedicalRecords(MedicalRecords medicalRecords, String firstName, String lastName) throws MedicalRecordsNotFoundException {
+		log.info("Function : updateMedicalRecords");
 		MedicalRecords e = getMedicalRecords(firstName, lastName);
 		MedicalRecords currentMedicalRecords = null;
 		if(e != null){
 			currentMedicalRecords = e;
 
-			List medications = medicalRecords.getMedications();
+			List<String> medications = medicalRecords.getMedications();
 			if (medications != null) {
 				currentMedicalRecords.setMedications(medications);
 			}
-			List allergies = medicalRecords.getAllergies();
+			List<String> allergies = medicalRecords.getAllergies();
 			if (allergies != null) {
 				medicalRecords.setAllergies(allergies);
 			}
@@ -98,9 +100,9 @@ public class MedicalRecordsService implements IMedicalRecordService{
 	 * @param lastName represents the lastname registered on the medical record that has to be removed.
 	 * @throws MedicalRecordsNotFoundException if there is no medicalRecord found with this name.
 	 */
-	public void deleteAccount(String firstName, String lastName) throws NameNotFoundException, MedicalRecordLastnameNotFoundException, MedicalRecordFirstnameNotFoundException, MedicalRecordsNotFoundException {
+	public void deleteAccount(String firstName, String lastName) throws NameNotFoundException, MedicalRecordsNotFoundException {
+		log.info("Function : deleteAccount");
 		MedicalRecords medicalRecord = medicalRecordsRepository.findByIds(firstName, lastName);
-		//System.out.println("Persons: "+person.getLastName());
 		if(medicalRecord != null){
 			medicalRecordsRepository.deleteByIds(firstName, lastName);
 		}else{
@@ -108,7 +110,4 @@ public class MedicalRecordsService implements IMedicalRecordService{
 		}
 	}
 
-//	public Optional<MedicalR(ecords> getMedicalRecords(final String firstName, final String lastName) {
-//        return medicalRecordsRepository.findByIds(firstName, lastName);
-//    }
 }

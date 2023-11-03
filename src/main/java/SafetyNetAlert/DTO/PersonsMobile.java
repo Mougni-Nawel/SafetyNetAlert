@@ -1,7 +1,6 @@
 package SafetyNetAlert.DTO;
 
 import Config.Generated;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,13 +12,13 @@ import java.util.List;
 @Generated
 public class PersonsMobile {
 
-    private List mobile = new ArrayList();
+    private List<String> mobile = new ArrayList<>();
 
-    public List getMobile() {
+    public List<String> getMobile() {
         return mobile;
     }
 
-    public void setMobile(List mobile) {
+    public void setMobile(List<String> mobile) {
         this.mobile = mobile;
     }
 }

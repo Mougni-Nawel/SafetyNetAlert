@@ -6,7 +6,6 @@ import SafetyNetAlert.DTO.PersonInfo;
 import SafetyNetAlert.DTO.PersonsEmail;
 import SafetyNetAlert.DTO.PersonsMobile;
 import SafetyNetAlert.Model.Persons;
-
 import javax.naming.NameNotFoundException;
 import java.util.List;
 
@@ -19,13 +18,13 @@ public interface IPersonService {
 
     public List<Persons> getAllPersons() throws PersonsNotFoundException;
     public Persons savePerson(Persons person);
-    public <Persons> Persons getPersons(final String firstName, final String lastName) throws PersonsNotFoundException, PersonFirstnameNotFoundException, PersonLastnameNotFoundException;
-    public void deleteAccount(String firstName, String lastName) throws PersonsNotFoundException, PersonFirstnameNotFoundException, PersonLastnameNotFoundException;
-    public Persons updatePerson(Persons person, String firstName, String lastName) throws PersonsNotFoundException, PersonFirstnameNotFoundException, PersonLastnameNotFoundException;
-    public List<PersonInfo> getPersonsInfo(String firstName, String lastName) throws PersonsNotFoundException, MedicalRecordLastnameNotFoundException, MedicalRecordFirstnameNotFoundException, PersonInParameterIsNullException, MedicalRecordsNotFoundException;
+    public Persons getPersons(final String firstName, final String lastName) throws PersonsNotFoundException;
+    public void deleteAccount(String firstName, String lastName) throws PersonsNotFoundException;
+    public Persons updatePerson(Persons person, String firstName, String lastName) throws PersonsNotFoundException;
+    public List<PersonInfo> getPersonsInfo(String firstName, String lastName) throws PersonsNotFoundException, MedicalRecordsNotFoundException, PersonInParameterIsNullException;
     public PersonsEmail getPersonsEmail(String city) throws PersonsNotFoundException;
     public PersonsMobile getPersonsMobile(int station) throws NameNotFoundException, FirestationNotFoundException, PersonsNotFoundException;
-    public List<ChildAlerts> getChildByAddress(String address) throws MedicalRecordsNotFoundException, PersonsNotFoundException, MedicalRecordInParameterIsNullException, ListIsNullException, AddressInParameterIsNullException;
+    public List<ChildAlerts> getChildByAddress(String address) throws MedicalRecordsNotFoundException, PersonsNotFoundException, ListIsNullException, AddressInParameterIsNullException;
 
 
 }

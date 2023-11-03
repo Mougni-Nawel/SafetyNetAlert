@@ -36,8 +36,6 @@ import static org.mockito.Mockito.verify;
 @ExtendWith(SpringExtension.class)
 public class MedicalRecordsServiceTest {
 
-    @Autowired
-    private MockMvc mockmvc;
     private MedicalRecords medicalRecords;
     @InjectMocks
     private MedicalRecordsService medicalRecordsService;
@@ -65,9 +63,7 @@ public class MedicalRecordsServiceTest {
 
         MedicalRecordsRepository e = Mockito.mock(MedicalRecordsRepository.class);
         Mockito.when(medicalRecordsRepository.save(medicalRecords)).thenReturn(medicalRecords);
-        // when(personsRepository.save((Persons) any(Persons.class))).thenReturn(person);
 
-        //personService = new PersonsService();
         MedicalRecords medicalRecordAdded = medicalRecordsService.saveMedicalRecords(medicalRecords);
         verify(medicalRecordsRepository, Mockito.times(1)).save(medicalRecords);
         Assert.assertEquals(medicalRecordAdded, medicalRecords);
@@ -82,12 +78,9 @@ public class MedicalRecordsServiceTest {
         medicalRecords.setFirstName("Jon");
 
         MedicalRecordsRepository e = Mockito.mock(MedicalRecordsRepository.class);
-        //Mockito.when(e.save(firestations)).thenReturn(null);
         Mockito.when(medicalRecordsRepository.save(any(MedicalRecords.class))).thenReturn(null);
 
 
-        //when(personsRepository.save(null)).thenReturn(null);
-        //personService = new PersonsService();
         MedicalRecords medicalRecordAdded = medicalRecordsService.saveMedicalRecords(medicalRecords);
         verify(medicalRecordsRepository, Mockito.times(1)).save(medicalRecords);
         Assert.assertEquals(null, medicalRecordAdded);
@@ -113,11 +106,7 @@ public class MedicalRecordsServiceTest {
         list.add(medicalRecords);
         list.add(medicalRecords1);
         Mockito.when(medicalRecordsRepository.findAll()).thenReturn(list);
-        //when(personsRepository.save((Persons) any(Persons.class))).thenReturn(0);
 
-
-        //when(personsRepository.save(null)).thenReturn(null);
-        //personService = new PersonsService();
         List<MedicalRecords> listFound = medicalRecordsService.getAllMedicalRecords();
         verify(medicalRecordsRepository, Mockito.times(1)).findAll();
         Assert.assertEquals(listFound, list);
@@ -139,11 +128,7 @@ public class MedicalRecordsServiceTest {
 
         MedicalRecordsRepository e = Mockito.mock(MedicalRecordsRepository.class);
         Mockito.when(medicalRecordsRepository.findByIds(medicalRecords.getFirstName(), medicalRecords.getLastName())).thenReturn(medicalRecords);
-        //when(personsRepository.save((Persons) any(Persons.class))).thenReturn(0);
 
-
-        //when(personsRepository.save(null)).thenReturn(null);
-        //personService = new PersonsService();
         MedicalRecords medicalRecordsFound = medicalRecordsService.getMedicalRecords(medicalRecords.getFirstName(), medicalRecords.getLastName());
         verify(medicalRecordsRepository, Mockito.times(1)).findByIds(medicalRecords.getFirstName(), medicalRecords.getLastName());
         Assert.assertEquals(medicalRecords, medicalRecordsFound);
@@ -162,19 +147,11 @@ public class MedicalRecordsServiceTest {
 
         MedicalRecordsRepository e = Mockito.mock(MedicalRecordsRepository.class);
         Mockito.when(medicalRecordsRepository.findByIds(medicalRecords.getFirstName(), medicalRecords.getLastName())).thenReturn(null);
-        //when(personsRepository.save((Persons) any(Persons.class))).thenReturn(0);
 
-
-
-        //when(personsRepository.save(null)).thenReturn(null);
-        //personService = new PersonsService();
         Exception thrown = Assert.assertThrows(MedicalRecordsNotFoundException.class, () -> {
-            //Code under test
             medicalRecordsService.getMedicalRecords(medicalRecords.getFirstName(), medicalRecords.getLastName());
         });
         verify(medicalRecordsRepository, Mockito.times(1)).findByIds(medicalRecords.getFirstName(), medicalRecords.getLastName());
-        // Assert.assertEquals(null, personFound);
-
         Assert.assertEquals("MedicalRecords not found with this name", thrown.getMessage());
 
     }
@@ -216,10 +193,8 @@ public class MedicalRecordsServiceTest {
         Mockito.doNothing().when(medicalRecordsRepository).deleteByIds(medicalRecords.getFirstName(), medicalRecords.getLastName());
         Mockito.when(medicalRecordsRepository.findByIds(medicalRecords.getFirstName(), medicalRecords.getLastName())).thenReturn(null);
         Exception thrown = Assert.assertThrows(MedicalRecordsNotFoundException.class, () -> {
-            //Code under test
             medicalRecordsService.deleteAccount(medicalRecords.getFirstName(), medicalRecords.getLastName());
         });
-        //personService.deleteAccount(person.getFirstName(), person.getLastName());
         verify(medicalRecordsRepository, Mockito.times(1)).findByIds(medicalRecords.getFirstName(), medicalRecords.getLastName());
 
         Assert.assertEquals("MedicalRecords not found with this name", thrown.getMessage());
@@ -237,14 +212,11 @@ public class MedicalRecordsServiceTest {
         medicalRecords.setFirstName("John");
 
         MedicalRecordsRepository e = Mockito.mock(MedicalRecordsRepository.class);
-        //Mockito.doNothing().when(personsRepository).update(person, person.getFirstName(), person.getLastName());
         Mockito.when(medicalRecordsRepository.findByIds(medicalRecords.getFirstName(), medicalRecords.getLastName())).thenReturn(medicalRecords);
 
         MedicalRecords medicalRecordsUpdated = medicalRecordsService.updateMedicalRecords(medicalRecords, medicalRecords.getFirstName(), medicalRecords.getLastName());
 
         verify(medicalRecordsRepository, Mockito.times(1)).update(medicalRecords, medicalRecords.getFirstName(), medicalRecords.getLastName());
-        //Mockito.when(personsRepository.findByIds(person.getFirstName(), person.getLastName())).thenReturn(null);
-        //Persons personDeleted = personsRepository.findByIds(person.getFirstName(), person.getLastName());
         Assert.assertEquals(medicalRecords, medicalRecordsUpdated);
 
 
@@ -260,17 +232,12 @@ public class MedicalRecordsServiceTest {
         medicalRecords.setFirstName("Jon");
 
         MedicalRecordsRepository e = Mockito.mock(MedicalRecordsRepository.class);
-        //Mockito.doNothing().when(personsRepository).update(person, person.getFirstName(), person.getLastName());
         Mockito.when(medicalRecordsRepository.findByIds(medicalRecords.getFirstName(), medicalRecords.getLastName())).thenReturn(null);
-        //Persons personUpdated = personService.updatePerson(person, person.getFirstName(), person.getLastName());
         Exception thrown = Assert.assertThrows(MedicalRecordsNotFoundException.class, () -> {
-            //Code under test
             medicalRecordsService.updateMedicalRecords(medicalRecords, medicalRecords.getFirstName(), medicalRecords.getLastName());
         });
 
         verify(medicalRecordsRepository, Mockito.times(1)).findByIds(medicalRecords.getFirstName(), medicalRecords.getLastName());
-        //Mockito.when(personsRepository.findByIds(person.getFirstName(), person.getLastName())).thenReturn(null);
-        //Persons personDeleted = personsRepository.findByIds(person.getFirstName(), person.getLastName());
         Assert.assertEquals("MedicalRecords not found with this name", thrown.getMessage());
 
     }

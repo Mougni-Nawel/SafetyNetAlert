@@ -14,11 +14,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public abstract class LocalData {
 	ObjectMapper mapper = new ObjectMapper();
 	public <T> T read(File file, T object) throws FileNotFoundException {
-		
-
-		//JSON file to Java object
-//		String fileName = "D:\\Mougni\\Documents\\BAC+3 JAVA\\projets\\P5\\safety3\\src\\main\\resources";
-		
 
 		InputStream inputStream = new FileInputStream(file);
 
@@ -40,20 +35,10 @@ public abstract class LocalData {
 			}
 		}
 
-//		return localData;
-		
 		System.out.println("hello: "+localData);
 		return localData;
 	}
-	
-	public <T> T write(File file, T object) throws IOException {
-		
-		// charger l'objet des données a cette dans le service pour ensuite apperler cette fonction et 
-		// mettre cette classe en parametre
-		mapper.writeValue(file, object);
-		return read(file, object);
-	}
-	
+
 	
 	
 }

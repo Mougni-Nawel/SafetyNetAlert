@@ -1,8 +1,6 @@
 package SafetyNetAlert.Repository;
 
 import java.util.List;
-import java.util.Optional;
-
 import Config.Generated;
 import SafetyNetAlert.Controller.Exception.*;
 import SafetyNetAlert.Model.MedicalRecords;
@@ -61,19 +59,18 @@ public class MedicalRecordsRepository implements IRepository{
 	 * @param lastName represents the lastName of the medical record that has to be found.
 	 * @return p that represents the medical record found.
 	 */
-	//@Override
-	public <MedicalRecords> MedicalRecords findByIds(String firstName, String lastName) throws MedicalRecordFirstnameNotFoundException, MedicalRecordLastnameNotFoundException {
+	public MedicalRecords findByIds(String firstName, String lastName) throws MedicalRecordsNotFoundException {
 
 		SafetyAlerts safetyAlerts = getSafety();
 		// TODO Auto-generated method stub
 		MedicalRecords p = null;
 		for(SafetyNetAlert.Model.MedicalRecords medicalRecord : safetyAlerts.getMedicalrecords()){
 			if(medicalRecord.getFirstName().contains(firstName) && medicalRecord.getLastName().contains(lastName)){
-				p = (MedicalRecords) medicalRecord;
+				p = medicalRecord;
 				if(!medicalRecord.getFirstName().contains(firstName)){
-					throw new MedicalRecordFirstnameNotFoundException("MedicalRecords not found with this firstname");
+					throw new MedicalRecordsNotFoundException("MedicalRecords not found with this firstname");
 				}else if(!medicalRecord.getLastName().contains(lastName)){
-					throw new MedicalRecordLastnameNotFoundException("MedicalRecords not found with this lastname");
+					throw new MedicalRecordsNotFoundException("MedicalRecords not found with this lastname");
 				}
 			}
 		}
@@ -85,8 +82,7 @@ public class MedicalRecordsRepository implements IRepository{
 	 * @param firstName represents the firstname of the medical record that has to be removed.
 	 * @param lastName represents the lastName of the medical record that has to be removed.
 	 */
-	//@Override
-	public <T> void deleteByIds(String firstName, String lastName) throws MedicalRecordLastnameNotFoundException, MedicalRecordFirstnameNotFoundException {
+	public void deleteByIds(String firstName, String lastName) throws MedicalRecordsNotFoundException {
 		// TODO Auto-generated method stub
 		MedicalRecords medicalRecords = findByIds(firstName, lastName);
 		if(medicalRecords != null){
@@ -101,7 +97,7 @@ public class MedicalRecordsRepository implements IRepository{
 	 * @param lastName represents the lastName of the medical record that has to be updated.
 	 * @param medicalRecords represents the new medical record that has to replace the old one.
 	 */
-	public void update(MedicalRecords medicalRecords, String firstName, String lastName) throws MedicalRecordLastnameNotFoundException, MedicalRecordFirstnameNotFoundException {
+	public void update(MedicalRecords medicalRecords, String firstName, String lastName) throws MedicalRecordsNotFoundException {
 		MedicalRecords medicalRecordsFound = findByIds(firstName, lastName);
 		if(medicalRecordsFound != null){
 			int index = AbstractRepository.safety.getMedicalrecords().indexOf(medicalRecordsFound);

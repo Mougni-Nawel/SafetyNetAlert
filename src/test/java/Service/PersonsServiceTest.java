@@ -51,8 +51,6 @@ import static org.mockito.Mockito.*;
 @ExtendWith(SpringExtension.class)
 public class PersonsServiceTest {
 
-    @Autowired
-    private MockMvc mockmvc;
     private Persons person;
     private Persons person2;
     private SafetyAlerts safety;
@@ -62,10 +60,7 @@ public class PersonsServiceTest {
 
     @MockBean
     public PersonsRepository personsRepository;
-    @MockBean
-    private MedicalRecordsRepository medicalRecordsRepository;
-    @MockBean
-    private MedicalRecordsService medicalRecordsService;
+
 
 
     @BeforeEach
@@ -74,7 +69,6 @@ public class PersonsServiceTest {
         person = new Persons();
 
         safety = new SafetyAlerts();
-        //Persons person = new Persons();
         person.setPhone("000-000-000");
         person.setLastName("Boyd");
         person.setFirstName("John");
@@ -111,9 +105,6 @@ public class PersonsServiceTest {
         person.setPhone("841-874-0000");
         PersonsRepository e = Mockito.mock(PersonsRepository.class);
         Mockito.when(personsRepository.save(person)).thenReturn(person);
-       // when(personsRepository.save((Persons) any(Persons.class))).thenReturn(person);
-
-        //personService = new PersonsService();
         Persons personAdded = personService.savePerson(person);
         verify(personsRepository, Mockito.times(1)).save(person);
         Assert.assertEquals(personAdded, person);
@@ -132,11 +123,8 @@ public class PersonsServiceTest {
         person.setPhone("841-874-0000");
         PersonsRepository e = Mockito.mock(PersonsRepository.class);
         Mockito.when(personsRepository.save(person)).thenReturn(null);
-        //when(personsRepository.save((Persons) any(Persons.class))).thenReturn(0);
 
 
-       //when(personsRepository.save(null)).thenReturn(null);
-        //personService = new PersonsService();
         Persons personAdded = personService.savePerson(person);
         verify(personsRepository, Mockito.times(1)).save(person);
         Assert.assertEquals(null, personAdded);
@@ -150,11 +138,8 @@ public class PersonsServiceTest {
 
         PersonsRepository e = Mockito.mock(PersonsRepository.class);
         Mockito.when(personsRepository.findByIds(person.getFirstName(), person.getLastName())).thenReturn(person);
-        //when(personsRepository.save((Persons) any(Persons.class))).thenReturn(0);
 
 
-        //when(personsRepository.save(null)).thenReturn(null);
-        //personService = new PersonsService();
         Persons personFound = personService.getPersons(person.getFirstName(), person.getLastName());
         verify(personsRepository, Mockito.times(1)).findByIds(person.getFirstName(), person.getLastName());
         Assert.assertEquals(person, personFound);
@@ -166,8 +151,6 @@ public class PersonsServiceTest {
     @Test
     public void givenPerson_whenGetAPerson_then404IsReceived() throws Exception {
         // given
-        //safety.setPersons(new ArrayList<>());
-
 
         setUpPerTest();
         Mockito.when(personsRepository.getSafety()).thenReturn(safety);
@@ -181,17 +164,12 @@ public class PersonsServiceTest {
 
         PersonsRepository e = Mockito.mock(PersonsRepository.class);
         Mockito.when(personsRepository.findByIds(person.getFirstName(), person.getLastName())).thenReturn(null);
-        //when(personsRepository.save((Persons) any(Persons.class))).thenReturn(0);
 
 
-        //when(personsRepository.save(null)).thenReturn(null);
-        //personService = new PersonsService();
-        Exception thrown = Assert.assertThrows(PersonFirstnameNotFoundException.class, () -> {
-            //Code under test
+        Exception thrown = Assert.assertThrows(PersonsNotFoundException.class, () -> {
             personService.getPersons(person.getFirstName(), person.getLastName());
         });
         verify(personsRepository, Mockito.times(1)).findByIds(person.getFirstName(), person.getLastName());
-       // Assert.assertEquals(null, personFound);
 
         Assert.assertEquals("L'utilisateur n'est pas trouvé avec ce firstname", thrown.getMessage());
 
@@ -224,11 +202,7 @@ public class PersonsServiceTest {
         list.add(person);
         list.add(person1);
         Mockito.when(personsRepository.findAll()).thenReturn(list);
-        //when(personsRepository.save((Persons) any(Persons.class))).thenReturn(0);
 
-
-        //when(personsRepository.save(null)).thenReturn(null);
-        //personService = new PersonsService();
         List<Persons> listFound = personService.getAllPersons();
         verify(personsRepository, Mockito.times(1)).findAll();
         Assert.assertEquals(list, listFound);
@@ -284,11 +258,9 @@ public class PersonsServiceTest {
         PersonsRepository e = Mockito.mock(PersonsRepository.class);
         Mockito.doNothing().when(personsRepository).deleteByIds(person.getFirstName(), person.getLastName());
         Mockito.when(personsRepository.findByIds(person.getFirstName(), person.getLastName())).thenReturn(null);
-        Exception thrown = Assert.assertThrows(PersonFirstnameNotFoundException.class, () -> {
-            //Code under test
+        Exception thrown = Assert.assertThrows(PersonsNotFoundException.class, () -> {
             personService.deleteAccount(person.getFirstName(), person.getLastName());
         });
-        //personService.deleteAccount(person.getFirstName(), person.getLastName());
         verify(personsRepository, Mockito.times(1)).findByIds(person.getFirstName(), person.getLastName());
 
         Assert.assertEquals("L'utilisateur à supprimé n'est pas trouvé avec ce firstname", thrown.getMessage());
@@ -314,14 +286,11 @@ public class PersonsServiceTest {
         safety.getPersons().add(person);
 
         PersonsRepository e = Mockito.mock(PersonsRepository.class);
-        //Mockito.doNothing().when(personsRepository).update(person, person.getFirstName(), person.getLastName());
         Mockito.when(personsRepository.findByIds(person.getFirstName(), person.getLastName())).thenReturn(person);
 
         Persons personUpdated = personService.updatePerson(person, person.getFirstName(), person.getLastName());
 
         verify(personsRepository, Mockito.times(1)).update(person, person.getFirstName(), person.getLastName());
-        //Mockito.when(personsRepository.findByIds(person.getFirstName(), person.getLastName())).thenReturn(null);
-        //Persons personDeleted = personsRepository.findByIds(person.getFirstName(), person.getLastName());
         Assert.assertEquals(person, personUpdated);
 
 
@@ -345,18 +314,13 @@ public class PersonsServiceTest {
         safety.getPersons().add(person);
 
         PersonsRepository e = Mockito.mock(PersonsRepository.class);
-        //Mockito.doNothing().when(personsRepository).update(person, person.getFirstName(), person.getLastName());
         Mockito.when(personsRepository.findByIds(person.getFirstName(), person.getLastName())).thenReturn(null);
 
-        //Persons personUpdated = personService.updatePerson(person, person.getFirstName(), person.getLastName());
-        Exception thrown = Assert.assertThrows(PersonFirstnameNotFoundException.class, () -> {
-            //Code under test
+        Exception thrown = Assert.assertThrows(PersonsNotFoundException.class, () -> {
             personService.updatePerson(person, person.getFirstName(), person.getLastName());
         });
 
         verify(personsRepository, Mockito.times(1)).findByIds(person.getFirstName(), person.getLastName());
-        //Mockito.when(personsRepository.findByIds(person.getFirstName(), person.getLastName())).thenReturn(null);
-        //Persons personDeleted = personsRepository.findByIds(person.getFirstName(), person.getLastName());
         Assert.assertEquals("L'utilisateur n'est pas trouvé avec ce firstname", thrown.getMessage());
 
     }
@@ -404,7 +368,6 @@ public class PersonsServiceTest {
         listPersonInfo.add(personInfo2);
 
         Mockito.when(personsRepository.findByIds(anyString(), anyString())).thenReturn(person);
-        //when(personsRepository.save((Persons) any(Persons.class))).thenReturn(0);
         Mockito.when(personsRepository.getSafety()).thenReturn(safety);
         Mockito.when(personsRepository.findPersonsInfo(any(Persons.class))).thenReturn(medicalRecords);
 
@@ -422,7 +385,7 @@ public class PersonsServiceTest {
     public void givenCity_whenGetPersonsEmail_then200IsReceived() throws Exception {
         personService.setPersonsRepository(personsRepository);
 
-        List listEmail = new ArrayList();
+        List<String> listEmail = new ArrayList<>();
         PersonsEmail emails = new PersonsEmail();
 
 
@@ -447,7 +410,7 @@ public class PersonsServiceTest {
         personService.setPersonsRepository(personsRepository);
 
         PersonsMobile mobile = new PersonsMobile();
-        List phone = new ArrayList();
+        List<String> phone = new ArrayList<>();
         Firestations firestations = new Firestations();
         firestations.setAddress("15 street Cluver");
 
@@ -475,7 +438,7 @@ public class PersonsServiceTest {
         personService.setPersonsRepository(personsRepository);
 
         List<Persons> membres = new ArrayList<>();
-        List<ChildAlerts> childList = new ArrayList();
+        List<ChildAlerts> childList = new ArrayList<>();
 
         MedicalRecords medicalRecords = new MedicalRecords();
 
@@ -513,8 +476,6 @@ public class PersonsServiceTest {
         birthdate = LocalDate.parse(medicalRecords3.getBirthdate(), dtf);
         period = Period.between(birthdate, curDate);
         System.out.println("Period : "+period.getYears());
-//        childList.add(new ChildAlerts(safety.getPersons().get(2).getLastName(), safety.getPersons().get(2).getFirstName(), period.getYears(), membres));
-        //membres.add(safety.getPersons().get(1));
 
         Mockito.when(personsRepository.getSafety()).thenReturn(safety);
 
@@ -524,7 +485,6 @@ public class PersonsServiceTest {
         assertEquals(childList.get(0).getAge(), childAlertsList.get(0).getAge());
         assertEquals(childList.get(0).getMembres().size(), childAlertsList.get(0).getMembres().size());
         assertEquals(childList.get(0).getMembres().get(0).getFirstName(), childAlertsList.get(0).getMembres().get(0).getFirstName());
-        //assertEquals(childList.get(0).getMembres().get(0).getFirstName(), childAlertsList.get(0).getMembres().get(1).getFirstName());
         assertEquals(childList.size(), childAlertsList.size());
         verify(personsRepository, Mockito.times(1)).getSafety();
 

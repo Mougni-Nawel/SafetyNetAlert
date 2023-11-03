@@ -2,8 +2,6 @@ package SafetyNetAlert.DTO;
 
 import Config.Generated;
 import SafetyNetAlert.Model.Persons;
-
-import java.util.LinkedList;
 import java.util.List;
 
 /**

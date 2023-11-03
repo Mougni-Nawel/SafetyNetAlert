@@ -2,7 +2,6 @@ package SafetyNetAlert.Model;
 
 import Config.Generated;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import java.util.List;
 
 /**

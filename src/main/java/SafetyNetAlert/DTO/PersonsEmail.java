@@ -1,7 +1,6 @@
 package SafetyNetAlert.DTO;
 
 import Config.Generated;
-
 import java.util.List;
 
 /**
@@ -12,13 +11,13 @@ import java.util.List;
 @Generated
 public class PersonsEmail {
 
-    private List email;
+    private List<String> email;
 
-    public List getEmail() {
+    public List<String> getEmail() {
         return email;
     }
 
-    public void setEmail(List email) {
+    public void setEmail(List<String> email) {
         this.email = email;
     }
 

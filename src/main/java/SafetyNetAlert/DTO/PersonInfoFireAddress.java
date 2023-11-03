@@ -1,7 +1,6 @@
 package SafetyNetAlert.DTO;
 
 import Config.Generated;
-
 import java.util.List;
 
 /**

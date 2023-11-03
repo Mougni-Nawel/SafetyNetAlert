@@ -1,10 +1,10 @@
 package SafetyNetAlert.Repository;
 
 import java.util.List;
-
 import Config.Generated;
 import SafetyNetAlert.DTO.ChildAlerts;
 import SafetyNetAlert.DTO.PersonsMobile;
+import SafetyNetAlert.Model.Firestations;
 import SafetyNetAlert.Model.MedicalRecords;
 import SafetyNetAlert.Model.Persons;
 import SafetyNetAlert.Model.SafetyAlerts;
@@ -71,8 +71,7 @@ public class PersonsRepository implements IRepository{
 	 * @param lastName represents the lastName of the person that has to be found.
 	 * @return p that represents the person found.
 	 */
-	//@Override
-	public <Persons> Persons findByIds(String firstName, String lastName) {
+	public Persons findByIds(String firstName, String lastName) {
 		// TODO Auto-generated method stub
 		Persons p = null;
 		for(int i = 0; i < AbstractRepository.safety.getPersons().size(); i++){
@@ -91,8 +90,7 @@ public class PersonsRepository implements IRepository{
 	 * @param firstName represents the firstname of the person that has to be removed.
 	 * @param lastName represents the lastName of the person that has to be removed.
 	 */
-	//@Override
-	public <T> void deleteByIds(String firstName, String lastName) {
+	public void deleteByIds(String firstName, String lastName) {
 		// TODO Auto-generated method stub
 		Persons person = findByIds(firstName, lastName);
 		if(person != null){
@@ -110,7 +108,7 @@ public class PersonsRepository implements IRepository{
 	 * @param lastName represents the lastName of the person that has to be updated.
 	 * @param person represents the new person that has to replace the old one.
 	 */
-	public <Persons> void update(Persons person, String firstName, String lastName) {
+	public void update(Persons person, String firstName, String lastName) {
 		// TODO Auto-generated method stub
 		Persons personFound = findByIds(firstName, lastName);
 		if(personFound != null){
@@ -126,14 +124,10 @@ public class PersonsRepository implements IRepository{
 	 * @param p represents the person that we have to find the info from.
 	 * @return m that represents info of the person found.
 	 */
-	public MedicalRecords findPersonsInfo(Persons p) throws MedicalRecordLastnameNotFoundException, MedicalRecordFirstnameNotFoundException {
+	public MedicalRecords findPersonsInfo(Persons p) throws MedicalRecordsNotFoundException {
 		MedicalRecords m = medicalRecordsRepository.findByIds(p.getFirstName(), p.getLastName());
 		return m;
 	}
-
-//	public PersonsEmail getAllEmail(String city) {
-//		return null;
-//	}
 
 	public PersonsMobile getAllMobile(int station) {
 		return null;
@@ -144,7 +138,7 @@ public class PersonsRepository implements IRepository{
 	}
 
 	@Override
-	public <T> T save(T firestations) {
+	public <Firestations> Firestations save(Firestations firestations) {
 		return null;
 	}
 

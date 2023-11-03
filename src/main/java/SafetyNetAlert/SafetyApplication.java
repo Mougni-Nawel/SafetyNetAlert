@@ -1,11 +1,9 @@
 package SafetyNetAlert;
 
 import java.io.IOException;
-
 import Config.Generated;
 import SafetyNetAlert.Repository.AbstractRepository;
 import org.apache.logging.log4j.Logger;
-
 import org.apache.logging.log4j.LogManager;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,7 +23,6 @@ public class SafetyApplication {
 		AbstractRepository.read("data.json");
 		logger.info("Lancement de l'application");
 	}
-
 
 
 }

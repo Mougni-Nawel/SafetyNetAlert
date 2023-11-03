@@ -6,8 +6,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-
-
 import SafetyNetAlert.DTO.FireAddress;
 import SafetyNetAlert.DTO.FirestationByStation;
 import SafetyNetAlert.DTO.Flood;
@@ -40,13 +38,12 @@ public class FirestationsService implements IFirestationService{
 	@Autowired
 	MedicalRecordsRepository medicalRecordsRepository;
 
-	//SafetyAlerts safetyAlerts = AbstractRepository.getSafety();
-
 	/**
 	 * this method get all the firestations.
 	 * @return all the firestations registered.
 	 */
 	public List<Firestations> getAllFirestations(){
+		log.info("Function : getAllFirestations");
 		return firestationsRepository.findAll();
 	}
 
@@ -56,6 +53,7 @@ public class FirestationsService implements IFirestationService{
 	 * @return firestationsAdded that reprensents the firestation saved.
 	 */
 	public Firestations saveFirestations(Firestations firestations) {
+		log.info("Function : saveFirestations");
 		Firestations firestationsAdded = firestationsRepository.save(firestations);
 		return firestationsAdded;
 	}
@@ -64,14 +62,14 @@ public class FirestationsService implements IFirestationService{
 	 * this method get the firestation from the address put in parameter.
 	 * @param address represents the address of the firestation that has to be found.
 	 * @return firestation that reprensents the firestation found.
-	 * @throws FirestationNotFoundByAddressException if there is no firestation found with this address.
 	 */
-    public Firestations getFirestations(final String address) throws FirestationNotFoundByAddressException {
+    public Firestations getFirestations(final String address) throws FirestationNotFoundException {
+		log.info("Function : getFirestations");
 		Firestations firestation = firestationsRepository.findByIds(address);
     	if(firestation != null){
 			return firestation;
 		}else{
-			throw new FirestationNotFoundByAddressException("Firestation not found with this address");
+			throw new FirestationNotFoundException("Firestation not found with this address");
 		}
 	}
 
@@ -80,9 +78,9 @@ public class FirestationsService implements IFirestationService{
 	 * @param address represents the address of the firestation that has to be updated.
 	 * @param firestation represents the new version of firestation that has to be replcace the old firestation.
 	 * @return currentFirestation that reprensents the firestation updated.
-	 * @throws FirestationNotFoundByAddressException if there is no firestation found with this address.
 	 */
-	public Firestations updateFirestations(String address, Firestations firestation) throws FirestationNotFoundByAddressException {
+	public Firestations updateFirestations(String address, Firestations firestation) throws FirestationNotFoundException {
+		log.info("Function : updateFirestations");
 		Firestations e = getFirestations(address);
 		Firestations currentFirestation = null;
 		if(e != null) {
@@ -96,7 +94,7 @@ public class FirestationsService implements IFirestationService{
 			firestationsRepository.update(firestation, address);
 			return currentFirestation;
 		}else{
-			throw new FirestationNotFoundByAddressException("Firestation not found with this address");
+			throw new FirestationNotFoundException("Firestation not found with this address");
 		}
 	}
 
@@ -104,15 +102,15 @@ public class FirestationsService implements IFirestationService{
 	/**
 	 * this method remove a firestation from the address put in parameter.
 	 * @param address represents the address of the firestation that has to be removed.
-	 * @throws FirestationNotFoundByAddressException if there is no firestation found with this address.
+	 * @throws FirestationNotFoundException if there is no firestation found with this address.
 	 */
-	public void deleteFirestation(String address) throws FirestationNotFoundByAddressException {
+	public void deleteFirestation(String address) throws FirestationNotFoundException {
+		log.info("Function : deleteFirestation");
 		Firestations firestations = firestationsRepository.findByIds(address);
-		//System.out.println("Persons: "+person.getLastName());
 		if(firestations != null){
 			firestationsRepository.deleteByIds(address);
 		}else{
-			throw new FirestationNotFoundByAddressException("Firestation not found with this address");
+			throw new FirestationNotFoundException("Firestation not found with this address");
 		}
 	}
 
@@ -127,6 +125,7 @@ public class FirestationsService implements IFirestationService{
 	 * @return station that reprensents a list of stations.
 	 */
 	public List<Integer> addStation(SafetyAlerts safetyAlerts, String address) {
+		log.info("Function : addStation");
 		List<Integer> station = new ArrayList<Integer>();
 		for (Firestations firestation : safetyAlerts.getFirestations()) {
 			if(firestation.getAddress().contains(address)){
@@ -148,6 +147,7 @@ public class FirestationsService implements IFirestationService{
 	 * @param habitants represents a list of residents.
 	 */
 	public void addHabitant(Persons person, SafetyAlerts safetyAlerts, String address, List<String> medications, List<String> allergies, List<PersonInfoFireAddress> habitants){
+		log.info("Function : addHabitant");
 		int age = 0;
 		if(person.getAddress().contains(address)){
 			String lastName = person.getLastName();
@@ -175,8 +175,8 @@ public class FirestationsService implements IFirestationService{
 	 * @throws AddressInParameterIsNullException if address is null.
 	 */
 	public FireAddress getPersonsFromAddress(String address) throws AddressInParameterIsNullException {
+		log.info("Function : getPersonsFromAddress");
 		SafetyAlerts safetyAlerts = firestationsRepository.getSafety();
-		int age = 0;
 		List<String> medications = new ArrayList<>();
 		List<String> allergies = new ArrayList<String>();
 		List<Integer> station;
@@ -209,7 +209,8 @@ public class FirestationsService implements IFirestationService{
 	 * @param firestationByStation is of type {@link FirestationByStation}.
 	 * @return habitant is a list of type {@link Persons}.
 	 */
-	public List<Persons> getAgeFromPersons(List<String> addressList, Persons person, List<Persons> habitant, FirestationByStation firestationByStation) throws MedicalRecordLastnameNotFoundException, MedicalRecordFirstnameNotFoundException {
+	public List<Persons> getAgeFromPersons(List<String> addressList, Persons person, List<Persons> habitant, FirestationByStation firestationByStation) throws MedicalRecordsNotFoundException {
+		log.info("Function : getAgeFromPersons");
 		for(String address : addressList) {
 			if (person.getAddress().contains(address)) {
 
@@ -240,11 +241,12 @@ public class FirestationsService implements IFirestationService{
 	 * @return firestationByStation is of type {@link FirestationByStation}.
 	 * @throws FirestationStationNotFoundException if no firestation found with this station
 	 */
-	public FirestationByStation getPersonsFromStation(int station) throws FirestationStationNotFoundException, MedicalRecordLastnameNotFoundException, MedicalRecordFirstnameNotFoundException {
+	public FirestationByStation getPersonsFromStation(int station) throws FirestationStationNotFoundException, MedicalRecordsNotFoundException {
+		log.info("Function : getPersonsFromStation");
 		SafetyAlerts safetyAlerts = firestationsRepository.getSafety();
 		FirestationByStation firestationByStation = new FirestationByStation();
-		List<Persons> habitant = new ArrayList();
-		List<String> addressList = new ArrayList();
+		List<Persons> habitant = new ArrayList<>();
+		List<String> addressList = new ArrayList<>();
 
 		if(station != 0){
 			for(Firestations firestation : safetyAlerts.getFirestations()){
@@ -271,10 +273,10 @@ public class FirestationsService implements IFirestationService{
 	 * @param station represents the station nulber of a firestation.
 	 */
 	public void addAddressList(SafetyAlerts safetyAlerts, List<String> addressList, int station) {
+		log.info("Function : addAddressList");
 		for(Firestations firestation : safetyAlerts.getFirestations()) {
 			if(firestation.getStation() == station && !addressList.contains(firestation.getAddress())){
 				addressList.add(firestation.getAddress());
-				System.out.println(firestation.getAddress());
 			}
 
 		}
@@ -291,10 +293,9 @@ public class FirestationsService implements IFirestationService{
 	 * @param floods represents a list of type {@link Flood}.
 	 */
 	public void addFlood(SafetyAlerts safetyAlerts, List<String> addressList, Persons person, int count, List<String> medications, List<String> allergies, List<Flood> floods){
+		log.info("Function : addFlood");
 		for(String address : addressList) {
 			if (person.getAddress().contains(address)) {
-
-
 				String address1 = person.getAddress();
 				String phone = person.getPhone();
 				String lastName = person.getLastName();
@@ -311,7 +312,6 @@ public class FirestationsService implements IFirestationService{
 					List<String> medicalRecordsList = new ArrayList<>();
 					medicalRecordsList.add(medicalRecords.getMedications().toString());
 					medicalRecordsList.add(medicalRecords.getAllergies().toString());
-					//flood.setAntécedentMedicaux(m);
 					floods.add(new Flood(address1, lastName, phone, age, medicalRecordsList));
 				}
 
@@ -324,9 +324,10 @@ public class FirestationsService implements IFirestationService{
 	 * this method get the flood from the stations list that is put in parameter.
 	 * @param stationsList represents a list of stations of firestations.
 	 * @return floods is a list of type {@link Flood}.
-	 * @throws FirestationListStationNotFoundException if station list is empty or null.
+	 * @throws FirestationNotFoundException if station list is empty or null.
 	 */
-    public List<Flood> getHearthByStations(List<Integer> stationsList) throws FirestationListStationNotFoundException {
+    public List<Flood> getHearthByStations(List<Integer> stationsList) throws FirestationNotFoundException {
+		log.info("Function : getHearthByStations");
 		SafetyAlerts safetyAlerts = firestationsRepository.getSafety();
 		List<String> addressList = new ArrayList<String>();
 		List<String> medications = new ArrayList<>();
@@ -345,8 +346,7 @@ public class FirestationsService implements IFirestationService{
 			}
 			return floods;
 		}else{
-			throw new FirestationListStationNotFoundException("The list of station is empty or not found"); // a détailler dans la création de differentes d'exception
-			// puis definir leur comportement dans le globalexception handler
+			throw new FirestationNotFoundException("The list of station is empty or not found");
 		}
 
     }
