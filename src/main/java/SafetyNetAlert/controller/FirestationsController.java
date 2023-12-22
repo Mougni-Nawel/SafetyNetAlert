@@ -31,15 +31,6 @@ public class FirestationsController {
 	@Autowired
 	IFirestationService firestationsService;
 
-	/**
-	 * this method get all firestations from firestation service.
-	 * @return list of firestations.
-	 */
-	@GetMapping
-	public List<Firestations> getAllFirestations(){
-		log.info("Function : getAllFirestations");
-		return firestationsService.getAllFirestations();
-	}
 
 	/**
 	 * this method get a firestation from address from the path /firestation/{address}
@@ -98,8 +89,8 @@ public class FirestationsController {
 	 * @return ResponseEntity ok which represents a http response with code 200 with fireAddress result.
 	 * @throws ParameterIsNullException if the address given is not recorded with persons living in this address.
 	 */
-	@GetMapping("/fire/{address}")
-	public ResponseEntity<FireAddress> getPersonInfo(@PathVariable("address") String address) throws ParameterIsNullException {
+	@GetMapping("/fire")
+	public ResponseEntity<FireAddress> getPersonInfo(@RequestParam("address") String address) throws ParameterIsNullException {
 		log.info("Function : getPersonInfo");
 		FireAddress fireAddress = firestationsService.getPersonsFromAddress(address);
 		return ResponseEntity.ok(fireAddress);
@@ -111,8 +102,8 @@ public class FirestationsController {
 	 * @return ResponseEntity ok which represents a http response with code 200 with firestationByStation result.
 	 * @throws NotFoundException if the station given is not recorded with persons living near this station.
 	 */
-	@GetMapping("/stationNumber/{station}")
-	public ResponseEntity<FirestationByStation> getPersonsByStation(@PathVariable("station") int station) throws NotFoundException {
+	@GetMapping("")
+	public ResponseEntity<FirestationByStation> getPersonsByStation(@RequestParam("stationNumber") int station) throws NotFoundException {
 		log.info("Function : getPersonsByStation");
 		FirestationByStation firestationByStation = firestationsService.getPersonsFromStation(station);
 		return ResponseEntity.ok(firestationByStation);
@@ -124,8 +115,8 @@ public class FirestationsController {
 	 * @return ResponseEntity ok which represents a http response with code 200 with the flood result.
 	 * @throws NotFoundException if the list of stations given is not recorded with persons living in this near these stations.
 	 */
-	@GetMapping("/flood/{list_of_stations}")
-	public ResponseEntity<List<Flood>> getHearthByStations(@PathVariable("list_of_stations") List<Integer> stationsList) throws NotFoundException {
+	@GetMapping("/flood/stations")
+	public ResponseEntity<List<Flood>> getHearthByStations(@RequestParam("stations") List<Integer> stationsList) throws NotFoundException {
 		log.info("Function : getHearthByStations");
 		List<Flood> flood = firestationsService.getHearthByStations(stationsList);
 		return ResponseEntity.ok(flood);

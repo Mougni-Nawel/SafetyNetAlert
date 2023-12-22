@@ -6,6 +6,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
+
 import SafetyNetAlert.controller.exception.*;
 import SafetyNetAlert.dto.ChildAlerts;
 import SafetyNetAlert.dto.PersonInfo;
@@ -322,11 +324,11 @@ public class PersonsService implements IPersonService{
 	 * @param firstName represents the firstName of a person.
 	 * @return membersList is a list that represent the person's family member.
 	 */
-	public List<Persons> addMembre(SafetyAlerts safetyAlerts, String nameChild, String firstName){
+	public List<Persons> addMembre(SafetyAlerts safetyAlerts, String nameChild, String firstName, String address){
 		log.info("Function : addMembre");
 		List<Persons> membresList = new ArrayList<>();
 		for (Persons membre : safetyAlerts.getPersons()) {
-			if (membre.getLastName().contains(nameChild) && membre.getFirstName() != firstName) {
+			if (Objects.equals(membre.getAddress(), address) && !Objects.equals(membre.getFirstName(), firstName)) {
 				membresList.add(membre);
 			}
 		}
@@ -398,7 +400,7 @@ public class PersonsService implements IPersonService{
 
 					}
 					if (nameChild != null) {
-						membresList = addMembre(safetyAlerts, nameChild, firstName);
+						membresList = addMembre(safetyAlerts, nameChild, firstName, person.getAddress());
 					}
 
 				}

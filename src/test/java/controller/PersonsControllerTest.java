@@ -254,7 +254,7 @@ public class PersonsControllerTest {
         when(personsService.getPersonsInfo(anyString(), anyString())).thenReturn(list);
 
         mockMvc.perform(MockMvcRequestBuilders
-                        .get("/personInfo/John/Boyd")
+                        .get("/personInfo?firstName=John&lastName=Boyd")
                         .accept(MediaType.APPLICATION_JSON)
                         .contentType("application/json;charset=UTF-8"))
                 .andDo(print())
@@ -278,7 +278,7 @@ public class PersonsControllerTest {
         when(personsService.getPersonsEmail(anyString())).thenReturn(any(PersonsEmail.class));
 
         mockMvc.perform(MockMvcRequestBuilders
-                        .get("/communityEmail/Cluver")
+                        .get("/communityEmail?city=Cluver")
                         .accept(MediaType.APPLICATION_JSON)
                         .contentType("application/json;charset=UTF-8"))
                 .andDo(print())
@@ -293,7 +293,7 @@ public class PersonsControllerTest {
         when(personsService.getPersonsMobile(anyInt())).thenReturn(any(PersonsMobile.class));
 
         mockMvc.perform(MockMvcRequestBuilders
-                        .get("/phoneAlert/2")
+                        .get("/phoneAlert?firestation=2")
                         .accept(MediaType.APPLICATION_JSON)
                         .contentType("application/json;charset=UTF-8"))
                 .andDo(print())
@@ -310,7 +310,7 @@ public class PersonsControllerTest {
         when(personsService.getChildByAddress(anyString())).thenReturn(list);
 
         mockMvc.perform(MockMvcRequestBuilders
-                        .get("/childAlert/1509 Culver St")
+                        .get("/childAlert?address=1509 Culver St")
                         .accept(MediaType.APPLICATION_JSON)
                         .contentType("application/json;charset=UTF-8"))
                 .andDo(print())

@@ -99,7 +99,7 @@ public class FirestationControllerTest {
 
 
         mockMvc.perform( MockMvcRequestBuilders
-                        .get("/firestation")
+                        .get("/firestation/1")
                         .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
                 .andExpect(status().isOk());
@@ -247,7 +247,7 @@ public class FirestationControllerTest {
         when(firestationService.getPersonsFromAddress(anyString())).thenReturn(any(FireAddress.class));
 
         mockMvc.perform(MockMvcRequestBuilders
-                        .get("/firestation/fire/1509 Culver St")
+                        .get("/firestation/fire?address=1509 Culver St")
                         .accept(MediaType.APPLICATION_JSON)
                         .contentType("application/json;charset=UTF-8"))
                 .andDo(print())
@@ -266,7 +266,7 @@ public class FirestationControllerTest {
         when(firestationService.getPersonsFromStation(anyInt())).thenReturn(any(FirestationByStation.class));
 
         mockMvc.perform(MockMvcRequestBuilders
-                        .get("/firestation/stationNumber/1")
+                        .get("/firestation?stationNumber=1")
                         .accept(MediaType.APPLICATION_JSON)
                         .contentType("application/json;charset=UTF-8"))
                 .andDo(print())
@@ -286,7 +286,7 @@ public class FirestationControllerTest {
         when(firestationService.getHearthByStations(listStation)).thenReturn(listReturned);
 
         mockMvc.perform(MockMvcRequestBuilders
-                        .get("/firestation/flood/1,4")
+                        .get("/firestation/flood/stations?stations=1,4")
                         .accept(MediaType.APPLICATION_JSON)
                         .contentType("application/json;charset=UTF-8"))
                 .andDo(print())

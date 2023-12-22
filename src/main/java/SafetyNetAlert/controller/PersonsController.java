@@ -15,14 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 import javax.naming.NameNotFoundException;
@@ -118,8 +111,8 @@ public class PersonsController {
 	 * @return ResponseEntity ok which represents a http response with code 200.
 	 * @throws NotFoundException if the firstname and lastname given is not recorded with person having this name.
 	 */
-	@GetMapping("/personInfo/{firstName}/{lastName}")
-	public ResponseEntity<List<PersonInfo>> getPersonInfo(@PathVariable("firstName") String firstName, @PathVariable("lastName") final String lastName) throws NotFoundException, ParameterIsNullException {
+	@GetMapping("/personInfo")
+	public ResponseEntity<List<PersonInfo>> getPersonInfo(@RequestParam("firstName") String firstName, @RequestParam("lastName") final String lastName) throws NotFoundException, ParameterIsNullException {
 		log.info("Function : getPersonInfo");
 		List<PersonInfo> persons = personsService.getPersonsInfo(firstName,lastName);
 		return ResponseEntity.ok(persons);
@@ -131,8 +124,8 @@ public class PersonsController {
 	 * @return ResponseEntity ok which represents a http response with code 200 with the emails of the persons found.
 	 * @throws NotFoundException if the city given is not recorded with persons living in this city.
 	 */
-	@GetMapping("/communityEmail/{city}")
-	public ResponseEntity<PersonsEmail> getPersonEmails(@PathVariable("city") String city) throws NotFoundException {
+	@GetMapping("/communityEmail")
+	public ResponseEntity<PersonsEmail> getPersonEmails(@RequestParam("city") String city) throws NotFoundException {
 		log.info("Function : getPersonEmails");
 		PersonsEmail persons = personsService.getPersonsEmail(city);
 		return ResponseEntity.ok(persons);
@@ -144,8 +137,8 @@ public class PersonsController {
 	 * @return ResponseEntity ok which represents a http response with code 200.
 	 * @throws NameNotFoundException if the station given is not recorded with persons living near this station.
 	 */
-	@GetMapping("/phoneAlert/{station}")
-	public ResponseEntity<PersonsMobile> getPersonsMobile(@PathVariable("station") int station) throws NotFoundException {
+	@GetMapping("/phoneAlert")
+	public ResponseEntity<PersonsMobile> getPersonsMobile(@RequestParam("firestation") int station) throws NotFoundException {
 		log.info("Function : getPersonsMobile");
 		PersonsMobile persons = personsService.getPersonsMobile(station);
 		return ResponseEntity.ok(persons);
@@ -158,8 +151,8 @@ public class PersonsController {
 	 * @throws NotFoundException if the address given is not recorded with persons living in this address.
 	 * @throws NotFoundException if the medical record is not found.
 	 */
-	@GetMapping("/childAlert/{address}")
-	public ResponseEntity<List<ChildAlerts>> getChild(@PathVariable("address") String address) throws NotFoundException, ParameterIsNullException {
+	@GetMapping("/childAlert")
+	public ResponseEntity<List<ChildAlerts>> getChild(@RequestParam("address") String address) throws NotFoundException, ParameterIsNullException {
 		log.info("Function : getChild");
 		List<ChildAlerts> childAlerts = personsService.getChildByAddress(address);
 		return ResponseEntity.ok(childAlerts);
