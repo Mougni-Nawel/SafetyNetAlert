@@ -26776,3 +26776,1250 @@ Mocking methods declared on non-public parent classes is not supported.
 2023-12-22 21:06:15,235 INFO S.s.PersonsService [main] Function : addPersonInfo
 2023-12-22 21:06:15,243 INFO S.s.PersonsService [main] Function : updatePerson
 2023-12-22 21:06:15,254 INFO S.s.PersonsService [main] Function : getPersonsMobile
+2023-12-27 22:24:21,922 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.FirestationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-27 22:24:23,429 INFO c.FirestationControllerTest [main] Starting FirestationControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 14040 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-27 22:24:23,436 INFO c.FirestationControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-27 22:24:27,612 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-27 22:24:27,615 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 3 ms
+2023-12-27 22:24:27,765 INFO c.FirestationControllerTest [main] Started FirestationControllerTest in 5.207 seconds (JVM running for 10.0)
+2023-12-27 22:24:28,332 INFO S.c.FirestationsController [main] Function : addPerson
+2023-12-27 22:24:28,628 INFO S.c.FirestationsController [main] Function : updateFirestations
+2023-12-27 22:24:28,710 INFO S.c.FirestationsController [main] Function : getPersonsByStation
+2023-12-27 22:24:28,750 INFO S.c.FirestationsController [main] Function : getHearthByStations
+2023-12-27 22:24:28,791 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-27 22:24:28,809 INFO S.c.FirestationsController [main] Function : getPersonInfo
+2023-12-27 22:24:28,831 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.Firestations> SafetyNetAlert.controller.FirestationsController.addPerson(SafetyNetAlert.model.Firestations)]
+2023-12-27 22:24:28,852 INFO S.c.FirestationsController [main] Function : deleteFirestation
+2023-12-27 22:24:28,898 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-27 22:24:28,916 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-27 22:24:28,940 INFO S.c.FirestationsController [main] Function : deleteFirestation
+2023-12-27 22:24:28,960 INFO S.c.FirestationsController [main] Function : updateFirestations
+2023-12-27 22:24:28,989 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.MedicalRecordsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-27 22:24:29,169 INFO c.MedicalRecordsControllerTest [main] Starting MedicalRecordsControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 14040 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-27 22:24:29,171 INFO c.MedicalRecordsControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-27 22:24:29,692 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-27 22:24:29,693 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 1 ms
+2023-12-27 22:24:29,716 INFO c.MedicalRecordsControllerTest [main] Started MedicalRecordsControllerTest in 0.702 seconds (JVM running for 11.951)
+2023-12-27 22:24:29,731 INFO S.c.MedicalRecordsController [main] Function : getAllMedicalsRecords
+2023-12-27 22:24:29,760 INFO S.c.MedicalRecordsController [main] Function : deletePerson
+2023-12-27 22:24:29,786 INFO S.c.MedicalRecordsController [main] Function : updateMedicalRecords
+2023-12-27 22:24:29,800 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.MedicalRecords> SafetyNetAlert.controller.MedicalRecordsController.addMedicalRecords(SafetyNetAlert.model.MedicalRecords)]
+2023-12-27 22:24:29,815 INFO S.c.MedicalRecordsController [main] Function : updateMedicalRecords
+2023-12-27 22:24:29,825 INFO S.c.MedicalRecordsController [main] Function : deletePerson
+2023-12-27 22:24:29,835 INFO S.c.MedicalRecordsController [main] Function : getMedicalRecords
+2023-12-27 22:24:29,849 INFO S.c.MedicalRecordsController [main] Function : getMedicalRecords
+2023-12-27 22:24:29,862 INFO S.c.MedicalRecordsController [main] Function : addMedicalRecords
+2023-12-27 22:24:29,875 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.PersonsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-27 22:24:29,976 INFO c.PersonsControllerTest [main] Starting PersonsControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 14040 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-27 22:24:29,978 INFO c.PersonsControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-27 22:24:33,636 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-27 22:24:33,638 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 2 ms
+2023-12-27 22:24:34,438 INFO c.PersonsControllerTest [main] Started PersonsControllerTest in 4.523 seconds (JVM running for 16.673)
+2023-12-27 22:24:34,466 INFO S.c.PersonsController [main] Function : updatePersons
+2023-12-27 22:24:34,468 ERROR S.c.e.ControllerExceptionsHandler [main] null
+2023-12-27 22:24:34,484 INFO S.c.PersonsController [main] Function : getPersonEmails
+2023-12-27 22:24:34,496 INFO S.c.PersonsController [main] Function : getAllAccount
+2023-12-27 22:24:34,513 INFO S.c.PersonsController [main] Function : getChild
+2023-12-27 22:24:34,524 INFO S.c.PersonsController [main] Function : deletePerson
+2023-12-27 22:24:34,537 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.Persons> SafetyNetAlert.controller.PersonsController.addPerson(SafetyNetAlert.model.Persons)]
+2023-12-27 22:24:34,546 INFO S.c.PersonsController [main] Function : getPerson
+2023-12-27 22:24:34,560 INFO S.c.PersonsController [main] Function : getPersonInfo
+2023-12-27 22:24:34,577 INFO S.c.PersonsController [main] Function : addPerson
+2023-12-27 22:24:34,602 WARN o.s.w.s.PageNotFound [main] No mapping for DELETE /person/Jon&Boyd
+2023-12-27 22:24:34,614 WARN o.s.w.s.PageNotFound [main] No mapping for GET /person/Jon&Boyd
+2023-12-27 22:24:34,626 INFO S.c.PersonsController [main] Function : updatePersons
+2023-12-27 22:24:34,640 INFO S.c.PersonsController [main] Function : getPersonsMobile
+2023-12-27 22:24:34,653 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [SafetyApplicationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-27 22:24:34,742 INFO SafetyApplicationTest [main] Starting SafetyApplicationTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 14040 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-27 22:24:34,744 INFO SafetyApplicationTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-27 22:24:36,664 INFO SafetyApplicationTest [main] Started SafetyApplicationTest in 1.996 seconds (JVM running for 18.899)
+2023-12-27 22:24:36,685 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.FirestationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-27 22:24:36,741 INFO s.FirestationServiceTest [main] Starting FirestationServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 14040 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-27 22:24:36,742 INFO s.FirestationServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-27 22:24:37,254 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-27 22:24:37,433 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 179 ms
+2023-12-27 22:24:37,466 INFO s.FirestationServiceTest [main] Started FirestationServiceTest in 0.763 seconds (JVM running for 19.701)
+2023-12-27 22:24:37,629 INFO S.s.FirestationsService [main] Function : updateFirestations
+2023-12-27 22:24:37,629 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-27 22:24:37,689 INFO S.s.FirestationsService [main] Function : saveFirestations
+2023-12-27 22:24:37,717 INFO S.s.FirestationsService [main] Function : getHearthByStations
+2023-12-27 22:24:37,718 INFO S.s.FirestationsService [main] Function : addAddressList
+2023-12-27 22:24:37,718 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-27 22:24:37,719 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-27 22:24:37,719 INFO S.s.FirestationsService [main] Function : addAddressList
+2023-12-27 22:24:37,719 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-27 22:24:37,720 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-27 22:24:37,756 INFO S.s.FirestationsService [main] Function : getPersonsFromStation
+2023-12-27 22:24:37,757 INFO S.s.FirestationsService [main] Function : getAgeFromPersons
+2023-12-27 22:24:37,757 INFO S.s.FirestationsService [main] Function : getAgeFromPersons
+2023-12-27 22:24:37,773 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-27 22:24:37,785 INFO S.s.FirestationsService [main] Function : getPersonsFromAddress
+2023-12-27 22:24:37,785 INFO S.s.FirestationsService [main] Function : addStation
+2023-12-27 22:24:37,786 INFO S.s.FirestationsService [main] Function : addHabitant
+2023-12-27 22:24:37,786 INFO S.s.FirestationsService [main] Function : addHabitant
+2023-12-27 22:24:37,800 INFO S.s.FirestationsService [main] Function : deleteFirestation
+2023-12-27 22:24:37,823 INFO S.s.FirestationsService [main] Function : saveFirestations
+2023-12-27 22:24:37,836 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-27 22:24:37,850 INFO S.s.FirestationsService [main] Function : deleteFirestation
+2023-12-27 22:24:37,865 INFO S.s.FirestationsService [main] Function : getAllFirestations
+2023-12-27 22:24:37,879 INFO S.s.FirestationsService [main] Function : updateFirestations
+2023-12-27 22:24:37,879 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-27 22:24:37,904 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.MedicalRecordsServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-27 22:24:38,010 INFO s.MedicalRecordsServiceTest [main] Starting MedicalRecordsServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 14040 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-27 22:24:38,012 INFO s.MedicalRecordsServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-27 22:24:38,197 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-27 22:24:38,356 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 159 ms
+2023-12-27 22:24:38,376 INFO s.MedicalRecordsServiceTest [main] Started MedicalRecordsServiceTest in 0.453 seconds (JVM running for 20.611)
+2023-12-27 22:24:38,386 INFO S.s.MedicalRecordsService [main] Function : saveMedicalRecords
+2023-12-27 22:24:38,399 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-27 22:24:38,414 INFO S.s.MedicalRecordsService [main] Function : getAllMedicalRecords
+2023-12-27 22:24:38,429 INFO S.s.MedicalRecordsService [main] Function : updateMedicalRecords
+2023-12-27 22:24:38,429 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-27 22:24:38,447 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-27 22:24:38,463 INFO S.s.MedicalRecordsService [main] Function : deleteAccount
+2023-12-27 22:24:38,476 INFO S.s.MedicalRecordsService [main] Function : saveMedicalRecords
+2023-12-27 22:24:38,486 INFO S.s.MedicalRecordsService [main] Function : deleteAccount
+2023-12-27 22:24:38,495 INFO S.s.MedicalRecordsService [main] Function : updateMedicalRecords
+2023-12-27 22:24:38,496 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-27 22:24:38,509 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.PersonsServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-27 22:24:38,560 INFO s.PersonsServiceTest [main] Starting PersonsServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 14040 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-27 22:24:38,561 INFO s.PersonsServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-27 22:24:38,809 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-27 22:24:38,955 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 146 ms
+2023-12-27 22:24:38,989 INFO s.PersonsServiceTest [main] Started PersonsServiceTest in 0.463 seconds (JVM running for 21.224)
+2023-12-27 22:24:39,011 INFO S.s.PersonsService [main] Function : getAllPersons
+2023-12-27 22:24:39,028 INFO S.s.PersonsService [main] Function : getChildByAddress
+2023-12-27 22:24:39,029 INFO S.s.PersonsService [main] Function : addAge
+2023-12-27 22:24:39,030 INFO S.s.PersonsService [main] Function : addAge
+2023-12-27 22:24:39,032 INFO S.s.PersonsService [main] Function : addMembre
+2023-12-27 22:24:39,032 INFO S.s.PersonsService [main] Function : addChild
+2023-12-27 22:24:39,049 INFO S.s.PersonsService [main] Function : deleteAccount
+2023-12-27 22:24:39,063 INFO S.s.PersonsService [main] Function : getPersons
+2023-12-27 22:24:39,076 INFO S.s.PersonsService [main] Function : savePerson
+2023-12-27 22:24:39,089 INFO S.s.PersonsService [main] Function : deleteAccount
+2023-12-27 22:24:39,100 INFO S.s.PersonsService [main] Function : savePerson
+2023-12-27 22:24:39,115 INFO S.s.PersonsService [main] Function : getPersonsEmail
+2023-12-27 22:24:39,131 INFO S.s.PersonsService [main] Function : updatePerson
+2023-12-27 22:24:39,142 INFO S.s.PersonsService [main] Function : getPersons
+2023-12-27 22:24:39,153 INFO S.s.PersonsService [main] Function : getPersonsInfo
+2023-12-27 22:24:39,154 INFO S.s.PersonsService [main] Function : addPersonInfo
+2023-12-27 22:24:39,155 INFO S.s.PersonsService [main] Function : addPersonInfo
+2023-12-27 22:24:39,165 INFO S.s.PersonsService [main] Function : updatePerson
+2023-12-27 22:24:39,177 INFO S.s.PersonsService [main] Function : getPersonsMobile
+2023-12-29 22:25:46,609 INFO S.SafetyApplication [main] Starting SafetyApplication using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 4692 (C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert\target\classes started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-29 22:25:46,624 INFO S.SafetyApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-29 22:25:48,273 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-29 22:25:48,274 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-12-29 22:25:48,274 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.62]
+2023-12-29 22:25:48,486 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-12-29 22:25:49,194 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-29 22:25:49,644 INFO S.SafetyApplication [main] Started SafetyApplication in 3.602 seconds (JVM running for 5.543)
+2023-12-29 22:25:49,704 INFO S.SafetyApplication [main] Lancement de l'application
+2023-12-29 22:26:31,370 INFO o.a.c.c.C.[.[.[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-29 22:26:31,371 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-29 22:26:31,374 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 3 ms
+2023-12-29 22:26:31,416 INFO S.c.PersonsController [http-nio-8080-exec-1] Function : getChild
+2023-12-29 22:26:31,416 INFO S.s.PersonsService [http-nio-8080-exec-1] Function : getChildByAddress
+2023-12-29 22:26:31,416 INFO S.s.PersonsService [http-nio-8080-exec-1] Function : addAge
+2023-12-29 22:26:31,432 INFO S.s.PersonsService [http-nio-8080-exec-1] Function : addAge
+2023-12-29 22:26:31,433 INFO S.s.PersonsService [http-nio-8080-exec-1] Function : addAge
+2023-12-29 22:26:31,434 INFO S.s.PersonsService [http-nio-8080-exec-1] Function : addMembre
+2023-12-29 22:26:31,434 INFO S.s.PersonsService [http-nio-8080-exec-1] Function : addAge
+2023-12-29 22:26:31,434 INFO S.s.PersonsService [http-nio-8080-exec-1] Function : addMembre
+2023-12-29 22:26:31,435 INFO S.s.PersonsService [http-nio-8080-exec-1] Function : addAge
+2023-12-29 22:26:31,435 INFO S.s.PersonsService [http-nio-8080-exec-1] Function : addMembre
+2023-12-29 22:26:31,435 INFO S.s.PersonsService [http-nio-8080-exec-1] Function : addChild
+2023-12-29 22:40:12,756 INFO S.c.PersonsController [http-nio-8080-exec-5] Function : getChild
+2023-12-29 22:40:12,757 INFO S.s.PersonsService [http-nio-8080-exec-5] Function : getChildByAddress
+2023-12-29 22:40:12,757 INFO S.s.PersonsService [http-nio-8080-exec-5] Function : addAge
+2023-12-29 22:40:12,757 INFO S.s.PersonsService [http-nio-8080-exec-5] Function : addAge
+2023-12-29 22:40:12,758 INFO S.s.PersonsService [http-nio-8080-exec-5] Function : addAge
+2023-12-29 22:40:12,759 INFO S.s.PersonsService [http-nio-8080-exec-5] Function : addMembre
+2023-12-29 22:40:12,759 INFO S.s.PersonsService [http-nio-8080-exec-5] Function : addAge
+2023-12-29 22:40:12,759 INFO S.s.PersonsService [http-nio-8080-exec-5] Function : addMembre
+2023-12-29 22:40:12,759 INFO S.s.PersonsService [http-nio-8080-exec-5] Function : addAge
+2023-12-29 22:40:12,760 INFO S.s.PersonsService [http-nio-8080-exec-5] Function : addMembre
+2023-12-29 22:40:12,760 INFO S.s.PersonsService [http-nio-8080-exec-5] Function : addChild
+2023-12-29 23:16:38,332 INFO S.SafetyApplication [main] Starting SafetyApplication using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 11688 (C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert\target\classes started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-29 23:16:38,346 INFO S.SafetyApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-29 23:16:40,386 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-29 23:16:40,388 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-12-29 23:16:40,388 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.62]
+2023-12-29 23:16:40,635 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-12-29 23:16:41,683 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-29 23:16:42,429 INFO S.SafetyApplication [main] Started SafetyApplication in 4.699 seconds (JVM running for 6.783)
+2023-12-29 23:16:42,549 INFO S.SafetyApplication [main] Lancement de l'application
+2023-12-29 23:16:47,265 INFO o.a.c.c.C.[.[.[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-29 23:16:47,266 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-12-29 23:16:47,268 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2023-12-29 23:16:47,323 INFO S.c.PersonsController [http-nio-8080-exec-1] Function : getChild
+2023-12-29 23:16:47,324 INFO S.s.PersonsService [http-nio-8080-exec-1] Function : getChildByAddress
+2023-12-29 23:16:47,325 INFO S.s.PersonsService [http-nio-8080-exec-1] Function : addAge
+2023-12-29 23:16:47,350 INFO S.s.PersonsService [http-nio-8080-exec-1] Function : addAge
+2023-12-29 23:16:47,351 INFO S.s.PersonsService [http-nio-8080-exec-1] Function : addAge
+2023-12-29 23:16:47,351 INFO S.s.PersonsService [http-nio-8080-exec-1] Function : addMembre
+2023-12-29 23:16:47,351 INFO S.s.PersonsService [http-nio-8080-exec-1] Function : addAge
+2023-12-29 23:16:47,353 INFO S.s.PersonsService [http-nio-8080-exec-1] Function : addMembre
+2023-12-29 23:16:47,353 INFO S.s.PersonsService [http-nio-8080-exec-1] Function : addAge
+2023-12-29 23:16:47,353 INFO S.s.PersonsService [http-nio-8080-exec-1] Function : addMembre
+2023-12-29 23:16:47,353 INFO S.s.PersonsService [http-nio-8080-exec-1] Function : addChild
+2023-12-29 23:31:18,100 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.PersonsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-29 23:31:20,042 INFO c.PersonsControllerTest [main] Starting PersonsControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 16056 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-29 23:31:20,050 INFO c.PersonsControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-29 23:31:29,482 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-29 23:31:29,485 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 3 ms
+2023-12-29 23:31:30,631 INFO c.PersonsControllerTest [main] Started PersonsControllerTest in 11.736 seconds (JVM running for 16.642)
+2023-12-29 23:31:31,029 INFO S.c.PersonsController [main] Function : updatePersons
+2023-12-29 23:31:31,046 ERROR S.c.e.ControllerExceptionsHandler [main] null
+2023-12-29 23:31:31,189 INFO S.c.PersonsController [main] Function : getPersonEmails
+2023-12-29 23:31:31,225 INFO S.c.PersonsController [main] Function : getAllAccount
+2023-12-29 23:31:31,281 INFO S.c.PersonsController [main] Function : getChild
+2023-12-29 23:31:31,314 INFO S.c.PersonsController [main] Function : deletePerson
+2023-12-29 23:31:31,379 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.Persons> SafetyNetAlert.controller.PersonsController.addPerson(SafetyNetAlert.model.Persons)]
+2023-12-29 23:31:31,398 INFO S.c.PersonsController [main] Function : getPerson
+2023-12-29 23:31:31,431 INFO S.c.PersonsController [main] Function : getPersonInfo
+2023-12-29 23:31:31,465 INFO S.c.PersonsController [main] Function : addPerson
+2023-12-29 23:31:31,484 WARN o.s.w.s.PageNotFound [main] No mapping for DELETE /person/Jon&Boyd
+2023-12-29 23:31:31,512 WARN o.s.w.s.PageNotFound [main] No mapping for GET /person/Jon&Boyd
+2023-12-29 23:31:31,549 INFO S.c.PersonsController [main] Function : updatePersons
+2023-12-29 23:31:31,596 INFO S.c.PersonsController [main] Function : getPersonsMobile
+2023-12-29 23:55:45,570 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.FirestationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-29 23:55:47,209 INFO c.FirestationControllerTest [main] Starting FirestationControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 10700 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-29 23:55:47,217 INFO c.FirestationControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-29 23:55:51,537 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-29 23:55:51,540 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 3 ms
+2023-12-29 23:55:51,662 INFO c.FirestationControllerTest [main] Started FirestationControllerTest in 5.395 seconds (JVM running for 10.007)
+2023-12-29 23:55:52,258 INFO S.c.FirestationsController [main] Function : addPerson
+2023-12-29 23:55:52,589 INFO S.c.FirestationsController [main] Function : updateFirestations
+2023-12-29 23:55:52,699 INFO S.c.FirestationsController [main] Function : getPersonsByStation
+2023-12-29 23:55:52,740 INFO S.c.FirestationsController [main] Function : getHearthByStations
+2023-12-29 23:55:52,775 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-29 23:55:52,797 INFO S.c.FirestationsController [main] Function : getPersonInfo
+2023-12-29 23:55:52,833 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.Firestations> SafetyNetAlert.controller.FirestationsController.addPerson(SafetyNetAlert.model.Firestations)]
+2023-12-29 23:55:52,856 INFO S.c.FirestationsController [main] Function : deleteFirestation
+2023-12-29 23:55:52,903 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-29 23:55:52,920 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-29 23:55:52,953 INFO S.c.FirestationsController [main] Function : deleteFirestation
+2023-12-29 23:55:52,972 INFO S.c.FirestationsController [main] Function : updateFirestations
+2023-12-29 23:55:53,003 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.MedicalRecordsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-29 23:55:53,197 INFO c.MedicalRecordsControllerTest [main] Starting MedicalRecordsControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 10700 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-29 23:55:53,199 INFO c.MedicalRecordsControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-29 23:55:53,685 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-29 23:55:53,686 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 1 ms
+2023-12-29 23:55:53,713 INFO c.MedicalRecordsControllerTest [main] Started MedicalRecordsControllerTest in 0.663 seconds (JVM running for 12.058)
+2023-12-29 23:55:53,729 INFO S.c.MedicalRecordsController [main] Function : getAllMedicalsRecords
+2023-12-29 23:55:53,756 INFO S.c.MedicalRecordsController [main] Function : deletePerson
+2023-12-29 23:55:53,782 INFO S.c.MedicalRecordsController [main] Function : updateMedicalRecords
+2023-12-29 23:55:53,794 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.MedicalRecords> SafetyNetAlert.controller.MedicalRecordsController.addMedicalRecords(SafetyNetAlert.model.MedicalRecords)]
+2023-12-29 23:55:53,807 INFO S.c.MedicalRecordsController [main] Function : updateMedicalRecords
+2023-12-29 23:55:53,817 INFO S.c.MedicalRecordsController [main] Function : deletePerson
+2023-12-29 23:55:53,826 INFO S.c.MedicalRecordsController [main] Function : getMedicalRecords
+2023-12-29 23:55:53,842 INFO S.c.MedicalRecordsController [main] Function : getMedicalRecords
+2023-12-29 23:55:53,852 INFO S.c.MedicalRecordsController [main] Function : addMedicalRecords
+2023-12-29 23:55:53,868 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.PersonsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-29 23:55:53,991 INFO c.PersonsControllerTest [main] Starting PersonsControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 10700 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-29 23:55:53,993 INFO c.PersonsControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-29 23:55:57,245 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-29 23:55:57,247 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 2 ms
+2023-12-29 23:55:57,993 INFO c.PersonsControllerTest [main] Started PersonsControllerTest in 4.089 seconds (JVM running for 16.338)
+2023-12-29 23:55:58,020 INFO S.c.PersonsController [main] Function : updatePersons
+2023-12-29 23:55:58,022 ERROR S.c.e.ControllerExceptionsHandler [main] null
+2023-12-29 23:55:58,040 INFO S.c.PersonsController [main] Function : getPersonEmails
+2023-12-29 23:55:58,052 INFO S.c.PersonsController [main] Function : getAllAccount
+2023-12-29 23:55:58,065 INFO S.c.PersonsController [main] Function : getChild
+2023-12-29 23:55:58,078 INFO S.c.PersonsController [main] Function : deletePerson
+2023-12-29 23:55:58,094 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.Persons> SafetyNetAlert.controller.PersonsController.addPerson(SafetyNetAlert.model.Persons)]
+2023-12-29 23:55:58,106 INFO S.c.PersonsController [main] Function : getPerson
+2023-12-29 23:55:58,124 INFO S.c.PersonsController [main] Function : getPersonInfo
+2023-12-29 23:55:58,142 INFO S.c.PersonsController [main] Function : addPerson
+2023-12-29 23:55:58,157 WARN o.s.w.s.PageNotFound [main] No mapping for DELETE /person/Jon&Boyd
+2023-12-29 23:55:58,170 WARN o.s.w.s.PageNotFound [main] No mapping for GET /person/Jon&Boyd
+2023-12-29 23:55:58,192 INFO S.c.PersonsController [main] Function : updatePersons
+2023-12-29 23:55:58,245 INFO S.c.PersonsController [main] Function : getPersonsMobile
+2023-12-29 23:55:58,268 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [SafetyApplicationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-29 23:55:58,348 INFO SafetyApplicationTest [main] Starting SafetyApplicationTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 10700 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-29 23:55:58,349 INFO SafetyApplicationTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-29 23:56:00,106 INFO SafetyApplicationTest [main] Started SafetyApplicationTest in 1.817 seconds (JVM running for 18.451)
+2023-12-29 23:56:00,126 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.FirestationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-29 23:56:00,161 INFO s.FirestationServiceTest [main] Starting FirestationServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 10700 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-29 23:56:00,162 INFO s.FirestationServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-29 23:56:00,693 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-29 23:56:00,953 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 259 ms
+2023-12-29 23:56:00,993 INFO s.FirestationServiceTest [main] Started FirestationServiceTest in 0.858 seconds (JVM running for 19.337)
+2023-12-29 23:56:01,160 INFO S.s.FirestationsService [main] Function : updateFirestations
+2023-12-29 23:56:01,161 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-29 23:56:01,218 INFO S.s.FirestationsService [main] Function : saveFirestations
+2023-12-29 23:56:01,237 INFO S.s.FirestationsService [main] Function : getHearthByStations
+2023-12-29 23:56:01,238 INFO S.s.FirestationsService [main] Function : addAddressList
+2023-12-29 23:56:01,239 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-29 23:56:01,239 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-29 23:56:01,240 INFO S.s.FirestationsService [main] Function : addAddressList
+2023-12-29 23:56:01,240 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-29 23:56:01,240 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-29 23:56:01,272 INFO S.s.FirestationsService [main] Function : getPersonsFromStation
+2023-12-29 23:56:01,273 INFO S.s.FirestationsService [main] Function : getAgeFromPersons
+2023-12-29 23:56:01,274 INFO S.s.FirestationsService [main] Function : getAgeFromPersons
+2023-12-29 23:56:01,295 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-29 23:56:01,310 INFO S.s.FirestationsService [main] Function : getPersonsFromAddress
+2023-12-29 23:56:01,311 INFO S.s.FirestationsService [main] Function : addStation
+2023-12-29 23:56:01,311 INFO S.s.FirestationsService [main] Function : addHabitant
+2023-12-29 23:56:01,311 INFO S.s.FirestationsService [main] Function : addHabitant
+2023-12-29 23:56:01,322 INFO S.s.FirestationsService [main] Function : deleteFirestation
+2023-12-29 23:56:01,347 INFO S.s.FirestationsService [main] Function : saveFirestations
+2023-12-29 23:56:01,362 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-29 23:56:01,376 INFO S.s.FirestationsService [main] Function : deleteFirestation
+2023-12-29 23:56:01,393 INFO S.s.FirestationsService [main] Function : getAllFirestations
+2023-12-29 23:56:01,403 INFO S.s.FirestationsService [main] Function : updateFirestations
+2023-12-29 23:56:01,404 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-29 23:56:01,419 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.MedicalRecordsServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-29 23:56:01,514 INFO s.MedicalRecordsServiceTest [main] Starting MedicalRecordsServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 10700 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-29 23:56:01,515 INFO s.MedicalRecordsServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-29 23:56:01,661 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-29 23:56:01,840 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 178 ms
+2023-12-29 23:56:01,862 INFO s.MedicalRecordsServiceTest [main] Started MedicalRecordsServiceTest in 0.422 seconds (JVM running for 20.207)
+2023-12-29 23:56:01,876 INFO S.s.MedicalRecordsService [main] Function : saveMedicalRecords
+2023-12-29 23:56:01,895 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-29 23:56:01,908 INFO S.s.MedicalRecordsService [main] Function : getAllMedicalRecords
+2023-12-29 23:56:01,921 INFO S.s.MedicalRecordsService [main] Function : updateMedicalRecords
+2023-12-29 23:56:01,921 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-29 23:56:01,936 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-29 23:56:01,951 INFO S.s.MedicalRecordsService [main] Function : deleteAccount
+2023-12-29 23:56:01,963 INFO S.s.MedicalRecordsService [main] Function : saveMedicalRecords
+2023-12-29 23:56:01,972 INFO S.s.MedicalRecordsService [main] Function : deleteAccount
+2023-12-29 23:56:01,986 INFO S.s.MedicalRecordsService [main] Function : updateMedicalRecords
+2023-12-29 23:56:01,986 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-29 23:56:02,030 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.PersonsServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-29 23:56:02,121 INFO s.PersonsServiceTest [main] Starting PersonsServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 10700 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-29 23:56:02,122 INFO s.PersonsServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-29 23:56:02,394 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-29 23:56:02,531 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 134 ms
+2023-12-29 23:56:02,549 INFO s.PersonsServiceTest [main] Started PersonsServiceTest in 0.488 seconds (JVM running for 20.894)
+2023-12-29 23:56:02,564 INFO S.s.PersonsService [main] Function : getAllPersons
+2023-12-29 23:56:02,574 INFO S.s.PersonsService [main] Function : getChildByAddress
+2023-12-29 23:56:02,575 INFO S.s.PersonsService [main] Function : addAge
+2023-12-29 23:56:02,576 INFO S.s.PersonsService [main] Function : addAge
+2023-12-29 23:56:02,577 INFO S.s.PersonsService [main] Function : addMembre
+2023-12-29 23:56:02,577 INFO S.s.PersonsService [main] Function : addChild
+2023-12-29 23:56:02,586 INFO S.s.PersonsService [main] Function : deleteAccount
+2023-12-29 23:56:02,597 INFO S.s.PersonsService [main] Function : getPersons
+2023-12-29 23:56:02,609 INFO S.s.PersonsService [main] Function : savePerson
+2023-12-29 23:56:02,624 INFO S.s.PersonsService [main] Function : deleteAccount
+2023-12-29 23:56:02,635 INFO S.s.PersonsService [main] Function : savePerson
+2023-12-29 23:56:02,646 INFO S.s.PersonsService [main] Function : getPersonsEmail
+2023-12-29 23:56:02,661 INFO S.s.PersonsService [main] Function : updatePerson
+2023-12-29 23:56:02,674 INFO S.s.PersonsService [main] Function : getPersons
+2023-12-29 23:56:02,692 INFO S.s.PersonsService [main] Function : getPersonsInfo
+2023-12-29 23:56:02,694 INFO S.s.PersonsService [main] Function : addPersonInfo
+2023-12-29 23:56:02,695 INFO S.s.PersonsService [main] Function : addPersonInfo
+2023-12-29 23:56:02,710 INFO S.s.PersonsService [main] Function : updatePerson
+2023-12-29 23:56:02,719 INFO S.s.PersonsService [main] Function : getPersonsMobile
+2023-12-29 23:58:21,611 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.FirestationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-29 23:58:22,920 INFO c.FirestationControllerTest [main] Starting FirestationControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 2684 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-29 23:58:22,935 INFO c.FirestationControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-29 23:58:27,049 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-29 23:58:27,053 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 2 ms
+2023-12-29 23:58:27,162 INFO c.FirestationControllerTest [main] Started FirestationControllerTest in 4.918 seconds (JVM running for 8.959)
+2023-12-29 23:58:27,693 INFO S.c.FirestationsController [main] Function : addPerson
+2023-12-29 23:58:27,951 INFO S.c.FirestationsController [main] Function : updateFirestations
+2023-12-29 23:58:28,053 INFO S.c.FirestationsController [main] Function : getPersonsByStation
+2023-12-29 23:58:28,097 INFO S.c.FirestationsController [main] Function : getHearthByStations
+2023-12-29 23:58:28,140 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-29 23:58:28,163 INFO S.c.FirestationsController [main] Function : getPersonInfo
+2023-12-29 23:58:28,207 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.Firestations> SafetyNetAlert.controller.FirestationsController.addPerson(SafetyNetAlert.model.Firestations)]
+2023-12-29 23:58:28,239 INFO S.c.FirestationsController [main] Function : deleteFirestation
+2023-12-29 23:58:28,290 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-29 23:58:28,309 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-29 23:58:28,327 INFO S.c.FirestationsController [main] Function : deleteFirestation
+2023-12-29 23:58:28,338 INFO S.c.FirestationsController [main] Function : updateFirestations
+2023-12-29 23:58:28,359 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.MedicalRecordsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-29 23:58:28,514 INFO c.MedicalRecordsControllerTest [main] Starting MedicalRecordsControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 2684 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-29 23:58:28,516 INFO c.MedicalRecordsControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-29 23:58:28,970 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-29 23:58:28,972 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 2 ms
+2023-12-29 23:58:29,002 INFO c.MedicalRecordsControllerTest [main] Started MedicalRecordsControllerTest in 0.618 seconds (JVM running for 10.798)
+2023-12-29 23:58:29,017 INFO S.c.MedicalRecordsController [main] Function : getAllMedicalsRecords
+2023-12-29 23:58:29,045 INFO S.c.MedicalRecordsController [main] Function : deletePerson
+2023-12-29 23:58:29,070 INFO S.c.MedicalRecordsController [main] Function : updateMedicalRecords
+2023-12-29 23:58:29,081 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.MedicalRecords> SafetyNetAlert.controller.MedicalRecordsController.addMedicalRecords(SafetyNetAlert.model.MedicalRecords)]
+2023-12-29 23:58:29,093 INFO S.c.MedicalRecordsController [main] Function : updateMedicalRecords
+2023-12-29 23:58:29,102 INFO S.c.MedicalRecordsController [main] Function : deletePerson
+2023-12-29 23:58:29,114 INFO S.c.MedicalRecordsController [main] Function : getMedicalRecords
+2023-12-29 23:58:29,130 INFO S.c.MedicalRecordsController [main] Function : getMedicalRecords
+2023-12-29 23:58:29,141 INFO S.c.MedicalRecordsController [main] Function : addMedicalRecords
+2023-12-29 23:58:29,152 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.PersonsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-29 23:58:29,249 INFO c.PersonsControllerTest [main] Starting PersonsControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 2684 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-29 23:58:29,251 INFO c.PersonsControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-29 23:58:32,818 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-29 23:58:32,822 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 3 ms
+2023-12-29 23:58:33,502 INFO c.PersonsControllerTest [main] Started PersonsControllerTest in 4.315 seconds (JVM running for 15.298)
+2023-12-29 23:58:33,529 INFO S.c.PersonsController [main] Function : updatePersons
+2023-12-29 23:58:33,531 ERROR S.c.e.ControllerExceptionsHandler [main] null
+2023-12-29 23:58:33,550 INFO S.c.PersonsController [main] Function : getPersonEmails
+2023-12-29 23:58:33,562 INFO S.c.PersonsController [main] Function : getAllAccount
+2023-12-29 23:58:33,576 INFO S.c.PersonsController [main] Function : getChild
+2023-12-29 23:58:33,588 INFO S.c.PersonsController [main] Function : deletePerson
+2023-12-29 23:58:33,600 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.Persons> SafetyNetAlert.controller.PersonsController.addPerson(SafetyNetAlert.model.Persons)]
+2023-12-29 23:58:33,610 INFO S.c.PersonsController [main] Function : getPerson
+2023-12-29 23:58:33,625 INFO S.c.PersonsController [main] Function : getPersonInfo
+2023-12-29 23:58:33,638 INFO S.c.PersonsController [main] Function : addPerson
+2023-12-29 23:58:33,649 WARN o.s.w.s.PageNotFound [main] No mapping for DELETE /person/Jon&Boyd
+2023-12-29 23:58:33,658 WARN o.s.w.s.PageNotFound [main] No mapping for GET /person/Jon&Boyd
+2023-12-29 23:58:33,669 INFO S.c.PersonsController [main] Function : updatePersons
+2023-12-29 23:58:33,680 INFO S.c.PersonsController [main] Function : getPersonsMobile
+2023-12-29 23:58:33,691 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [SafetyApplicationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-29 23:58:33,760 INFO SafetyApplicationTest [main] Starting SafetyApplicationTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 2684 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-29 23:58:33,760 INFO SafetyApplicationTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-29 23:58:35,641 INFO SafetyApplicationTest [main] Started SafetyApplicationTest in 1.942 seconds (JVM running for 17.437)
+2023-12-29 23:58:35,667 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.FirestationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-29 23:58:35,721 INFO s.FirestationServiceTest [main] Starting FirestationServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 2684 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-29 23:58:35,723 INFO s.FirestationServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-29 23:58:36,245 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-29 23:58:36,391 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 145 ms
+2023-12-29 23:58:36,420 INFO s.FirestationServiceTest [main] Started FirestationServiceTest in 0.742 seconds (JVM running for 18.216)
+2023-12-29 23:58:36,566 INFO S.s.FirestationsService [main] Function : updateFirestations
+2023-12-29 23:58:36,566 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-29 23:58:36,611 INFO S.s.FirestationsService [main] Function : saveFirestations
+2023-12-29 23:58:36,632 INFO S.s.FirestationsService [main] Function : getHearthByStations
+2023-12-29 23:58:36,633 INFO S.s.FirestationsService [main] Function : addAddressList
+2023-12-29 23:58:36,633 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-29 23:58:36,634 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-29 23:58:36,634 INFO S.s.FirestationsService [main] Function : addAddressList
+2023-12-29 23:58:36,634 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-29 23:58:36,634 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-29 23:58:36,657 INFO S.s.FirestationsService [main] Function : getPersonsFromStation
+2023-12-29 23:58:36,658 INFO S.s.FirestationsService [main] Function : getAgeFromPersons
+2023-12-29 23:58:36,659 INFO S.s.FirestationsService [main] Function : getAgeFromPersons
+2023-12-29 23:58:36,673 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-29 23:58:36,684 INFO S.s.FirestationsService [main] Function : getPersonsFromAddress
+2023-12-29 23:58:36,684 INFO S.s.FirestationsService [main] Function : addStation
+2023-12-29 23:58:36,685 INFO S.s.FirestationsService [main] Function : addHabitant
+2023-12-29 23:58:36,685 INFO S.s.FirestationsService [main] Function : addHabitant
+2023-12-29 23:58:36,695 INFO S.s.FirestationsService [main] Function : deleteFirestation
+2023-12-29 23:58:36,713 INFO S.s.FirestationsService [main] Function : saveFirestations
+2023-12-29 23:58:36,723 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-29 23:58:36,735 INFO S.s.FirestationsService [main] Function : deleteFirestation
+2023-12-29 23:58:36,747 INFO S.s.FirestationsService [main] Function : getAllFirestations
+2023-12-29 23:58:36,759 INFO S.s.FirestationsService [main] Function : updateFirestations
+2023-12-29 23:58:36,760 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-29 23:58:36,778 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.MedicalRecordsServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-29 23:58:36,855 INFO s.MedicalRecordsServiceTest [main] Starting MedicalRecordsServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 2684 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-29 23:58:36,856 INFO s.MedicalRecordsServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-29 23:58:37,012 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-29 23:58:37,179 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 167 ms
+2023-12-29 23:58:37,204 INFO s.MedicalRecordsServiceTest [main] Started MedicalRecordsServiceTest in 0.407 seconds (JVM running for 19.0)
+2023-12-29 23:58:37,213 INFO S.s.MedicalRecordsService [main] Function : saveMedicalRecords
+2023-12-29 23:58:37,226 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-29 23:58:37,238 INFO S.s.MedicalRecordsService [main] Function : getAllMedicalRecords
+2023-12-29 23:58:37,253 INFO S.s.MedicalRecordsService [main] Function : updateMedicalRecords
+2023-12-29 23:58:37,254 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-29 23:58:37,267 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-29 23:58:37,276 INFO S.s.MedicalRecordsService [main] Function : deleteAccount
+2023-12-29 23:58:37,288 INFO S.s.MedicalRecordsService [main] Function : saveMedicalRecords
+2023-12-29 23:58:37,297 INFO S.s.MedicalRecordsService [main] Function : deleteAccount
+2023-12-29 23:58:37,306 INFO S.s.MedicalRecordsService [main] Function : updateMedicalRecords
+2023-12-29 23:58:37,306 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-29 23:58:37,316 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.PersonsServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-29 23:58:37,359 INFO s.PersonsServiceTest [main] Starting PersonsServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 2684 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-29 23:58:37,361 INFO s.PersonsServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-29 23:58:37,592 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-29 23:58:37,733 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 140 ms
+2023-12-29 23:58:37,764 INFO s.PersonsServiceTest [main] Started PersonsServiceTest in 0.439 seconds (JVM running for 19.56)
+2023-12-29 23:58:37,787 INFO S.s.PersonsService [main] Function : getAllPersons
+2023-12-29 23:58:37,801 INFO S.s.PersonsService [main] Function : getChildByAddress
+2023-12-29 23:58:37,803 INFO S.s.PersonsService [main] Function : addAge
+2023-12-29 23:58:37,804 INFO S.s.PersonsService [main] Function : addAge
+2023-12-29 23:58:37,805 INFO S.s.PersonsService [main] Function : addMembre
+2023-12-29 23:58:37,806 INFO S.s.PersonsService [main] Function : addChild
+2023-12-29 23:58:37,818 INFO S.s.PersonsService [main] Function : deleteAccount
+2023-12-29 23:58:37,833 INFO S.s.PersonsService [main] Function : getPersons
+2023-12-29 23:58:37,849 INFO S.s.PersonsService [main] Function : savePerson
+2023-12-29 23:58:37,865 INFO S.s.PersonsService [main] Function : deleteAccount
+2023-12-29 23:58:37,878 INFO S.s.PersonsService [main] Function : savePerson
+2023-12-29 23:58:37,890 INFO S.s.PersonsService [main] Function : getPersonsEmail
+2023-12-29 23:58:37,902 INFO S.s.PersonsService [main] Function : updatePerson
+2023-12-29 23:58:37,918 INFO S.s.PersonsService [main] Function : getPersons
+2023-12-29 23:58:37,935 INFO S.s.PersonsService [main] Function : getPersonsInfo
+2023-12-29 23:58:37,936 INFO S.s.PersonsService [main] Function : addPersonInfo
+2023-12-29 23:58:37,937 INFO S.s.PersonsService [main] Function : addPersonInfo
+2023-12-29 23:58:37,949 INFO S.s.PersonsService [main] Function : updatePerson
+2023-12-29 23:58:37,962 INFO S.s.PersonsService [main] Function : getPersonsMobile
+2023-12-30 11:05:35,178 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.FirestationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:05:36,684 INFO c.FirestationControllerTest [main] Starting FirestationControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 13512 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:05:36,691 INFO c.FirestationControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:05:41,456 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:05:41,459 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 3 ms
+2023-12-30 11:05:41,595 INFO c.FirestationControllerTest [main] Started FirestationControllerTest in 5.741 seconds (JVM running for 10.433)
+2023-12-30 11:05:42,105 INFO S.c.FirestationsController [main] Function : addPerson
+2023-12-30 11:05:42,422 INFO S.c.FirestationsController [main] Function : updateFirestations
+2023-12-30 11:05:42,529 INFO S.c.FirestationsController [main] Function : getPersonsByStation
+2023-12-30 11:05:42,566 INFO S.c.FirestationsController [main] Function : getHearthByStations
+2023-12-30 11:05:42,612 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-30 11:05:42,633 INFO S.c.FirestationsController [main] Function : getPersonInfo
+2023-12-30 11:05:42,682 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.Firestations> SafetyNetAlert.controller.FirestationsController.addPerson(SafetyNetAlert.model.Firestations)]
+2023-12-30 11:05:42,713 INFO S.c.FirestationsController [main] Function : deleteFirestation
+2023-12-30 11:05:42,760 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-30 11:05:42,775 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-30 11:05:42,796 INFO S.c.FirestationsController [main] Function : deleteFirestation
+2023-12-30 11:05:42,812 INFO S.c.FirestationsController [main] Function : updateFirestations
+2023-12-30 11:05:42,836 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.MedicalRecordsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:05:43,082 INFO c.MedicalRecordsControllerTest [main] Starting MedicalRecordsControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 13512 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:05:43,084 INFO c.MedicalRecordsControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:05:43,577 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:05:43,579 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 1 ms
+2023-12-30 11:05:43,616 INFO c.MedicalRecordsControllerTest [main] Started MedicalRecordsControllerTest in 0.636 seconds (JVM running for 12.453)
+2023-12-30 11:05:43,634 INFO S.c.MedicalRecordsController [main] Function : getAllMedicalsRecords
+2023-12-30 11:05:43,669 INFO S.c.MedicalRecordsController [main] Function : deletePerson
+2023-12-30 11:05:43,704 INFO S.c.MedicalRecordsController [main] Function : updateMedicalRecords
+2023-12-30 11:05:43,719 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.MedicalRecords> SafetyNetAlert.controller.MedicalRecordsController.addMedicalRecords(SafetyNetAlert.model.MedicalRecords)]
+2023-12-30 11:05:43,734 INFO S.c.MedicalRecordsController [main] Function : updateMedicalRecords
+2023-12-30 11:05:43,745 INFO S.c.MedicalRecordsController [main] Function : deletePerson
+2023-12-30 11:05:43,757 INFO S.c.MedicalRecordsController [main] Function : getMedicalRecords
+2023-12-30 11:05:43,774 INFO S.c.MedicalRecordsController [main] Function : getMedicalRecords
+2023-12-30 11:05:43,790 INFO S.c.MedicalRecordsController [main] Function : addMedicalRecords
+2023-12-30 11:05:43,812 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.PersonsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:05:43,966 INFO c.PersonsControllerTest [main] Starting PersonsControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 13512 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:05:43,968 INFO c.PersonsControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:05:47,833 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:05:47,835 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 1 ms
+2023-12-30 11:05:48,627 INFO c.PersonsControllerTest [main] Started PersonsControllerTest in 4.727 seconds (JVM running for 17.465)
+2023-12-30 11:05:48,669 INFO S.c.PersonsController [main] Function : updatePersons
+2023-12-30 11:05:48,671 ERROR S.c.e.ControllerExceptionsHandler [main] null
+2023-12-30 11:05:48,695 INFO S.c.PersonsController [main] Function : getPersonEmails
+2023-12-30 11:05:48,710 INFO S.c.PersonsController [main] Function : getAllAccount
+2023-12-30 11:05:48,727 INFO S.c.PersonsController [main] Function : getChild
+2023-12-30 11:05:48,741 INFO S.c.PersonsController [main] Function : deletePerson
+2023-12-30 11:05:48,758 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.Persons> SafetyNetAlert.controller.PersonsController.addPerson(SafetyNetAlert.model.Persons)]
+2023-12-30 11:05:48,773 INFO S.c.PersonsController [main] Function : getPerson
+2023-12-30 11:05:48,796 INFO S.c.PersonsController [main] Function : getPersonInfo
+2023-12-30 11:05:48,812 INFO S.c.PersonsController [main] Function : addPerson
+2023-12-30 11:05:48,828 WARN o.s.w.s.PageNotFound [main] No mapping for DELETE /person/Jon&Boyd
+2023-12-30 11:05:48,848 WARN o.s.w.s.PageNotFound [main] No mapping for GET /person/Jon&Boyd
+2023-12-30 11:05:48,873 INFO S.c.PersonsController [main] Function : updatePersons
+2023-12-30 11:05:48,913 INFO S.c.PersonsController [main] Function : getPersonsMobile
+2023-12-30 11:05:48,940 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [SafetyApplicationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:05:49,022 INFO SafetyApplicationTest [main] Starting SafetyApplicationTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 13512 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:05:49,023 INFO SafetyApplicationTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:05:51,102 INFO SafetyApplicationTest [main] Started SafetyApplicationTest in 2.135 seconds (JVM running for 19.94)
+2023-12-30 11:05:51,132 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.FirestationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:05:51,193 INFO s.FirestationServiceTest [main] Starting FirestationServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 13512 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:05:51,195 INFO s.FirestationServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:05:51,762 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:05:51,979 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 215 ms
+2023-12-30 11:05:52,030 INFO s.FirestationServiceTest [main] Started FirestationServiceTest in 0.882 seconds (JVM running for 20.868)
+2023-12-30 11:05:52,222 INFO S.s.FirestationsService [main] Function : updateFirestations
+2023-12-30 11:05:52,222 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 11:05:52,288 INFO S.s.FirestationsService [main] Function : saveFirestations
+2023-12-30 11:05:52,316 INFO S.s.FirestationsService [main] Function : getHearthByStations
+2023-12-30 11:05:52,317 INFO S.s.FirestationsService [main] Function : addAddressList
+2023-12-30 11:05:52,318 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 11:05:52,319 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 11:05:52,319 INFO S.s.FirestationsService [main] Function : addAddressList
+2023-12-30 11:05:52,320 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 11:05:52,320 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 11:05:52,361 INFO S.s.FirestationsService [main] Function : getPersonsFromStation
+2023-12-30 11:05:52,362 INFO S.s.FirestationsService [main] Function : getAgeFromPersons
+2023-12-30 11:05:52,366 INFO S.s.FirestationsService [main] Function : getAgeFromPersons
+2023-12-30 11:05:52,390 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 11:05:52,413 INFO S.s.FirestationsService [main] Function : getPersonsFromAddress
+2023-12-30 11:05:52,414 INFO S.s.FirestationsService [main] Function : addStation
+2023-12-30 11:05:52,414 INFO S.s.FirestationsService [main] Function : addHabitant
+2023-12-30 11:05:52,415 INFO S.s.FirestationsService [main] Function : addHabitant
+2023-12-30 11:05:52,450 INFO S.s.FirestationsService [main] Function : deleteFirestation
+2023-12-30 11:05:52,519 INFO S.s.FirestationsService [main] Function : saveFirestations
+2023-12-30 11:05:52,552 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 11:05:52,575 INFO S.s.FirestationsService [main] Function : deleteFirestation
+2023-12-30 11:05:52,597 INFO S.s.FirestationsService [main] Function : getAllFirestations
+2023-12-30 11:05:52,617 INFO S.s.FirestationsService [main] Function : updateFirestations
+2023-12-30 11:05:52,617 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 11:05:52,649 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.MedicalRecordsServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:05:52,762 INFO s.MedicalRecordsServiceTest [main] Starting MedicalRecordsServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 13512 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:05:52,764 INFO s.MedicalRecordsServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:05:52,882 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:05:53,054 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 171 ms
+2023-12-30 11:05:53,099 INFO s.MedicalRecordsServiceTest [main] Started MedicalRecordsServiceTest in 0.431 seconds (JVM running for 21.938)
+2023-12-30 11:05:53,116 INFO S.s.MedicalRecordsService [main] Function : saveMedicalRecords
+2023-12-30 11:05:53,129 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 11:05:53,141 INFO S.s.MedicalRecordsService [main] Function : getAllMedicalRecords
+2023-12-30 11:05:53,151 INFO S.s.MedicalRecordsService [main] Function : updateMedicalRecords
+2023-12-30 11:05:53,151 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 11:05:53,163 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 11:05:53,174 INFO S.s.MedicalRecordsService [main] Function : deleteAccount
+2023-12-30 11:05:53,183 INFO S.s.MedicalRecordsService [main] Function : saveMedicalRecords
+2023-12-30 11:05:53,194 INFO S.s.MedicalRecordsService [main] Function : deleteAccount
+2023-12-30 11:05:53,204 INFO S.s.MedicalRecordsService [main] Function : updateMedicalRecords
+2023-12-30 11:05:53,204 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 11:05:53,214 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.PersonsServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:05:53,253 INFO s.PersonsServiceTest [main] Starting PersonsServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 13512 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:05:53,256 INFO s.PersonsServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:05:53,541 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:05:53,660 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 118 ms
+2023-12-30 11:05:53,701 INFO s.PersonsServiceTest [main] Started PersonsServiceTest in 0.478 seconds (JVM running for 22.539)
+2023-12-30 11:05:53,719 INFO S.s.PersonsService [main] Function : getAllPersons
+2023-12-30 11:05:53,729 INFO S.s.PersonsService [main] Function : getChildByAddress
+2023-12-30 11:05:53,730 INFO S.s.PersonsService [main] Function : addAge
+2023-12-30 11:05:53,731 INFO S.s.PersonsService [main] Function : addAge
+2023-12-30 11:05:53,732 INFO S.s.PersonsService [main] Function : addMembre
+2023-12-30 11:05:53,732 INFO S.s.PersonsService [main] Function : addChild
+2023-12-30 11:05:53,740 INFO S.s.PersonsService [main] Function : deleteAccount
+2023-12-30 11:05:53,755 INFO S.s.PersonsService [main] Function : getPersons
+2023-12-30 11:05:53,781 INFO S.s.PersonsService [main] Function : savePerson
+2023-12-30 11:05:53,808 INFO S.s.PersonsService [main] Function : deleteAccount
+2023-12-30 11:05:53,828 INFO S.s.PersonsService [main] Function : savePerson
+2023-12-30 11:05:53,851 INFO S.s.PersonsService [main] Function : getPersonsEmail
+2023-12-30 11:05:53,869 INFO S.s.PersonsService [main] Function : updatePerson
+2023-12-30 11:05:53,884 INFO S.s.PersonsService [main] Function : getPersons
+2023-12-30 11:05:53,900 INFO S.s.PersonsService [main] Function : getPersonsInfo
+2023-12-30 11:05:53,902 INFO S.s.PersonsService [main] Function : addPersonInfo
+2023-12-30 11:05:53,902 INFO S.s.PersonsService [main] Function : addPersonInfo
+2023-12-30 11:05:53,918 INFO S.s.PersonsService [main] Function : updatePerson
+2023-12-30 11:05:53,931 INFO S.s.PersonsService [main] Function : getPersonsMobile
+2023-12-30 11:15:11,899 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.FirestationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:15:13,574 INFO c.FirestationControllerTest [main] Starting FirestationControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 4828 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:15:13,582 INFO c.FirestationControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:15:18,548 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:15:18,550 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 2 ms
+2023-12-30 11:15:18,661 INFO c.FirestationControllerTest [main] Started FirestationControllerTest in 6.065 seconds (JVM running for 11.099)
+2023-12-30 11:15:19,250 INFO S.c.FirestationsController [main] Function : addPerson
+2023-12-30 11:15:19,621 INFO S.c.FirestationsController [main] Function : updateFirestations
+2023-12-30 11:15:19,737 INFO S.c.FirestationsController [main] Function : getPersonsByStation
+2023-12-30 11:15:19,787 INFO S.c.FirestationsController [main] Function : getHearthByStations
+2023-12-30 11:15:19,834 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-30 11:15:19,863 INFO S.c.FirestationsController [main] Function : getPersonInfo
+2023-12-30 11:15:19,911 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.Firestations> SafetyNetAlert.controller.FirestationsController.addPerson(SafetyNetAlert.model.Firestations)]
+2023-12-30 11:15:19,940 INFO S.c.FirestationsController [main] Function : deleteFirestation
+2023-12-30 11:15:19,983 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-30 11:15:20,010 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-30 11:15:20,044 INFO S.c.FirestationsController [main] Function : deleteFirestation
+2023-12-30 11:15:20,076 INFO S.c.FirestationsController [main] Function : updateFirestations
+2023-12-30 11:15:20,119 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.MedicalRecordsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:15:20,291 INFO c.MedicalRecordsControllerTest [main] Starting MedicalRecordsControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 4828 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:15:20,293 INFO c.MedicalRecordsControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:15:20,912 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:15:20,913 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 1 ms
+2023-12-30 11:15:20,951 INFO c.MedicalRecordsControllerTest [main] Started MedicalRecordsControllerTest in 0.773 seconds (JVM running for 13.39)
+2023-12-30 11:15:20,968 INFO S.c.MedicalRecordsController [main] Function : getAllMedicalsRecords
+2023-12-30 11:15:20,996 INFO S.c.MedicalRecordsController [main] Function : deletePerson
+2023-12-30 11:15:21,026 INFO S.c.MedicalRecordsController [main] Function : updateMedicalRecords
+2023-12-30 11:15:21,039 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.MedicalRecords> SafetyNetAlert.controller.MedicalRecordsController.addMedicalRecords(SafetyNetAlert.model.MedicalRecords)]
+2023-12-30 11:15:21,055 INFO S.c.MedicalRecordsController [main] Function : updateMedicalRecords
+2023-12-30 11:15:21,067 INFO S.c.MedicalRecordsController [main] Function : deletePerson
+2023-12-30 11:15:21,080 INFO S.c.MedicalRecordsController [main] Function : getMedicalRecords
+2023-12-30 11:15:21,097 INFO S.c.MedicalRecordsController [main] Function : getMedicalRecords
+2023-12-30 11:15:21,113 INFO S.c.MedicalRecordsController [main] Function : addMedicalRecords
+2023-12-30 11:15:21,129 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.PersonsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:15:21,297 INFO c.PersonsControllerTest [main] Starting PersonsControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 4828 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:15:21,298 INFO c.PersonsControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:15:25,352 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:15:25,354 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 2 ms
+2023-12-30 11:15:26,251 INFO c.PersonsControllerTest [main] Started PersonsControllerTest in 5.032 seconds (JVM running for 18.689)
+2023-12-30 11:15:26,284 INFO S.c.PersonsController [main] Function : updatePersons
+2023-12-30 11:15:26,285 ERROR S.c.e.ControllerExceptionsHandler [main] null
+2023-12-30 11:15:26,305 INFO S.c.PersonsController [main] Function : getPersonEmails
+2023-12-30 11:15:26,318 INFO S.c.PersonsController [main] Function : getAllAccount
+2023-12-30 11:15:26,334 INFO S.c.PersonsController [main] Function : getChild
+2023-12-30 11:15:26,351 INFO S.c.PersonsController [main] Function : deletePerson
+2023-12-30 11:15:26,367 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.Persons> SafetyNetAlert.controller.PersonsController.addPerson(SafetyNetAlert.model.Persons)]
+2023-12-30 11:15:26,379 INFO S.c.PersonsController [main] Function : getPerson
+2023-12-30 11:15:26,395 INFO S.c.PersonsController [main] Function : getPersonInfo
+2023-12-30 11:15:26,414 INFO S.c.PersonsController [main] Function : addPerson
+2023-12-30 11:15:26,428 WARN o.s.w.s.PageNotFound [main] No mapping for DELETE /person/Jon&Boyd
+2023-12-30 11:15:26,442 WARN o.s.w.s.PageNotFound [main] No mapping for GET /person/Jon&Boyd
+2023-12-30 11:15:26,460 INFO S.c.PersonsController [main] Function : updatePersons
+2023-12-30 11:15:26,488 INFO S.c.PersonsController [main] Function : getPersonsMobile
+2023-12-30 11:15:26,519 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [SafetyApplicationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:15:26,620 INFO SafetyApplicationTest [main] Starting SafetyApplicationTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 4828 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:15:26,622 INFO SafetyApplicationTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:15:28,827 INFO SafetyApplicationTest [main] Started SafetyApplicationTest in 2.266 seconds (JVM running for 21.266)
+2023-12-30 11:15:28,852 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.FirestationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:15:28,897 INFO s.FirestationServiceTest [main] Starting FirestationServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 4828 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:15:28,898 INFO s.FirestationServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:15:29,496 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:15:29,757 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 260 ms
+2023-12-30 11:15:29,798 INFO s.FirestationServiceTest [main] Started FirestationServiceTest in 0.935 seconds (JVM running for 22.236)
+2023-12-30 11:15:29,987 INFO S.s.FirestationsService [main] Function : updateFirestations
+2023-12-30 11:15:29,987 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 11:15:30,044 INFO S.s.FirestationsService [main] Function : saveFirestations
+2023-12-30 11:15:30,065 INFO S.s.FirestationsService [main] Function : getHearthByStations
+2023-12-30 11:15:30,065 INFO S.s.FirestationsService [main] Function : addAddressList
+2023-12-30 11:15:30,066 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 11:15:30,066 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 11:15:30,066 INFO S.s.FirestationsService [main] Function : addAddressList
+2023-12-30 11:15:30,067 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 11:15:30,067 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 11:15:30,099 INFO S.s.FirestationsService [main] Function : getPersonsFromStation
+2023-12-30 11:15:30,100 INFO S.s.FirestationsService [main] Function : getAgeFromPersons
+2023-12-30 11:15:30,102 INFO S.s.FirestationsService [main] Function : getAgeFromPersons
+2023-12-30 11:15:30,124 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 11:15:30,138 INFO S.s.FirestationsService [main] Function : getPersonsFromAddress
+2023-12-30 11:15:30,138 INFO S.s.FirestationsService [main] Function : addStation
+2023-12-30 11:15:30,138 INFO S.s.FirestationsService [main] Function : addHabitant
+2023-12-30 11:15:30,140 INFO S.s.FirestationsService [main] Function : addHabitant
+2023-12-30 11:15:30,155 INFO S.s.FirestationsService [main] Function : deleteFirestation
+2023-12-30 11:15:30,180 INFO S.s.FirestationsService [main] Function : saveFirestations
+2023-12-30 11:15:30,197 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 11:15:30,217 INFO S.s.FirestationsService [main] Function : deleteFirestation
+2023-12-30 11:15:30,238 INFO S.s.FirestationsService [main] Function : getAllFirestations
+2023-12-30 11:15:30,259 INFO S.s.FirestationsService [main] Function : updateFirestations
+2023-12-30 11:15:30,261 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 11:15:30,287 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.MedicalRecordsServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:15:30,372 INFO s.MedicalRecordsServiceTest [main] Starting MedicalRecordsServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 4828 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:15:30,374 INFO s.MedicalRecordsServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:15:30,571 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:15:30,719 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 147 ms
+2023-12-30 11:15:30,752 INFO s.MedicalRecordsServiceTest [main] Started MedicalRecordsServiceTest in 0.433 seconds (JVM running for 23.191)
+2023-12-30 11:15:30,767 INFO S.s.MedicalRecordsService [main] Function : saveMedicalRecords
+2023-12-30 11:15:30,788 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 11:15:30,809 INFO S.s.MedicalRecordsService [main] Function : getAllMedicalRecords
+2023-12-30 11:15:30,835 INFO S.s.MedicalRecordsService [main] Function : updateMedicalRecords
+2023-12-30 11:15:30,836 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 11:15:30,857 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 11:15:30,875 INFO S.s.MedicalRecordsService [main] Function : deleteAccount
+2023-12-30 11:15:30,893 INFO S.s.MedicalRecordsService [main] Function : saveMedicalRecords
+2023-12-30 11:15:30,909 INFO S.s.MedicalRecordsService [main] Function : deleteAccount
+2023-12-30 11:15:30,931 INFO S.s.MedicalRecordsService [main] Function : updateMedicalRecords
+2023-12-30 11:15:30,931 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 11:15:30,958 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.PersonsServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:15:31,033 INFO s.PersonsServiceTest [main] Starting PersonsServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 4828 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:15:31,036 INFO s.PersonsServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:15:31,332 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:15:31,500 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 167 ms
+2023-12-30 11:15:31,527 INFO s.PersonsServiceTest [main] Started PersonsServiceTest in 0.554 seconds (JVM running for 23.966)
+2023-12-30 11:15:31,558 INFO S.s.PersonsService [main] Function : getAllPersons
+2023-12-30 11:15:31,588 INFO S.s.PersonsService [main] Function : getChildByAddress
+2023-12-30 11:15:31,589 INFO S.s.PersonsService [main] Function : addAge
+2023-12-30 11:15:31,590 INFO S.s.PersonsService [main] Function : addAge
+2023-12-30 11:15:31,591 INFO S.s.PersonsService [main] Function : addMembre
+2023-12-30 11:15:31,591 INFO S.s.PersonsService [main] Function : addChild
+2023-12-30 11:15:31,606 INFO S.s.PersonsService [main] Function : deleteAccount
+2023-12-30 11:15:31,622 INFO S.s.PersonsService [main] Function : getPersons
+2023-12-30 11:15:31,634 INFO S.s.PersonsService [main] Function : savePerson
+2023-12-30 11:15:31,645 INFO S.s.PersonsService [main] Function : deleteAccount
+2023-12-30 11:15:31,655 INFO S.s.PersonsService [main] Function : savePerson
+2023-12-30 11:15:31,664 INFO S.s.PersonsService [main] Function : getPersonsEmail
+2023-12-30 11:15:31,673 INFO S.s.PersonsService [main] Function : updatePerson
+2023-12-30 11:15:31,688 INFO S.s.PersonsService [main] Function : getPersons
+2023-12-30 11:15:31,700 INFO S.s.PersonsService [main] Function : getPersonsInfo
+2023-12-30 11:15:31,701 INFO S.s.PersonsService [main] Function : addPersonInfo
+2023-12-30 11:15:31,701 INFO S.s.PersonsService [main] Function : addPersonInfo
+2023-12-30 11:15:31,712 INFO S.s.PersonsService [main] Function : updatePerson
+2023-12-30 11:15:31,723 INFO S.s.PersonsService [main] Function : getPersonsMobile
+2023-12-30 11:24:08,290 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.FirestationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:24:09,875 INFO c.FirestationControllerTest [main] Starting FirestationControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 5084 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:24:09,883 INFO c.FirestationControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:24:14,758 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:24:14,761 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 2 ms
+2023-12-30 11:24:14,897 INFO c.FirestationControllerTest [main] Started FirestationControllerTest in 5.945 seconds (JVM running for 10.9)
+2023-12-30 11:24:15,735 INFO S.c.FirestationsController [main] Function : addPerson
+2023-12-30 11:24:16,153 INFO S.c.FirestationsController [main] Function : updateFirestations
+2023-12-30 11:24:16,277 INFO S.c.FirestationsController [main] Function : getPersonsByStation
+2023-12-30 11:24:16,322 INFO S.c.FirestationsController [main] Function : getHearthByStations
+2023-12-30 11:24:16,366 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-30 11:24:16,400 INFO S.c.FirestationsController [main] Function : getPersonInfo
+2023-12-30 11:24:16,447 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.Firestations> SafetyNetAlert.controller.FirestationsController.addPerson(SafetyNetAlert.model.Firestations)]
+2023-12-30 11:24:16,471 INFO S.c.FirestationsController [main] Function : deleteFirestation
+2023-12-30 11:24:16,525 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-30 11:24:16,547 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-30 11:24:16,571 INFO S.c.FirestationsController [main] Function : deleteFirestation
+2023-12-30 11:24:16,597 INFO S.c.FirestationsController [main] Function : updateFirestations
+2023-12-30 11:24:16,653 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.MedicalRecordsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:24:16,888 INFO c.MedicalRecordsControllerTest [main] Starting MedicalRecordsControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 5084 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:24:16,891 INFO c.MedicalRecordsControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:24:17,494 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:24:17,496 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 1 ms
+2023-12-30 11:24:17,525 INFO c.MedicalRecordsControllerTest [main] Started MedicalRecordsControllerTest in 0.823 seconds (JVM running for 13.528)
+2023-12-30 11:24:17,539 INFO S.c.MedicalRecordsController [main] Function : getAllMedicalsRecords
+2023-12-30 11:24:17,570 INFO S.c.MedicalRecordsController [main] Function : deletePerson
+2023-12-30 11:24:17,609 INFO S.c.MedicalRecordsController [main] Function : updateMedicalRecords
+2023-12-30 11:24:17,620 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.MedicalRecords> SafetyNetAlert.controller.MedicalRecordsController.addMedicalRecords(SafetyNetAlert.model.MedicalRecords)]
+2023-12-30 11:24:17,635 INFO S.c.MedicalRecordsController [main] Function : updateMedicalRecords
+2023-12-30 11:24:17,647 INFO S.c.MedicalRecordsController [main] Function : deletePerson
+2023-12-30 11:24:17,658 INFO S.c.MedicalRecordsController [main] Function : getMedicalRecords
+2023-12-30 11:24:17,678 INFO S.c.MedicalRecordsController [main] Function : getMedicalRecords
+2023-12-30 11:24:17,691 INFO S.c.MedicalRecordsController [main] Function : addMedicalRecords
+2023-12-30 11:24:17,707 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.PersonsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:24:17,878 INFO c.PersonsControllerTest [main] Starting PersonsControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 5084 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:24:17,880 INFO c.PersonsControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:24:22,152 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:24:22,155 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 2 ms
+2023-12-30 11:24:23,010 INFO c.PersonsControllerTest [main] Started PersonsControllerTest in 5.226 seconds (JVM running for 19.013)
+2023-12-30 11:24:23,047 INFO S.c.PersonsController [main] Function : updatePersons
+2023-12-30 11:24:23,049 ERROR S.c.e.ControllerExceptionsHandler [main] null
+2023-12-30 11:24:23,076 INFO S.c.PersonsController [main] Function : getPersonEmails
+2023-12-30 11:24:23,092 INFO S.c.PersonsController [main] Function : getAllAccount
+2023-12-30 11:24:23,120 INFO S.c.PersonsController [main] Function : getChild
+2023-12-30 11:24:23,138 INFO S.c.PersonsController [main] Function : deletePerson
+2023-12-30 11:24:23,158 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.Persons> SafetyNetAlert.controller.PersonsController.addPerson(SafetyNetAlert.model.Persons)]
+2023-12-30 11:24:23,170 INFO S.c.PersonsController [main] Function : getPerson
+2023-12-30 11:24:23,190 INFO S.c.PersonsController [main] Function : getPersonInfo
+2023-12-30 11:24:23,210 INFO S.c.PersonsController [main] Function : addPerson
+2023-12-30 11:24:23,277 WARN o.s.w.s.PageNotFound [main] No mapping for DELETE /person/Jon&Boyd
+2023-12-30 11:24:23,317 WARN o.s.w.s.PageNotFound [main] No mapping for GET /person/Jon&Boyd
+2023-12-30 11:24:23,353 INFO S.c.PersonsController [main] Function : updatePersons
+2023-12-30 11:24:23,373 INFO S.c.PersonsController [main] Function : getPersonsMobile
+2023-12-30 11:24:23,390 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [SafetyApplicationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:24:23,473 INFO SafetyApplicationTest [main] Starting SafetyApplicationTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 5084 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:24:23,476 INFO SafetyApplicationTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:24:25,875 INFO SafetyApplicationTest [main] Started SafetyApplicationTest in 2.467 seconds (JVM running for 21.878)
+2023-12-30 11:24:25,904 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.FirestationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:24:25,953 INFO s.FirestationServiceTest [main] Starting FirestationServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 5084 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:24:25,955 INFO s.FirestationServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:24:26,583 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:24:26,811 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 228 ms
+2023-12-30 11:24:26,857 INFO s.FirestationServiceTest [main] Started FirestationServiceTest in 0.938 seconds (JVM running for 22.861)
+2023-12-30 11:24:27,060 INFO S.s.FirestationsService [main] Function : updateFirestations
+2023-12-30 11:24:27,060 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 11:24:27,161 INFO S.s.FirestationsService [main] Function : saveFirestations
+2023-12-30 11:24:27,200 INFO S.s.FirestationsService [main] Function : getHearthByStations
+2023-12-30 11:24:27,203 INFO S.s.FirestationsService [main] Function : addAddressList
+2023-12-30 11:24:27,203 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 11:24:27,204 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 11:24:27,206 INFO S.s.FirestationsService [main] Function : addAddressList
+2023-12-30 11:24:27,206 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 11:24:27,207 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 11:24:27,263 INFO S.s.FirestationsService [main] Function : getPersonsFromStation
+2023-12-30 11:24:27,264 INFO S.s.FirestationsService [main] Function : getAgeFromPersons
+2023-12-30 11:24:27,265 INFO S.s.FirestationsService [main] Function : getAgeFromPersons
+2023-12-30 11:24:27,295 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 11:24:27,321 INFO S.s.FirestationsService [main] Function : getPersonsFromAddress
+2023-12-30 11:24:27,324 INFO S.s.FirestationsService [main] Function : addStation
+2023-12-30 11:24:27,326 INFO S.s.FirestationsService [main] Function : addHabitant
+2023-12-30 11:24:27,329 INFO S.s.FirestationsService [main] Function : addHabitant
+2023-12-30 11:24:27,365 INFO S.s.FirestationsService [main] Function : deleteFirestation
+2023-12-30 11:24:27,397 INFO S.s.FirestationsService [main] Function : saveFirestations
+2023-12-30 11:24:27,416 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 11:24:27,436 INFO S.s.FirestationsService [main] Function : deleteFirestation
+2023-12-30 11:24:27,452 INFO S.s.FirestationsService [main] Function : getAllFirestations
+2023-12-30 11:24:27,469 INFO S.s.FirestationsService [main] Function : updateFirestations
+2023-12-30 11:24:27,471 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 11:24:27,497 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.MedicalRecordsServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:24:27,642 INFO s.MedicalRecordsServiceTest [main] Starting MedicalRecordsServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 5084 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:24:27,645 INFO s.MedicalRecordsServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:24:27,851 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:24:27,976 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 125 ms
+2023-12-30 11:24:27,996 INFO s.MedicalRecordsServiceTest [main] Started MedicalRecordsServiceTest in 0.453 seconds (JVM running for 24.0)
+2023-12-30 11:24:28,009 INFO S.s.MedicalRecordsService [main] Function : saveMedicalRecords
+2023-12-30 11:24:28,022 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 11:24:28,038 INFO S.s.MedicalRecordsService [main] Function : getAllMedicalRecords
+2023-12-30 11:24:28,051 INFO S.s.MedicalRecordsService [main] Function : updateMedicalRecords
+2023-12-30 11:24:28,051 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 11:24:28,065 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 11:24:28,079 INFO S.s.MedicalRecordsService [main] Function : deleteAccount
+2023-12-30 11:24:28,093 INFO S.s.MedicalRecordsService [main] Function : saveMedicalRecords
+2023-12-30 11:24:28,112 INFO S.s.MedicalRecordsService [main] Function : deleteAccount
+2023-12-30 11:24:28,130 INFO S.s.MedicalRecordsService [main] Function : updateMedicalRecords
+2023-12-30 11:24:28,131 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 11:24:28,160 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.PersonsServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:24:28,218 INFO s.PersonsServiceTest [main] Starting PersonsServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 5084 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:24:28,219 INFO s.PersonsServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:24:28,508 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:24:28,640 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 131 ms
+2023-12-30 11:24:28,666 INFO s.PersonsServiceTest [main] Started PersonsServiceTest in 0.488 seconds (JVM running for 24.669)
+2023-12-30 11:24:28,685 INFO S.s.PersonsService [main] Function : getAllPersons
+2023-12-30 11:24:28,699 INFO S.s.PersonsService [main] Function : getChildByAddress
+2023-12-30 11:24:28,700 INFO S.s.PersonsService [main] Function : addAge
+2023-12-30 11:24:28,701 INFO S.s.PersonsService [main] Function : addAge
+2023-12-30 11:24:28,702 INFO S.s.PersonsService [main] Function : addMembre
+2023-12-30 11:24:28,702 INFO S.s.PersonsService [main] Function : addChild
+2023-12-30 11:24:28,712 INFO S.s.PersonsService [main] Function : deleteAccount
+2023-12-30 11:24:28,729 INFO S.s.PersonsService [main] Function : getPersons
+2023-12-30 11:24:28,746 INFO S.s.PersonsService [main] Function : savePerson
+2023-12-30 11:24:28,766 INFO S.s.PersonsService [main] Function : deleteAccount
+2023-12-30 11:24:28,782 INFO S.s.PersonsService [main] Function : savePerson
+2023-12-30 11:24:28,797 INFO S.s.PersonsService [main] Function : getPersonsEmail
+2023-12-30 11:24:28,819 INFO S.s.PersonsService [main] Function : updatePerson
+2023-12-30 11:24:28,843 INFO S.s.PersonsService [main] Function : getPersons
+2023-12-30 11:24:28,859 INFO S.s.PersonsService [main] Function : getPersonsInfo
+2023-12-30 11:24:28,860 INFO S.s.PersonsService [main] Function : addPersonInfo
+2023-12-30 11:24:28,861 INFO S.s.PersonsService [main] Function : addPersonInfo
+2023-12-30 11:24:28,879 INFO S.s.PersonsService [main] Function : updatePerson
+2023-12-30 11:24:28,892 INFO S.s.PersonsService [main] Function : getPersonsMobile
+2023-12-30 11:26:47,995 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.FirestationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:26:49,437 INFO c.FirestationControllerTest [main] Starting FirestationControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 19616 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:26:49,444 INFO c.FirestationControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:26:55,655 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:26:55,661 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 4 ms
+2023-12-30 11:26:55,774 INFO c.FirestationControllerTest [main] Started FirestationControllerTest in 7.203 seconds (JVM running for 11.686)
+2023-12-30 11:26:56,372 INFO S.c.FirestationsController [main] Function : addPerson
+2023-12-30 11:26:56,701 INFO S.c.FirestationsController [main] Function : updateFirestations
+2023-12-30 11:26:56,855 INFO S.c.FirestationsController [main] Function : getPersonsByStation
+2023-12-30 11:26:56,986 INFO S.c.FirestationsController [main] Function : getHearthByStations
+2023-12-30 11:26:57,073 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-30 11:26:57,128 INFO S.c.FirestationsController [main] Function : getPersonInfo
+2023-12-30 11:26:57,183 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.Firestations> SafetyNetAlert.controller.FirestationsController.addPerson(SafetyNetAlert.model.Firestations)]
+2023-12-30 11:26:57,203 INFO S.c.FirestationsController [main] Function : deleteFirestation
+2023-12-30 11:26:57,292 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-30 11:26:57,324 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-30 11:26:57,411 INFO S.c.FirestationsController [main] Function : deleteFirestation
+2023-12-30 11:26:57,438 INFO S.c.FirestationsController [main] Function : updateFirestations
+2023-12-30 11:26:57,506 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.MedicalRecordsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:26:57,600 INFO c.MedicalRecordsControllerTest [main] Starting MedicalRecordsControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 19616 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:26:57,603 INFO c.MedicalRecordsControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:26:58,062 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:26:58,064 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2023-12-30 11:26:58,103 INFO c.MedicalRecordsControllerTest [main] Started MedicalRecordsControllerTest in 0.575 seconds (JVM running for 14.016)
+2023-12-30 11:26:58,123 INFO S.c.MedicalRecordsController [main] Function : getAllMedicalsRecords
+2023-12-30 11:26:58,175 INFO S.c.MedicalRecordsController [main] Function : deletePerson
+2023-12-30 11:26:58,237 INFO S.c.MedicalRecordsController [main] Function : updateMedicalRecords
+2023-12-30 11:26:58,277 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.MedicalRecords> SafetyNetAlert.controller.MedicalRecordsController.addMedicalRecords(SafetyNetAlert.model.MedicalRecords)]
+2023-12-30 11:26:58,294 INFO S.c.MedicalRecordsController [main] Function : updateMedicalRecords
+2023-12-30 11:26:58,306 INFO S.c.MedicalRecordsController [main] Function : deletePerson
+2023-12-30 11:26:58,323 INFO S.c.MedicalRecordsController [main] Function : getMedicalRecords
+2023-12-30 11:26:58,357 INFO S.c.MedicalRecordsController [main] Function : getMedicalRecords
+2023-12-30 11:26:58,371 INFO S.c.MedicalRecordsController [main] Function : addMedicalRecords
+2023-12-30 11:26:58,384 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.PersonsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:26:58,474 INFO c.PersonsControllerTest [main] Starting PersonsControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 19616 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:26:58,477 INFO c.PersonsControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:27:02,602 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:27:02,606 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 1 ms
+2023-12-30 11:27:03,384 INFO c.PersonsControllerTest [main] Started PersonsControllerTest in 4.958 seconds (JVM running for 19.297)
+2023-12-30 11:27:03,419 INFO S.c.PersonsController [main] Function : updatePersons
+2023-12-30 11:27:03,424 ERROR S.c.e.ControllerExceptionsHandler [main] null
+2023-12-30 11:27:03,468 INFO S.c.PersonsController [main] Function : getPersonEmails
+2023-12-30 11:27:03,514 INFO S.c.PersonsController [main] Function : getAllAccount
+2023-12-30 11:27:03,560 INFO S.c.PersonsController [main] Function : getChild
+2023-12-30 11:27:03,602 INFO S.c.PersonsController [main] Function : deletePerson
+2023-12-30 11:27:03,643 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.Persons> SafetyNetAlert.controller.PersonsController.addPerson(SafetyNetAlert.model.Persons)]
+2023-12-30 11:27:03,660 INFO S.c.PersonsController [main] Function : getPerson
+2023-12-30 11:27:03,699 INFO S.c.PersonsController [main] Function : getPersonInfo
+2023-12-30 11:27:03,732 INFO S.c.PersonsController [main] Function : addPerson
+2023-12-30 11:27:03,754 WARN o.s.w.s.PageNotFound [main] No mapping for DELETE /person/Jon&Boyd
+2023-12-30 11:27:03,792 WARN o.s.w.s.PageNotFound [main] No mapping for GET /person/Jon&Boyd
+2023-12-30 11:27:03,836 INFO S.c.PersonsController [main] Function : updatePersons
+2023-12-30 11:27:03,889 INFO S.c.PersonsController [main] Function : getPersonsMobile
+2023-12-30 11:27:03,953 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [SafetyApplicationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:27:04,030 INFO SafetyApplicationTest [main] Starting SafetyApplicationTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 19616 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:27:04,034 INFO SafetyApplicationTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:27:06,174 INFO SafetyApplicationTest [main] Started SafetyApplicationTest in 2.207 seconds (JVM running for 22.087)
+2023-12-30 11:27:06,202 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.FirestationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:27:06,245 INFO s.FirestationServiceTest [main] Starting FirestationServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 19616 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:27:06,248 INFO s.FirestationServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:27:06,884 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:27:07,152 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 265 ms
+2023-12-30 11:27:07,185 INFO s.FirestationServiceTest [main] Started FirestationServiceTest in 0.974 seconds (JVM running for 23.097)
+2023-12-30 11:27:07,402 INFO S.s.FirestationsService [main] Function : updateFirestations
+2023-12-30 11:27:07,404 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 11:27:07,470 INFO S.s.FirestationsService [main] Function : saveFirestations
+2023-12-30 11:27:07,509 INFO S.s.FirestationsService [main] Function : getHearthByStations
+2023-12-30 11:27:07,513 INFO S.s.FirestationsService [main] Function : addAddressList
+2023-12-30 11:27:07,515 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 11:27:07,517 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 11:27:07,518 INFO S.s.FirestationsService [main] Function : addAddressList
+2023-12-30 11:27:07,519 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 11:27:07,521 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 11:27:07,568 INFO S.s.FirestationsService [main] Function : getPersonsFromStation
+2023-12-30 11:27:07,571 INFO S.s.FirestationsService [main] Function : getAgeFromPersons
+2023-12-30 11:27:07,574 INFO S.s.FirestationsService [main] Function : getAgeFromPersons
+2023-12-30 11:27:07,604 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 11:27:07,634 INFO S.s.FirestationsService [main] Function : getPersonsFromAddress
+2023-12-30 11:27:07,635 INFO S.s.FirestationsService [main] Function : addStation
+2023-12-30 11:27:07,636 INFO S.s.FirestationsService [main] Function : addHabitant
+2023-12-30 11:27:07,638 INFO S.s.FirestationsService [main] Function : addHabitant
+2023-12-30 11:27:07,658 INFO S.s.FirestationsService [main] Function : deleteFirestation
+2023-12-30 11:27:07,683 INFO S.s.FirestationsService [main] Function : saveFirestations
+2023-12-30 11:27:07,701 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 11:27:07,720 INFO S.s.FirestationsService [main] Function : deleteFirestation
+2023-12-30 11:27:07,738 INFO S.s.FirestationsService [main] Function : getAllFirestations
+2023-12-30 11:27:07,752 INFO S.s.FirestationsService [main] Function : updateFirestations
+2023-12-30 11:27:07,753 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 11:27:07,770 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.MedicalRecordsServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:27:07,849 INFO s.MedicalRecordsServiceTest [main] Starting MedicalRecordsServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 19616 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:27:07,854 INFO s.MedicalRecordsServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:27:08,007 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:27:08,236 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 228 ms
+2023-12-30 11:27:08,280 INFO s.MedicalRecordsServiceTest [main] Started MedicalRecordsServiceTest in 0.496 seconds (JVM running for 24.193)
+2023-12-30 11:27:08,313 INFO S.s.MedicalRecordsService [main] Function : saveMedicalRecords
+2023-12-30 11:27:08,346 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 11:27:08,369 INFO S.s.MedicalRecordsService [main] Function : getAllMedicalRecords
+2023-12-30 11:27:08,390 INFO S.s.MedicalRecordsService [main] Function : updateMedicalRecords
+2023-12-30 11:27:08,393 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 11:27:08,416 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 11:27:08,438 INFO S.s.MedicalRecordsService [main] Function : deleteAccount
+2023-12-30 11:27:08,457 INFO S.s.MedicalRecordsService [main] Function : saveMedicalRecords
+2023-12-30 11:27:08,478 INFO S.s.MedicalRecordsService [main] Function : deleteAccount
+2023-12-30 11:27:08,495 INFO S.s.MedicalRecordsService [main] Function : updateMedicalRecords
+2023-12-30 11:27:08,496 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 11:27:08,517 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.PersonsServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:27:08,612 INFO s.PersonsServiceTest [main] Starting PersonsServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 19616 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:27:08,615 INFO s.PersonsServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:27:08,917 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:27:09,113 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 193 ms
+2023-12-30 11:27:09,151 INFO s.PersonsServiceTest [main] Started PersonsServiceTest in 0.613 seconds (JVM running for 25.064)
+2023-12-30 11:27:09,183 INFO S.s.PersonsService [main] Function : getAllPersons
+2023-12-30 11:27:09,204 INFO S.s.PersonsService [main] Function : getChildByAddress
+2023-12-30 11:27:09,205 INFO S.s.PersonsService [main] Function : addAge
+2023-12-30 11:27:09,209 INFO S.s.PersonsService [main] Function : addAge
+2023-12-30 11:27:09,214 INFO S.s.PersonsService [main] Function : addMembre
+2023-12-30 11:27:09,215 INFO S.s.PersonsService [main] Function : addChild
+2023-12-30 11:27:09,227 INFO S.s.PersonsService [main] Function : deleteAccount
+2023-12-30 11:27:09,242 INFO S.s.PersonsService [main] Function : getPersons
+2023-12-30 11:27:09,252 INFO S.s.PersonsService [main] Function : savePerson
+2023-12-30 11:27:09,267 INFO S.s.PersonsService [main] Function : deleteAccount
+2023-12-30 11:27:09,277 INFO S.s.PersonsService [main] Function : savePerson
+2023-12-30 11:27:09,286 INFO S.s.PersonsService [main] Function : getPersonsEmail
+2023-12-30 11:27:09,297 INFO S.s.PersonsService [main] Function : updatePerson
+2023-12-30 11:27:09,308 INFO S.s.PersonsService [main] Function : getPersons
+2023-12-30 11:27:09,323 INFO S.s.PersonsService [main] Function : getPersonsInfo
+2023-12-30 11:27:09,326 INFO S.s.PersonsService [main] Function : addPersonInfo
+2023-12-30 11:27:09,329 INFO S.s.PersonsService [main] Function : addPersonInfo
+2023-12-30 11:27:09,346 INFO S.s.PersonsService [main] Function : updatePerson
+2023-12-30 11:27:09,358 INFO S.s.PersonsService [main] Function : getPersonsMobile
+2023-12-30 11:27:35,000 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.FirestationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:27:36,474 INFO c.FirestationControllerTest [main] Starting FirestationControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 10676 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:27:36,481 INFO c.FirestationControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:27:41,323 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:27:41,325 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 2 ms
+2023-12-30 11:27:41,460 INFO c.FirestationControllerTest [main] Started FirestationControllerTest in 5.836 seconds (JVM running for 10.388)
+2023-12-30 11:27:42,096 INFO S.c.FirestationsController [main] Function : addPerson
+2023-12-30 11:27:42,515 INFO S.c.FirestationsController [main] Function : updateFirestations
+2023-12-30 11:27:42,623 INFO S.c.FirestationsController [main] Function : getPersonsByStation
+2023-12-30 11:27:42,663 INFO S.c.FirestationsController [main] Function : getHearthByStations
+2023-12-30 11:27:42,702 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-30 11:27:42,729 INFO S.c.FirestationsController [main] Function : getPersonInfo
+2023-12-30 11:27:42,764 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.Firestations> SafetyNetAlert.controller.FirestationsController.addPerson(SafetyNetAlert.model.Firestations)]
+2023-12-30 11:27:42,796 INFO S.c.FirestationsController [main] Function : deleteFirestation
+2023-12-30 11:27:42,845 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-30 11:27:42,861 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-30 11:27:42,879 INFO S.c.FirestationsController [main] Function : deleteFirestation
+2023-12-30 11:27:42,894 INFO S.c.FirestationsController [main] Function : updateFirestations
+2023-12-30 11:27:42,916 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.MedicalRecordsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:27:43,130 INFO c.MedicalRecordsControllerTest [main] Starting MedicalRecordsControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 10676 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:27:43,131 INFO c.MedicalRecordsControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:27:43,649 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:27:43,651 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 1 ms
+2023-12-30 11:27:43,689 INFO c.MedicalRecordsControllerTest [main] Started MedicalRecordsControllerTest in 0.743 seconds (JVM running for 12.617)
+2023-12-30 11:27:43,712 INFO S.c.MedicalRecordsController [main] Function : getAllMedicalsRecords
+2023-12-30 11:27:43,742 INFO S.c.MedicalRecordsController [main] Function : deletePerson
+2023-12-30 11:27:43,782 INFO S.c.MedicalRecordsController [main] Function : updateMedicalRecords
+2023-12-30 11:27:43,797 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.MedicalRecords> SafetyNetAlert.controller.MedicalRecordsController.addMedicalRecords(SafetyNetAlert.model.MedicalRecords)]
+2023-12-30 11:27:43,812 INFO S.c.MedicalRecordsController [main] Function : updateMedicalRecords
+2023-12-30 11:27:43,821 INFO S.c.MedicalRecordsController [main] Function : deletePerson
+2023-12-30 11:27:43,830 INFO S.c.MedicalRecordsController [main] Function : getMedicalRecords
+2023-12-30 11:27:43,843 INFO S.c.MedicalRecordsController [main] Function : getMedicalRecords
+2023-12-30 11:27:43,858 INFO S.c.MedicalRecordsController [main] Function : addMedicalRecords
+2023-12-30 11:27:43,894 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.PersonsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:27:44,017 INFO c.PersonsControllerTest [main] Starting PersonsControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 10676 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:27:44,019 INFO c.PersonsControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:27:47,766 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:27:47,768 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 2 ms
+2023-12-30 11:27:48,521 INFO c.PersonsControllerTest [main] Started PersonsControllerTest in 4.567 seconds (JVM running for 17.449)
+2023-12-30 11:27:48,551 INFO S.c.PersonsController [main] Function : updatePersons
+2023-12-30 11:27:48,553 ERROR S.c.e.ControllerExceptionsHandler [main] null
+2023-12-30 11:27:48,575 INFO S.c.PersonsController [main] Function : getPersonEmails
+2023-12-30 11:27:48,590 INFO S.c.PersonsController [main] Function : getAllAccount
+2023-12-30 11:27:48,606 INFO S.c.PersonsController [main] Function : getChild
+2023-12-30 11:27:48,621 INFO S.c.PersonsController [main] Function : deletePerson
+2023-12-30 11:27:48,632 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.Persons> SafetyNetAlert.controller.PersonsController.addPerson(SafetyNetAlert.model.Persons)]
+2023-12-30 11:27:48,644 INFO S.c.PersonsController [main] Function : getPerson
+2023-12-30 11:27:48,665 INFO S.c.PersonsController [main] Function : getPersonInfo
+2023-12-30 11:27:48,685 INFO S.c.PersonsController [main] Function : addPerson
+2023-12-30 11:27:48,698 WARN o.s.w.s.PageNotFound [main] No mapping for DELETE /person/Jon&Boyd
+2023-12-30 11:27:48,714 WARN o.s.w.s.PageNotFound [main] No mapping for GET /person/Jon&Boyd
+2023-12-30 11:27:48,734 INFO S.c.PersonsController [main] Function : updatePersons
+2023-12-30 11:27:48,759 INFO S.c.PersonsController [main] Function : getPersonsMobile
+2023-12-30 11:27:48,779 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [SafetyApplicationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:27:48,877 INFO SafetyApplicationTest [main] Starting SafetyApplicationTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 10676 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:27:48,879 INFO SafetyApplicationTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:27:50,868 INFO SafetyApplicationTest [main] Started SafetyApplicationTest in 2.072 seconds (JVM running for 19.796)
+2023-12-30 11:27:50,893 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.FirestationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:27:50,941 INFO s.FirestationServiceTest [main] Starting FirestationServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 10676 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:27:50,942 INFO s.FirestationServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:27:51,536 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:27:51,713 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 177 ms
+2023-12-30 11:27:51,750 INFO s.FirestationServiceTest [main] Started FirestationServiceTest in 0.838 seconds (JVM running for 20.678)
+2023-12-30 11:27:51,928 INFO S.s.FirestationsService [main] Function : updateFirestations
+2023-12-30 11:27:51,929 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 11:27:52,000 INFO S.s.FirestationsService [main] Function : saveFirestations
+2023-12-30 11:27:52,024 INFO S.s.FirestationsService [main] Function : getHearthByStations
+2023-12-30 11:27:52,026 INFO S.s.FirestationsService [main] Function : addAddressList
+2023-12-30 11:27:52,026 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 11:27:52,028 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 11:27:52,029 INFO S.s.FirestationsService [main] Function : addAddressList
+2023-12-30 11:27:52,029 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 11:27:52,029 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 11:27:52,065 INFO S.s.FirestationsService [main] Function : getPersonsFromStation
+2023-12-30 11:27:52,066 INFO S.s.FirestationsService [main] Function : getAgeFromPersons
+2023-12-30 11:27:52,066 INFO S.s.FirestationsService [main] Function : getAgeFromPersons
+2023-12-30 11:27:52,082 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 11:27:52,096 INFO S.s.FirestationsService [main] Function : getPersonsFromAddress
+2023-12-30 11:27:52,096 INFO S.s.FirestationsService [main] Function : addStation
+2023-12-30 11:27:52,097 INFO S.s.FirestationsService [main] Function : addHabitant
+2023-12-30 11:27:52,097 INFO S.s.FirestationsService [main] Function : addHabitant
+2023-12-30 11:27:52,112 INFO S.s.FirestationsService [main] Function : deleteFirestation
+2023-12-30 11:27:52,131 INFO S.s.FirestationsService [main] Function : saveFirestations
+2023-12-30 11:27:52,144 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 11:27:52,156 INFO S.s.FirestationsService [main] Function : deleteFirestation
+2023-12-30 11:27:52,169 INFO S.s.FirestationsService [main] Function : getAllFirestations
+2023-12-30 11:27:52,180 INFO S.s.FirestationsService [main] Function : updateFirestations
+2023-12-30 11:27:52,180 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 11:27:52,193 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.MedicalRecordsServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:27:52,284 INFO s.MedicalRecordsServiceTest [main] Starting MedicalRecordsServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 10676 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:27:52,285 INFO s.MedicalRecordsServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:27:52,434 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:27:52,646 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 211 ms
+2023-12-30 11:27:52,667 INFO s.MedicalRecordsServiceTest [main] Started MedicalRecordsServiceTest in 0.458 seconds (JVM running for 21.595)
+2023-12-30 11:27:52,682 INFO S.s.MedicalRecordsService [main] Function : saveMedicalRecords
+2023-12-30 11:27:52,697 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 11:27:52,712 INFO S.s.MedicalRecordsService [main] Function : getAllMedicalRecords
+2023-12-30 11:27:52,728 INFO S.s.MedicalRecordsService [main] Function : updateMedicalRecords
+2023-12-30 11:27:52,728 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 11:27:52,742 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 11:27:52,756 INFO S.s.MedicalRecordsService [main] Function : deleteAccount
+2023-12-30 11:27:52,768 INFO S.s.MedicalRecordsService [main] Function : saveMedicalRecords
+2023-12-30 11:27:52,778 INFO S.s.MedicalRecordsService [main] Function : deleteAccount
+2023-12-30 11:27:52,787 INFO S.s.MedicalRecordsService [main] Function : updateMedicalRecords
+2023-12-30 11:27:52,787 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 11:27:52,799 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.PersonsServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 11:27:52,858 INFO s.PersonsServiceTest [main] Starting PersonsServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 10676 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 11:27:52,860 INFO s.PersonsServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 11:27:53,185 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 11:27:53,303 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 117 ms
+2023-12-30 11:27:53,325 INFO s.PersonsServiceTest [main] Started PersonsServiceTest in 0.512 seconds (JVM running for 22.254)
+2023-12-30 11:27:53,346 INFO S.s.PersonsService [main] Function : getAllPersons
+2023-12-30 11:27:53,360 INFO S.s.PersonsService [main] Function : getChildByAddress
+2023-12-30 11:27:53,360 INFO S.s.PersonsService [main] Function : addAge
+2023-12-30 11:27:53,361 INFO S.s.PersonsService [main] Function : addAge
+2023-12-30 11:27:53,362 INFO S.s.PersonsService [main] Function : addMembre
+2023-12-30 11:27:53,362 INFO S.s.PersonsService [main] Function : addChild
+2023-12-30 11:27:53,370 INFO S.s.PersonsService [main] Function : deleteAccount
+2023-12-30 11:27:53,381 INFO S.s.PersonsService [main] Function : getPersons
+2023-12-30 11:27:53,389 INFO S.s.PersonsService [main] Function : savePerson
+2023-12-30 11:27:53,403 INFO S.s.PersonsService [main] Function : deleteAccount
+2023-12-30 11:27:53,418 INFO S.s.PersonsService [main] Function : savePerson
+2023-12-30 11:27:53,435 INFO S.s.PersonsService [main] Function : getPersonsEmail
+2023-12-30 11:27:53,448 INFO S.s.PersonsService [main] Function : updatePerson
+2023-12-30 11:27:53,460 INFO S.s.PersonsService [main] Function : getPersons
+2023-12-30 11:27:53,485 INFO S.s.PersonsService [main] Function : getPersonsInfo
+2023-12-30 11:27:53,495 INFO S.s.PersonsService [main] Function : addPersonInfo
+2023-12-30 11:27:53,497 INFO S.s.PersonsService [main] Function : addPersonInfo
+2023-12-30 11:27:53,523 INFO S.s.PersonsService [main] Function : updatePerson
+2023-12-30 11:27:53,537 INFO S.s.PersonsService [main] Function : getPersonsMobile
+2023-12-30 13:37:47,298 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.FirestationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 13:37:48,720 INFO c.FirestationControllerTest [main] Starting FirestationControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 17988 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 13:37:48,729 INFO c.FirestationControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 13:37:53,041 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 13:37:53,044 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 3 ms
+2023-12-30 13:37:53,202 INFO c.FirestationControllerTest [main] Started FirestationControllerTest in 5.278 seconds (JVM running for 9.899)
+2023-12-30 13:37:53,779 INFO S.c.FirestationsController [main] Function : addPerson
+2023-12-30 13:37:54,083 INFO S.c.FirestationsController [main] Function : updateFirestations
+2023-12-30 13:37:54,174 INFO S.c.FirestationsController [main] Function : getPersonsByStation
+2023-12-30 13:37:54,224 INFO S.c.FirestationsController [main] Function : getHearthByStations
+2023-12-30 13:37:54,277 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-30 13:37:54,310 INFO S.c.FirestationsController [main] Function : getPersonInfo
+2023-12-30 13:37:54,346 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.Firestations> SafetyNetAlert.controller.FirestationsController.addPerson(SafetyNetAlert.model.Firestations)]
+2023-12-30 13:37:54,374 INFO S.c.FirestationsController [main] Function : deleteFirestation
+2023-12-30 13:37:54,419 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-30 13:37:54,436 INFO S.c.FirestationsController [main] Function : getFirestations
+2023-12-30 13:37:54,456 INFO S.c.FirestationsController [main] Function : deleteFirestation
+2023-12-30 13:37:54,474 INFO S.c.FirestationsController [main] Function : updateFirestations
+2023-12-30 13:37:54,505 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.MedicalRecordsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 13:37:54,695 INFO c.MedicalRecordsControllerTest [main] Starting MedicalRecordsControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 17988 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 13:37:54,697 INFO c.MedicalRecordsControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 13:37:55,211 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 13:37:55,213 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 1 ms
+2023-12-30 13:37:55,252 INFO c.MedicalRecordsControllerTest [main] Started MedicalRecordsControllerTest in 0.706 seconds (JVM running for 11.948)
+2023-12-30 13:37:55,273 INFO S.c.MedicalRecordsController [main] Function : getAllMedicalsRecords
+2023-12-30 13:37:55,296 INFO S.c.MedicalRecordsController [main] Function : deletePerson
+2023-12-30 13:37:55,327 INFO S.c.MedicalRecordsController [main] Function : updateMedicalRecords
+2023-12-30 13:37:55,341 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.MedicalRecords> SafetyNetAlert.controller.MedicalRecordsController.addMedicalRecords(SafetyNetAlert.model.MedicalRecords)]
+2023-12-30 13:37:55,354 INFO S.c.MedicalRecordsController [main] Function : updateMedicalRecords
+2023-12-30 13:37:55,382 INFO S.c.MedicalRecordsController [main] Function : deletePerson
+2023-12-30 13:37:55,394 INFO S.c.MedicalRecordsController [main] Function : getMedicalRecords
+2023-12-30 13:37:55,410 INFO S.c.MedicalRecordsController [main] Function : getMedicalRecords
+2023-12-30 13:37:55,424 INFO S.c.MedicalRecordsController [main] Function : addMedicalRecords
+2023-12-30 13:37:55,441 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [controller.PersonsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 13:37:55,573 INFO c.PersonsControllerTest [main] Starting PersonsControllerTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 17988 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 13:37:55,575 INFO c.PersonsControllerTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 13:37:59,034 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 13:37:59,036 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 2 ms
+2023-12-30 13:37:59,742 INFO c.PersonsControllerTest [main] Started PersonsControllerTest in 4.25 seconds (JVM running for 16.438)
+2023-12-30 13:37:59,769 INFO S.c.PersonsController [main] Function : updatePersons
+2023-12-30 13:37:59,772 ERROR S.c.e.ControllerExceptionsHandler [main] null
+2023-12-30 13:37:59,790 INFO S.c.PersonsController [main] Function : getPersonEmails
+2023-12-30 13:37:59,800 INFO S.c.PersonsController [main] Function : getAllAccount
+2023-12-30 13:37:59,814 INFO S.c.PersonsController [main] Function : getChild
+2023-12-30 13:37:59,827 INFO S.c.PersonsController [main] Function : deletePerson
+2023-12-30 13:37:59,840 WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver [main] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<SafetyNetAlert.model.Persons> SafetyNetAlert.controller.PersonsController.addPerson(SafetyNetAlert.model.Persons)]
+2023-12-30 13:37:59,849 INFO S.c.PersonsController [main] Function : getPerson
+2023-12-30 13:37:59,862 INFO S.c.PersonsController [main] Function : getPersonInfo
+2023-12-30 13:37:59,875 INFO S.c.PersonsController [main] Function : addPerson
+2023-12-30 13:37:59,887 WARN o.s.w.s.PageNotFound [main] No mapping for DELETE /person/Jon&Boyd
+2023-12-30 13:37:59,899 WARN o.s.w.s.PageNotFound [main] No mapping for GET /person/Jon&Boyd
+2023-12-30 13:37:59,912 INFO S.c.PersonsController [main] Function : updatePersons
+2023-12-30 13:37:59,923 INFO S.c.PersonsController [main] Function : getPersonsMobile
+2023-12-30 13:37:59,935 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [SafetyApplicationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 13:38:00,007 INFO SafetyApplicationTest [main] Starting SafetyApplicationTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 17988 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 13:38:00,009 INFO SafetyApplicationTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 13:38:01,932 INFO SafetyApplicationTest [main] Started SafetyApplicationTest in 1.988 seconds (JVM running for 18.629)
+2023-12-30 13:38:01,955 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.FirestationServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 13:38:02,002 INFO s.FirestationServiceTest [main] Starting FirestationServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 17988 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 13:38:02,003 INFO s.FirestationServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 13:38:02,472 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 13:38:02,647 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 175 ms
+2023-12-30 13:38:02,679 INFO s.FirestationServiceTest [main] Started FirestationServiceTest in 0.711 seconds (JVM running for 19.376)
+2023-12-30 13:38:02,848 INFO S.s.FirestationsService [main] Function : updateFirestations
+2023-12-30 13:38:02,849 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 13:38:02,916 INFO S.s.FirestationsService [main] Function : saveFirestations
+2023-12-30 13:38:02,936 INFO S.s.FirestationsService [main] Function : getHearthByStations
+2023-12-30 13:38:02,937 INFO S.s.FirestationsService [main] Function : addAddressList
+2023-12-30 13:38:02,937 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 13:38:02,937 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 13:38:02,938 INFO S.s.FirestationsService [main] Function : addAddressList
+2023-12-30 13:38:02,938 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 13:38:02,938 INFO S.s.FirestationsService [main] Function : addFlood
+2023-12-30 13:38:02,976 INFO S.s.FirestationsService [main] Function : getPersonsFromStation
+2023-12-30 13:38:02,977 INFO S.s.FirestationsService [main] Function : getAgeFromPersons
+2023-12-30 13:38:02,978 INFO S.s.FirestationsService [main] Function : getAgeFromPersons
+2023-12-30 13:38:03,001 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 13:38:03,014 INFO S.s.FirestationsService [main] Function : getPersonsFromAddress
+2023-12-30 13:38:03,015 INFO S.s.FirestationsService [main] Function : addStation
+2023-12-30 13:38:03,015 INFO S.s.FirestationsService [main] Function : addHabitant
+2023-12-30 13:38:03,015 INFO S.s.FirestationsService [main] Function : addHabitant
+2023-12-30 13:38:03,027 INFO S.s.FirestationsService [main] Function : deleteFirestation
+2023-12-30 13:38:03,057 INFO S.s.FirestationsService [main] Function : saveFirestations
+2023-12-30 13:38:03,077 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 13:38:03,097 INFO S.s.FirestationsService [main] Function : deleteFirestation
+2023-12-30 13:38:03,113 INFO S.s.FirestationsService [main] Function : getAllFirestations
+2023-12-30 13:38:03,135 INFO S.s.FirestationsService [main] Function : updateFirestations
+2023-12-30 13:38:03,136 INFO S.s.FirestationsService [main] Function : getFirestations
+2023-12-30 13:38:03,159 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.MedicalRecordsServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 13:38:03,266 INFO s.MedicalRecordsServiceTest [main] Starting MedicalRecordsServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 17988 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 13:38:03,269 INFO s.MedicalRecordsServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 13:38:03,447 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 13:38:03,600 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 153 ms
+2023-12-30 13:38:03,627 INFO s.MedicalRecordsServiceTest [main] Started MedicalRecordsServiceTest in 0.435 seconds (JVM running for 20.323)
+2023-12-30 13:38:03,642 INFO S.s.MedicalRecordsService [main] Function : saveMedicalRecords
+2023-12-30 13:38:03,656 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 13:38:03,666 INFO S.s.MedicalRecordsService [main] Function : getAllMedicalRecords
+2023-12-30 13:38:03,682 INFO S.s.MedicalRecordsService [main] Function : updateMedicalRecords
+2023-12-30 13:38:03,682 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 13:38:03,697 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 13:38:03,712 INFO S.s.MedicalRecordsService [main] Function : deleteAccount
+2023-12-30 13:38:03,726 INFO S.s.MedicalRecordsService [main] Function : saveMedicalRecords
+2023-12-30 13:38:03,738 INFO S.s.MedicalRecordsService [main] Function : deleteAccount
+2023-12-30 13:38:03,752 INFO S.s.MedicalRecordsService [main] Function : updateMedicalRecords
+2023-12-30 13:38:03,752 INFO S.s.MedicalRecordsService [main] Function : getMedicalRecords
+2023-12-30 13:38:03,766 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [service.PersonsServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-12-30 13:38:03,815 INFO s.PersonsServiceTest [main] Starting PersonsServiceTest using Java 11.0.12 on LAPTOP-8PPGTG37 with PID 17988 (started by Mougni in C:\final\Mougni\Documents\BAC+3 JAVA\projets\P5\SafetyNetAlert)
+2023-12-30 13:38:03,817 INFO s.PersonsServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-30 13:38:04,036 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2023-12-30 13:38:04,157 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 120 ms
+2023-12-30 13:38:04,180 INFO s.PersonsServiceTest [main] Started PersonsServiceTest in 0.397 seconds (JVM running for 20.876)
+2023-12-30 13:38:04,202 INFO S.s.PersonsService [main] Function : getAllPersons
+2023-12-30 13:38:04,216 INFO S.s.PersonsService [main] Function : getChildByAddress
+2023-12-30 13:38:04,216 INFO S.s.PersonsService [main] Function : addAge
+2023-12-30 13:38:04,218 INFO S.s.PersonsService [main] Function : addAge
+2023-12-30 13:38:04,219 INFO S.s.PersonsService [main] Function : addMembre
+2023-12-30 13:38:04,219 INFO S.s.PersonsService [main] Function : addChild
+2023-12-30 13:38:04,231 INFO S.s.PersonsService [main] Function : deleteAccount
+2023-12-30 13:38:04,244 INFO S.s.PersonsService [main] Function : getPersons
+2023-12-30 13:38:04,260 INFO S.s.PersonsService [main] Function : savePerson
+2023-12-30 13:38:04,277 INFO S.s.PersonsService [main] Function : deleteAccount
+2023-12-30 13:38:04,290 INFO S.s.PersonsService [main] Function : savePerson
+2023-12-30 13:38:04,305 INFO S.s.PersonsService [main] Function : getPersonsEmail
+2023-12-30 13:38:04,322 INFO S.s.PersonsService [main] Function : updatePerson
+2023-12-30 13:38:04,338 INFO S.s.PersonsService [main] Function : getPersons
+2023-12-30 13:38:04,357 INFO S.s.PersonsService [main] Function : getPersonsInfo
+2023-12-30 13:38:04,359 INFO S.s.PersonsService [main] Function : addPersonInfo
+2023-12-30 13:38:04,362 INFO S.s.PersonsService [main] Function : addPersonInfo
+2023-12-30 13:38:04,377 INFO S.s.PersonsService [main] Function : updatePerson
+2023-12-30 13:38:04,391 INFO S.s.PersonsService [main] Function : getPersonsMobile

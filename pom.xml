@@ -133,6 +133,13 @@
                             <dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile>
                             <outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
                             <title>Jacoco - Tests unitaires</title>
+                            <excludes>
+                                <exclude>SafetyNetAlert/repository/*</exclude>
+                                <exclude>SafetyNetAlert/controller/exception/*</exclude>
+                                <exclude>SafetyNetAlert/**/*equals*</exclude>
+                                <exclude>SafetyNetAlert/**/*hashCode*</exclude>
+                                <exclude>SafetyNetAlert/**/*toString*</exclude>
+                            </excludes>
                         </configuration>
                     </execution>
                     <execution>
